@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Net.Requests" Version="4.3.0" />
+  </ItemGroup>
+  <Import Project="..\ClassesToTest.Shared\ClassesToTest.Shared.projitems" Label="Shared" Condition="Exists('..\ClassesToTest.Shared\ClassesToTest.Shared.projitems')" />
+</Project>
