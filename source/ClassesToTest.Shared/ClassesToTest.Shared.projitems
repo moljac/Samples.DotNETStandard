@@ -9,7 +9,10 @@
     <Import_RootNamespace>ClassesToTest.Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)HttpClientTest.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
-    <Compile Include="$(MSBuildThisFileDirectory)HttpClientTest %28copy%29.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <Compile Include="$(MSBuildThisFileDirectory)DotNetStandard1_1\HttpClientTest.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)DotNetStandard1_0\" />
+    <Folder Include="$(MSBuildThisFileDirectory)DotNetStandard1_1\" />
   </ItemGroup>
 </Project>
