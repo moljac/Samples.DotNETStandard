@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using System.Net;
 
-namespace ClassesToTest.Shared.DotNetStandard1_0
+namespace HolisticWare.Net.Http
 {
     public static class HttpWebUtilitiesExtensions
     {

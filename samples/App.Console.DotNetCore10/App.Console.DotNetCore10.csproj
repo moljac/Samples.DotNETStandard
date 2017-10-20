@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp1.0</TargetFramework>
+    <RootNamespace>App.Console.DotNetCore</RootNamespace>
+    <AssemblyName>App.Console.DotNetCore</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\source\HolisticWare.Net.OAuth.NetStandard10\HolisticWare.Net.OAuth.NetStandard10.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Console" Version="4.3.0" />
+  </ItemGroup>
+</Project>
