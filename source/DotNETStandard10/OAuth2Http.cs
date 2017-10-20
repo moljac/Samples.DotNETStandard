@@ -23,6 +23,10 @@ namespace ClassesToTest.Shared.DotNetStandard1_0
 
         public async Task<string> HttpGetAsync(string url)
         {
+        }
+
+        public async Task<string> HttpGetStringAsync(string url)
+        {
             string response_string = null;
 
 

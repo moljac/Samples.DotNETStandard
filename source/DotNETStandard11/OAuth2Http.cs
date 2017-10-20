@@ -38,7 +38,7 @@ namespace ClassesToTest.Shared.DotNetStandard1_0
             return response_string;
         }
 
-        protected void HttpHeadersSeatup()
+        protected void HttpRequestsSetup()
         {
             //http_client.BaseAddress = new Uri(url);
 
