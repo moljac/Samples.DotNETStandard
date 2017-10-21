@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <RootNamespace>HolisticWare.Net.OAuth</RootNamespace>
+    <AssemblyName>HolisticWare.Net.OAuth</AssemblyName>
+  </PropertyGroup>
+
+</Project>
