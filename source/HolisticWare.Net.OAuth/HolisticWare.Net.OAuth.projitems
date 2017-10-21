@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>0145436c-5efe-4ad9-81ba-24d7be276fd1</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>HolisticWare.Net.OAuth</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Net\OAuth\OAuth2\GrantType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\OAuth\OAuth2\ResponseType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\OAuth\OAuth2\State.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\OAuth\OAuthQueryParameters.cs" />
+  </ItemGroup>
+</Project>
