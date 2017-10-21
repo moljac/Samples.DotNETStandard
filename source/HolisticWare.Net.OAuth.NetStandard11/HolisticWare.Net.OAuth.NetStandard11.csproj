@@ -2,14 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.1</TargetFramework>
+    <DefaultItemExcludes>$(DefaultItemExcludes);.DS_Store</DefaultItemExcludes>
+    <AssemblyName>HolisticWare.Net.OAuth</AssemblyName>
+    <RootNamespace>HolisticWare.Net.OAuth</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="System.Net.Requests" Version="4.3.0" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="OAuth\" />
-    <Folder Include="OAuth\OAuth2\" />
+    <Folder Include="Net\OAuth\" />
   </ItemGroup>
-  <Import Project="..\ClassesToTest.Shared\ClassesToTest.Shared.projitems" Label="Shared" Condition="Exists('..\ClassesToTest.Shared\ClassesToTest.Shared.projitems')" />
+  <Import Project="..\HolisticWare.Net.OAuth\HolisticWare.Net.OAuth.projitems" Label="Shared" />
 </Project>
