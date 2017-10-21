@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "source", "source", "{5E437C0A-3605-44A4-85F8-C867E11EC6A3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Net.OAuth.NetStandard10", "..\..\source\HolisticWare.Net.OAuth.NetStandard10\HolisticWare.Net.OAuth.NetStandard10.csproj", "{99A55A01-73D4-44FE-8E59-9A6E42726B13}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Net.OAuth.NetStandard11", "..\..\source\HolisticWare.Net.OAuth.NetStandard11\HolisticWare.Net.OAuth.NetStandard11.csproj", "{49E5F228-3D87-4F38-BDF7-26EB3E2DFE69}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Net.OAuth.NetStandard16", "..\..\source\HolisticWare.Net.OAuth.NetStandard16\HolisticWare.Net.OAuth.NetStandard16.csproj", "{72AC2C83-EE17-4CD3-AC6F-9FDB8387FB25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.XUnit2.DotNETStandard10", "UnitTests.XUnit2.DotNETStandard10\UnitTests.XUnit2.DotNETStandard10.csproj", "{950C219D-274F-4BDE-ADAE-D0C4470D271B}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UnitTests.Common.DotNetStandard10", "UnitTests.Common.DotNetStandard10\UnitTests.Common.DotNetStandard10.shproj", "{9CED7EE1-EAD6-40E5-8F0E-1CBF11A1BDE3}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UnitTests.Common.DotNetStandard11", "UnitTests.Common.DotNetStandard11\UnitTests.Common.DotNetStandard11.shproj", "{515C6C03-5503-45DF-921F-C8D94634728E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.NUnit.DotNETStandard10", "UnitTests.NUnit.DotNETStandard10\UnitTests.NUnit.DotNETStandard10.csproj", "{2FA3D724-A040-4106-9796-C990E427FA1F}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		UnitTests.Common.DotNetStandard10\UnitTests.Common.DotNetStandard10.projitems*{2fa3d724-a040-4106-9796-c990e427fa1f}*SharedItemsImports = 4
+		UnitTests.Common.DotNetStandard11\UnitTests.Common.DotNetStandard11.projitems*{515c6c03-5503-45df-921f-c8d94634728e}*SharedItemsImports = 13
+		UnitTests.Common.DotNetStandard10\UnitTests.Common.DotNetStandard10.projitems*{950c219d-274f-4bde-adae-d0c4470d271b}*SharedItemsImports = 4
+		UnitTests.Common.DotNetStandard10\UnitTests.Common.DotNetStandard10.projitems*{9ced7ee1-ead6-40e5-8f0e-1cbf11a1bde3}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99A55A01-73D4-44FE-8E59-9A6E42726B13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99A55A01-73D4-44FE-8E59-9A6E42726B13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99A55A01-73D4-44FE-8E59-9A6E42726B13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99A55A01-73D4-44FE-8E59-9A6E42726B13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49E5F228-3D87-4F38-BDF7-26EB3E2DFE69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49E5F228-3D87-4F38-BDF7-26EB3E2DFE69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49E5F228-3D87-4F38-BDF7-26EB3E2DFE69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49E5F228-3D87-4F38-BDF7-26EB3E2DFE69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72AC2C83-EE17-4CD3-AC6F-9FDB8387FB25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72AC2C83-EE17-4CD3-AC6F-9FDB8387FB25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72AC2C83-EE17-4CD3-AC6F-9FDB8387FB25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72AC2C83-EE17-4CD3-AC6F-9FDB8387FB25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{950C219D-274F-4BDE-ADAE-D0C4470D271B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{950C219D-274F-4BDE-ADAE-D0C4470D271B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{950C219D-274F-4BDE-ADAE-D0C4470D271B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{950C219D-274F-4BDE-ADAE-D0C4470D271B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FA3D724-A040-4106-9796-C990E427FA1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FA3D724-A040-4106-9796-C990E427FA1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FA3D724-A040-4106-9796-C990E427FA1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FA3D724-A040-4106-9796-C990E427FA1F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{99A55A01-73D4-44FE-8E59-9A6E42726B13} = {5E437C0A-3605-44A4-85F8-C867E11EC6A3}
+		{49E5F228-3D87-4F38-BDF7-26EB3E2DFE69} = {5E437C0A-3605-44A4-85F8-C867E11EC6A3}
+		{72AC2C83-EE17-4CD3-AC6F-9FDB8387FB25} = {5E437C0A-3605-44A4-85F8-C867E11EC6A3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {80201DC7-57D3-4125-B682-E23C0FE2C569}
+	EndGlobalSection
+EndGlobal
