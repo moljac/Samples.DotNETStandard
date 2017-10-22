@@ -2,11 +2,9 @@
 
 namespace Xamarin.Auth.OAuth2
 {
-    public class ResponseType
+    public partial class ResponseType
     {
-        private OAuth2Authenticator authenticator = null;
-
-        public ResponseType(OAuth2Authenticator a)
+        public ResponseType()
         {
             
             return;
