@@ -9,10 +9,8 @@
     <Import_RootNamespace>UnitTests.Common.DotNetStandard10</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Net\OAuth\OAuth2\TestOAuth2Http.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)TestUri.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Net\OAuth\OAuth2\" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\OAuth\OAuth2\State.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\OAuth\OAuth2\OAuth2Http.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Uri.cs" />
   </ItemGroup>
 </Project>

@@ -9,6 +9,7 @@
     <Import_RootNamespace>UnitTests.Common.DotNetStandard11</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)TestUri.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\OAuth\OAuth2\OAuth2Http.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Uri.cs" />
   </ItemGroup>
 </Project>
