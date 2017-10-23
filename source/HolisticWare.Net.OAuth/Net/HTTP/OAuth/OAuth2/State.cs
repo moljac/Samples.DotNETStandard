@@ -1,6 +1,7 @@
 ﻿using System;
 
-namespace Xamarin.Auth.OAuth2
+namespace HolisticWare.Net.HTTP.OAuth.OAuth2
+//namespace Xamarin.Auth.OAuth.OAuth2
 {
     /// <summary>
     /// OAuth2 Parameter - State.
@@ -15,7 +16,7 @@ namespace Xamarin.Auth.OAuth2
         more info:
         http://www.thread-safe.com/2014/05/the-correct-use-of-state-parameter-in.html
         https://security.stackexchange.com/questions/104167/what-to-use-as-state-in-oauth2-authorization-code-grant-workflow
-    */ 
+    */
     public partial class State
     {
         public State()
@@ -28,15 +29,15 @@ namespace Xamarin.Auth.OAuth2
 
         public ulong StateStringLength
         {
-        	get;
-        	set;
+            get;
+            set;
         } = 16;
 
-        private string random_string; 
+        private string random_string;
 
         public string RandomString
         {
-        	get
+            get
             {
                 return random_string;
             }
@@ -54,10 +55,10 @@ namespace Xamarin.Auth.OAuth2
         /// <value>The random string URI escaped.</value>
         public string RandomStringUriEscaped
         {
-        	get
-        	{
+            get
+            {
                 return Uri.EscapeUriString(random_string);
-        	}
+            }
         }
 
         /// <summary>
@@ -68,24 +69,13 @@ namespace Xamarin.Auth.OAuth2
         /// </value>
         public Func<ulong, string> RandomStateGeneratorFunc
         {
-        	get;
-        	set;
+            get;
+            set;
         }
 
         public string GenerateOAuth2StateRandom(ulong number_of_characters = 16)
         {
-        	//
-        	// Generate a unique state string to check for forgeries
-        	//
-        	var chars = new char[number_of_characters];
-        	var rand = new Random();
-        	for (var i = 0; i < chars.Length; i++)
-        	{
-        		chars[i] = (char)rand.Next((int)'a', (int)'z' + 1);
-        	}
-        	string state_string = new string(chars);
-
-        	return state_string;
+            return new Security.RandomData().RandomString(number_of_characters);
         }
 
     }

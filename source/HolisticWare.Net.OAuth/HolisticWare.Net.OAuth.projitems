@@ -9,9 +9,14 @@
     <Import_RootNamespace>HolisticWare.Net.OAuth</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Net\OAuth\OAuth2\GrantType.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Net\OAuth\OAuth2\ResponseType.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Net\OAuth\OAuth2\State.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Net\OAuth\OAuthQueryParameters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\OAuth\OAuth2\GrantType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\OAuth\OAuth2\ResponseType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\OAuth\OAuth2\State.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\QueryParameters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\RandomData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Net\HTTP\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Security\" />
   </ItemGroup>
 </Project>

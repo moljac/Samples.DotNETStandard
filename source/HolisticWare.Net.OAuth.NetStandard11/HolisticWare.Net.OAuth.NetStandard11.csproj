@@ -11,7 +11,7 @@
     <PackageReference Include="System.Net.Requests" Version="4.3.0" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Net\OAuth\" />
+    <Folder Include="Net\HTTP\OAuth\" />
   </ItemGroup>
   <Import Project="..\HolisticWare.Net.OAuth\HolisticWare.Net.OAuth.projitems" Label="Shared" />
 </Project>

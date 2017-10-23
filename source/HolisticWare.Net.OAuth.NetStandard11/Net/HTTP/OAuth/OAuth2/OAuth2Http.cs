@@ -1,42 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
 
-namespace ClassesToTest.Shared.DotNetStandard1_0
+namespace HolisticWare.Net.Http
 {
     /// <summary>
     /// Web request.
     /// </summary>
     /// <see cref="http://packagesearch.azurewebsites.net/?q=WebRequest"/>
-    public class OAuth2Http
+    public partial class OAuth2Http
     {
         public OAuth2Http()
         {
             return;
         }
 
-        public async Task<HttpResponseMessage> HttpGetAsync(string url)
-        {
-            HttpClient http_client = new HttpClient();
-
-            HttpResponseMessage http_response_msg = null;
-
-            http_response_msg = await http_client.GetAsync(url);
-
-            return http_response_msg;
-        }
-
-        public async Task<string> HttpGetStringAsync(string url)
-        {
-            HttpClient http_client = new HttpClient();
-
-            string response_string = null;
-
-            string http_response_str = await http_client.GetStringAsync(url);
-
-            return response_string;
-        }
 
         protected void HttpRequestsSetup()
         {
