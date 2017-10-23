@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2FA3D724-A040-4106-9796-C990E427FA1F}</ProjectGuid>
+    <ProjectGuid>{9E225E03-7F55-4D3B-A66E-6437C2DD32BE}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>NUnit.Tests.DotNETStandard10</RootNamespace>
-    <AssemblyName>NUnit.Tests.DotNETStandard10</AssemblyName>
+    <RootNamespace>UnitTests.NUnit.DotNETStandard11</RootNamespace>
+    <AssemblyName>UnitTests.NUnit.DotNETStandard11</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -23,30 +23,28 @@
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DefineConstants>NUNIT</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.3.8.1\lib\net45\nunit.framework.dll</HintPath>
+      <HintPath>..\..\packages\NUnit.3.8.1\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\source\HolisticWare.Net.OAuth.NetStandard11\HolisticWare.Net.OAuth.NetStandard11.csproj">
+      <Project>{49E5F228-3D87-4F38-BDF7-26EB3E2DFE69}</Project>
+      <Name>HolisticWare.Net.OAuth.NetStandard11</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\source\HolisticWare.Net.OAuth.NetStandard10\HolisticWare.Net.OAuth.NetStandard10.csproj">
-      <Project>{99a55a01-73d4-44fe-8e59-9a6e42726b13}</Project>
-      <Name>HolisticWare.Net.OAuth.NetStandard10</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\source\DotNETStandard10\DotNETStandard10.csproj">
-      <Project>{F5D9A1E6-FDB1-41AE-9771-032F71A45D1C}</Project>
-      <Name>DotNETStandard10</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
-  <Import Project="..\UnitTests.Common.DotNetStandard10\UnitTests.Common.DotNetStandard10.projitems" Label="Shared" />
+  <Import Project="..\..\UnitTests.Common.DotNetStandard11\UnitTests.Common.DotNetStandard11.projitems" Label="Shared" Condition="Exists('..\..\UnitTests.Common.DotNetStandard11\UnitTests.Common.DotNetStandard11.projitems')" />
+  <Import Project="..\..\UnitTests.Common\UnitTests.Common.projitems" Label="Shared" Condition="Exists('..\..\UnitTests.Common\UnitTests.Common.projitems')" />
+  <Import Project="..\..\..\..\source\HolisticWare.Net.OAuth\HolisticWare.Net.OAuth.projitems" Label="Shared" Condition="Exists('..\..\..\..\source\HolisticWare.Net.OAuth\HolisticWare.Net.OAuth.projitems')" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

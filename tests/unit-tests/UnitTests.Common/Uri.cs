@@ -19,18 +19,18 @@ using System;
 using System.Threading.Tasks;
 using System.Net;
 
-using HolisticWare.Net.Http;
-
-namespace NUnit.Tests
+namespace NUnit.Tests.Net
 {
     [TestFixture()]
-    public class TestUri
+    public partial class UriTests
     {
         [Test()]
         public void TestAbsoluteVSOriginal()
         {
             Uri uri_01 = new Uri("http://xamarin.com/");
             Uri uri_02 = new Uri("http://xamarin.com");
+
+            Assert.AreEqual(uri_01, uri_02);
 
             if (uri_01 == uri_02)
             {
@@ -49,22 +49,17 @@ namespace NUnit.Tests
              uri_01.OriginalString = http://xamarin.com/
              uri_02.OriginalString = http://xamarin.com
             */  
-            return;
-        }
+
+            Assert.AreEqual(uri_01.AbsoluteUri, "http://xamarin.com/");
+            Assert.AreEqual(uri_02.AbsoluteUri, "http://xamarin.com/");
 
 
-        [Test()]
-        public void TestGetWebResponse()
-        {
-            OAuth2Http oauth2 = new OAuth2Http();
-            Task<HttpWebResponse> content = oauth2.HttpGetAsync("http://xamarin.com");
-
-            HttpWebResponse r = content.Result;
-
-            Console.WriteLine("Response: ");
-            Console.WriteLine(r.Cookies.ToString());
+            Assert.AreEqual(uri_01.OriginalString, "http://xamarin.com/");
+            Assert.AreEqual(uri_02.OriginalString, "http://xamarin.com");
 
             return;
         }
+
+
     }
 }
