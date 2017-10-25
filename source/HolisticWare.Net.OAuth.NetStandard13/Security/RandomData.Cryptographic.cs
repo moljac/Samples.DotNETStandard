@@ -33,7 +33,7 @@ namespace HolisticWare.Security
             byte[] bytes = new byte[length];
             rng.GetBytes(bytes);
 
-            return Base64urlencodeNoPadding(bytes);
+            return Base64UrlEncodeNoPadding(bytes);
         }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace HolisticWare.Security
         /// </summary>
         /// <param name="buffer"></param>
         /// <returns></returns>
-        public string Base64urlencodeNoPadding(byte[] buffer)
+        public string Base64UrlEncodeNoPadding(byte[] buffer)
         {
             string base64 = Convert.ToBase64String(buffer);
 

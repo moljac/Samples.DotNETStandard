@@ -10,5 +10,8 @@
     <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="..\HolisticWare.Net.OAuth\Security\RandomData.cs" />
+  </ItemGroup>
   <Import Project="..\HolisticWare.Net.OAuth\HolisticWare.Net.OAuth.projitems" Label="Shared" Condition="Exists('..\HolisticWare.Net.OAuth\HolisticWare.Net.OAuth.projitems')" />
 </Project>

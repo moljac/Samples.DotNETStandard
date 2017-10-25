@@ -32,12 +32,22 @@ namespace HolisticWare.Net.HTTP
         public async Task<string> HttpGetStringAsync
                                             (
                                                 string url,
-                                                Dictionary<string, string> parameters = null
+                                                Dictionary<string, string> query_map = null
                                             )
         {
+            string query = null;
+
+            if(null != query_map)
+            {
+                QueryParameters qp = new QueryParameters(query_map);
+                query = qp.ToString("F"); // format query parameters for query (F for fragment)
+            }
+
+            StringBuilder url_sb = new StringBuilder(url).Append("?").Append(query);
+
             string response_string = null;
 
-            http_web_response = await this.HttpGetAsync(url);
+            http_web_response = await this.HttpGetAsync(url_sb.ToString());
 
             using (StreamReader sr = new StreamReader(http_web_response.GetResponseStream()))
             {
