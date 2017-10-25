@@ -30,7 +30,7 @@ namespace UnitTests.Common.Net.HTTP
                 id_requestbin = value;
             }
         }
-        protected static string id_requestbin = "1hk3rro1";
+        protected static string id_requestbin = "yxhhewyx";
 
     }
 }

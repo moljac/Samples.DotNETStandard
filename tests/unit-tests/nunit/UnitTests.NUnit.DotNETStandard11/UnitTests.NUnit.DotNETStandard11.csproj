@@ -45,6 +45,5 @@
   </ItemGroup>
   <Import Project="..\..\UnitTests.Common.DotNetStandard11\UnitTests.Common.DotNetStandard11.projitems" Label="Shared" Condition="Exists('..\..\UnitTests.Common.DotNetStandard11\UnitTests.Common.DotNetStandard11.projitems')" />
   <Import Project="..\..\UnitTests.Common\UnitTests.Common.projitems" Label="Shared" Condition="Exists('..\..\UnitTests.Common\UnitTests.Common.projitems')" />
-  <Import Project="..\..\..\..\source\HolisticWare.Net.OAuth\HolisticWare.Net.OAuth.projitems" Label="Shared" Condition="Exists('..\..\..\..\source\HolisticWare.Net.OAuth\HolisticWare.Net.OAuth.projitems')" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

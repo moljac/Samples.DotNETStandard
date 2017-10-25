@@ -8,7 +8,4 @@
   <PropertyGroup Label="Configuration">
     <Import_RootNamespace>UnitTests.Common.DotNetStandard13</Import_RootNamespace>
   </PropertyGroup>
-  <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Security\" />
-  </ItemGroup>
 </Project>

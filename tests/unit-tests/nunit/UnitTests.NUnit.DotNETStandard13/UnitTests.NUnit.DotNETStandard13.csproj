@@ -31,12 +31,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\source\HolisticWare.Net.OAuth.NetStandard13\HolisticWare.Net.OAuth.NetStandard13.csproj">
-      <Project>{338D3B0A-7246-4A1A-AC70-CFF0D5AA0EF1}</Project>
-      <Name>HolisticWare.Net.OAuth.NetStandard13</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -48,8 +42,13 @@
   <ItemGroup>
     <Compile Include="Security\RandomData.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\source\HolisticWare.Net.OAuth.NetStandard13\HolisticWare.Net.OAuth.NetStandard13.csproj">
+      <Project>{338D3B0A-7246-4A1A-AC70-CFF0D5AA0EF1}</Project>
+      <Name>HolisticWare.Net.OAuth.NetStandard13</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="..\..\UnitTests.Common.DotNetStandard13\UnitTests.Common.DotNetStandard13.projitems" Label="Shared" Condition="Exists('..\..\UnitTests.Common.DotNetStandard13\UnitTests.Common.DotNetStandard13.projitems')" />
   <Import Project="..\..\UnitTests.Common\UnitTests.Common.projitems" Label="Shared" Condition="Exists('..\..\UnitTests.Common\UnitTests.Common.projitems')" />
-  <Import Project="..\..\..\..\source\HolisticWare.Net.OAuth\HolisticWare.Net.OAuth.projitems" Label="Shared" Condition="Exists('..\..\..\..\source\HolisticWare.Net.OAuth\HolisticWare.Net.OAuth.projitems')" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -33,9 +33,10 @@ namespace NUnit.Tests.NEt.HTTP
         public void TestGetString()
         {
             Client c = new Client();
+            string endpoint = $"{Data.UriAPIRequestBin}/{Data.IdRequestBin}";
             Task<string> content = c.HttpGetStringAsync
                                             (
-                                                $"{Data.UriAPIRequestBin}/{Data.IdRequestBin}",
+                                                endpoint,
                                                 new Dictionary<string, string>
                                                 {
                                                     { "client_id", "client_id_obtained_string" },
