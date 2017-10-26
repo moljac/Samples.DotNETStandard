@@ -12,6 +12,12 @@ namespace HolisticWare.Net.HTTP
             set;
         }
 
+        public Dictionary<string, string> ParametersEncoded
+        {
+            get;
+            set;
+        }
+
         public QueryParameters()
         {
             this.Parameters = null;
@@ -102,5 +108,50 @@ namespace HolisticWare.Net.HTTP
 
         }
 
+        public Dictionary<string, Func<string, string>> DefaultParameterEncodings
+        {
+            get;
+            set;
+        }
+
+        public QueryParameters Encode (IDictionary<string, Func<string,string> > parameters_encoding_map = null)
+        {
+            this.ParametersEncoded = new Dictionary<string, string>();
+
+            // use default parameter encoding - UrlEncode(string)
+            foreach(KeyValuePair<string, string> kvp in this.Parameters)
+            {
+                string encoded = System.Net.WebUtility.UrlEncode(kvp.Value);
+                this.ParametersEncoded.Add(kvp.Key, encoded);
+            }                
+
+            // Parameters are UrlEncoded
+            // Customized Encoding follows (no ops for some)
+
+            if (null == parameters_encoding_map || parameters_encoding_map.Count < 1)
+            {
+            }
+            else
+            {
+                // use default parameter encoding - UrlEncode(string)
+                foreach(KeyValuePair<string, Func<string, string> > kvp in parameters_encoding_map)
+                {
+                    string encoded = kvp.Value(this.Parameters[kvp.Key]);
+                    this.ParametersEncoded.Add(kvp.Key, encoded);
+                }                
+            }
+
+            return this;
+        }
+
+        public string UrlEncode(string s)
+        {
+            return System.Net.WebUtility.UrlEncode(s);
+        }
+
+        public string DoNotEncode(string s)
+        {
+            return s;
+        }
     }
 }
