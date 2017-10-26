@@ -18,6 +18,7 @@ using Fact= NUnit.Framework.TestAttribute;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Text;
 using System.Net;
 using System.Net.Http;
 
@@ -34,23 +35,43 @@ namespace NUnit.Tests.Net.HTTP
         public void TestGetString()
         {
             Client c = new Client();
-            Task<string> content = c.HttpGetStringAsync
-                                        (
-                                            $"{Data.UriAPIRequestBin}/{Data.IdRequestBin}",
-                                            new Dictionary<string, string>
-                                            {
-                                                { "client_id", "client_id_obtained_string" },
-                                                { "response_type", "code" },
-                                                { "redirect_uri", "http://localhost" },
-                                                { "scope", "" },
-                                                { "state", "" },
-                                            }
-                                        );
 
-            string s = content.Result;
+            foreach (KeyValuePair<string, string> kvp in Data.UriAPIs)
+            {
 
-            Console.WriteLine("Response: ");
-            Console.WriteLine(s);
+                string endpoint = kvp.Value;
+
+                Console.WriteLine($"Endpoint: {endpoint}");
+
+                try
+                {
+                    Task<string> content = c.HttpGetStringAsync
+                                                (
+                                                    endpoint,
+                                                    new Dictionary<string, string>
+                                                    {
+                                                        { "client_id", "client_id_obtained_string" },
+                                                        { "response_type", "code" },
+                                                        { "redirect_uri", "http://localhost" },
+                                                        { "scope", "" },
+                                                        { "state", "" },
+                                                    }
+                                                );
+
+                    string s = content.Result;
+
+                    Console.WriteLine("Response: ");
+                    Console.WriteLine(s);
+                }
+                catch (AggregateException exc_agg)
+                {
+                    StringBuilder sb = new StringBuilder();
+                    sb.AppendLine($" message  = {exc_agg.Message}");
+                    sb.AppendLine($" endpoint = {endpoint}");
+
+                    Console.WriteLine(sb.ToString());
+                }
+            }
 
             return;
         }
@@ -59,24 +80,44 @@ namespace NUnit.Tests.Net.HTTP
         public void TestGetWebResponse()
         {
             Client c = new Client();
-            Task<HttpResponseMessage> content = c.HttpGetAsync
-                                                    (
-                                                        $"{Data.UriAPIRequestBin}/{Data.IdRequestBin}",
-                                                        new Dictionary<string, string>
-                                                        {
-                                                            { "client_id", "client_id_obtained_string" },
-                                                            { "response_type", "code" },
-                                                            { "redirect_uri", "http://localhost" },
-                                                            { "scope", "" },
-                                                            { "state", "" },
-                                                        }
-                                                    );
 
-            HttpResponseMessage r = content.Result;
-            HttpContent http_content = r.Content;
+            foreach (KeyValuePair<string, string> kvp in Data.UriAPIs)
+            {
 
-            Console.WriteLine("Response: ");
-            Console.WriteLine(http_content.ToString());
+                string endpoint = kvp.Value;
+
+                Console.WriteLine($"Endpoint: {endpoint}");
+
+                try
+                {
+                    Task<HttpResponseMessage> content = c.HttpGetAsync
+                                                            (
+                                                                endpoint,
+                                                                new Dictionary<string, string>
+                                                                {
+                                                                    { "client_id", "client_id_obtained_string" },
+                                                                    { "response_type", "code" },
+                                                                    { "redirect_uri", "http://localhost" },
+                                                                    { "scope", "" },
+                                                                    { "state", "" },
+                                                                }
+                                                            );
+
+                    HttpResponseMessage r = content.Result;
+                    HttpContent http_content = r.Content;
+
+                    Console.WriteLine("Response: ");
+                    Console.WriteLine(http_content.ToString());
+                }
+                catch (AggregateException exc_agg)
+                {
+                    StringBuilder sb = new StringBuilder();
+                    sb.AppendLine($" message  = {exc_agg.Message}");
+                    sb.AppendLine($" endpoint = {endpoint}");
+
+                    Console.WriteLine(sb.ToString());
+                }
+            }
 
             return;
         }

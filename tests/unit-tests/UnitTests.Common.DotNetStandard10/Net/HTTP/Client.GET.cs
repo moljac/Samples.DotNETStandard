@@ -18,13 +18,14 @@ using Fact= NUnit.Framework.TestAttribute;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Text;
 using System.Net;
 
 using HolisticWare.Net.HTTP;
 
 using UnitTests.Common.Net.HTTP;
 
-namespace NUnit.Tests.NEt.HTTP
+namespace NUnit.Tests.Net.HTTP
 {
     [TestFixture()]
     public partial class ClientTests
@@ -33,24 +34,43 @@ namespace NUnit.Tests.NEt.HTTP
         public void TestGetString()
         {
             Client c = new Client();
-            string endpoint = $"{Data.UriAPIRequestBin}/{Data.IdRequestBin}";
-            Task<string> content = c.HttpGetStringAsync
-                                            (
-                                                endpoint,
-                                                new Dictionary<string, string>
-                                                {
-                                                    { "client_id", "client_id_obtained_string" },
-                                                    { "response_type", "code" },
-                                                    { "redirect_uri", "http://localhost" },
-                                                    { "scope", "" },
-                                                    { "state", "" },
-                                                }
-                                            );
 
-            string s = content.Result;
+            foreach (KeyValuePair<string, string> kvp in Data.UriAPIs)
+            {
+                
+                string endpoint = kvp.Value;
 
-            Console.WriteLine("Response: ");
-            Console.WriteLine(s);
+                Console.WriteLine($"Endpoint: {endpoint}");
+
+                try
+                {
+                    Task<string> content = c.HttpGetStringAsync
+                                                    (
+                                                        endpoint,
+                                                        new Dictionary<string, string>
+                                                        {
+                                                        { "client_id", "client_id_obtained_string" },
+                                                        { "response_type", "code" },
+                                                        { "redirect_uri", "http://localhost" },
+                                                        { "scope", "unit test client.HttpGetStringAsync()" },
+                                                        { "state", "" },
+                                                        }
+                                                    );
+
+                    string s = content.Result;
+
+                    Console.WriteLine("Response: ");
+                    Console.WriteLine(s);
+                }
+                catch (AggregateException exc_agg)
+                {
+                    StringBuilder sb = new StringBuilder();
+                    sb.AppendLine($" message  = {exc_agg.Message}");
+                    sb.AppendLine($" endpoint = {endpoint}");
+
+                    Console.WriteLine(sb.ToString());
+                }
+            }
 
             return;
         }
@@ -59,24 +79,45 @@ namespace NUnit.Tests.NEt.HTTP
         [Test()]
         public void TestGetWebResponse()
         {
-            Client oauth2 = new Client();
-            Task<HttpWebResponse> content = oauth2.HttpGetAsync
-                                                    (
-                                                        $"{Data.UriAPIRequestBin}/{Data.IdRequestBin}",
-                                                        new Dictionary<string, string>
-                                                        {
-                                                            { "client_id", "client_id_obtained_string" },
-                                                            { "response_type", "code" },
-                                                            { "redirect_uri", "http://localhost" },
-                                                            { "scope", "" },
-                                                            { "state", "" },
-                                                        }
-                                                    );
+            Client c = new Client();
 
-            HttpWebResponse r = content.Result;
+            foreach (KeyValuePair<string, string> kvp in Data.UriAPIs)
+            {
 
-            Console.WriteLine("Response: ");
-            Console.WriteLine(r.Cookies.ToString());
+                string endpoint = kvp.Value;
+
+                Console.WriteLine($"Endpoint: {endpoint}");
+
+                try
+                {
+
+                    Task<HttpWebResponse> content = c.HttpGetAsync
+                                                            (
+                                                                endpoint,
+                                                                new Dictionary<string, string>
+                                                                {
+                                                                { "client_id", "client_id_obtained_string" },
+                                                                { "response_type", "code" },
+                                                                { "redirect_uri", "http://localhost" },
+                                                                { "scope", "unit test client.HttpGetAsync()" },
+                                                                { "state", "" },
+                                                                }
+                                                            );
+
+                    HttpWebResponse r = content.Result;
+
+                    Console.WriteLine("Response: ");
+                    Console.WriteLine(r.Cookies.ToString());
+                }
+                catch(AggregateException exc_agg)
+                {
+                    StringBuilder sb = new StringBuilder();
+                    sb.AppendLine($" message  = {exc_agg.Message}");
+                    sb.AppendLine($" endpoint = {endpoint}");
+
+                    Console.WriteLine(sb.ToString());
+                }
+            }
 
             return;
         }
