@@ -28,7 +28,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="nunit.framework">
-      <HintPath>..\..\packages\NUnit.3.8.1\lib\net45\nunit.framework.dll</HintPath>
+      <HintPath>..\..\packages\NUnit.3.7.1\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -41,10 +41,10 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <Compile Include="Net\HTTP\Client.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Net\HTTP\Client.cs" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="..\..\UnitTests.Common.DotNetStandard10\UnitTests.Common.DotNetStandard10.projitems" Label="Shared" Condition="Exists('..\..\UnitTests.Common.DotNetStandard10\UnitTests.Common.DotNetStandard10.projitems')" />
   <Import Project="..\..\UnitTests.Common\UnitTests.Common.projitems" Label="Shared" Condition="Exists('..\..\UnitTests.Common\UnitTests.Common.projitems')" />

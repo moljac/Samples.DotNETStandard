@@ -1,14 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\UnitTests.Common.DotNetStandard11\UnitTests.Common.DotNetStandard11.projitems" Label="Shared" Condition="Exists('..\..\UnitTests.Common.DotNetStandard11\UnitTests.Common.DotNetStandard11.projitems')" />
+  <Import Project="..\..\UnitTests.Common\UnitTests.Common.projitems" Label="Shared" Condition="Exists('..\..\UnitTests.Common\UnitTests.Common.projitems')" />
   <Import Project="..\packages\xunit.core.2.3.0\build\xunit.core.props" Condition="Exists('..\packages\xunit.core.2.3.0\build\xunit.core.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{950C219D-274F-4BDE-ADAE-D0C4470D271B}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>XUnit2.Tests.DotNETStandard10</RootNamespace>
+    <RootNamespace>XUnit2.Tests.DotNETStandard11</RootNamespace>
     <AssemblyName>XUnit2.Tests.DotNETStandard10</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,32 +34,27 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="xunit.abstractions">
-      <HintPath>..\packages\xunit.abstractions.2.0.1\lib\net35\xunit.abstractions.dll</HintPath>
+      <HintPath>..\..\packages\xunit.abstractions.2.0.1\lib\net35\xunit.abstractions.dll</HintPath>
     </Reference>
     <Reference Include="xunit.assert">
-      <HintPath>..\packages\xunit.assert.2.3.0\lib\netstandard1.1\xunit.assert.dll</HintPath>
+      <HintPath>..\..\packages\xunit.assert.2.3.0\lib\netstandard1.1\xunit.assert.dll</HintPath>
     </Reference>
     <Reference Include="xunit.core">
-      <HintPath>..\packages\xunit.extensibility.core.2.3.0\lib\netstandard1.1\xunit.core.dll</HintPath>
+      <HintPath>..\..\packages\xunit.extensibility.core.2.3.0\lib\netstandard1.1\xunit.core.dll</HintPath>
     </Reference>
     <Reference Include="xunit.execution.desktop">
-      <HintPath>..\packages\xunit.extensibility.execution.2.3.0\lib\net452\xunit.execution.desktop.dll</HintPath>
+      <HintPath>..\..\packages\xunit.extensibility.execution.2.3.0\lib\net452\xunit.execution.desktop.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\source\HolisticWare.Net.OAuth.NetStandard10\HolisticWare.Net.OAuth.NetStandard10.csproj">
-      <Project>{99a55a01-73d4-44fe-8e59-9a6e42726b13}</Project>
-      <Name>HolisticWare.Net.OAuth.NetStandard10</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\source\DotNETStandard10\DotNETStandard10.csproj">
-      <Project>{F5D9A1E6-FDB1-41AE-9771-032F71A45D1C}</Project>
-      <Name>DotNETStandard10</Name>
+    <ProjectReference Include="..\..\..\..\source\HolisticWare.Net.OAuth.NetStandard11\HolisticWare.Net.OAuth.NetStandard11.csproj">
+      <Project>{49E5F228-3D87-4F38-BDF7-26EB3E2DFE69}</Project>
+      <Name>HolisticWare.Net.OAuth.NetStandard11</Name>
     </ProjectReference>
   </ItemGroup>
-  <Import Project="..\UnitTests.Common.DotNetStandard10\UnitTests.Common.DotNetStandard10.projitems" Label="Shared" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\xunit.core.2.3.0\build\xunit.core.targets" Condition="Exists('..\packages\xunit.core.2.3.0\build\xunit.core.targets')" />
 </Project>

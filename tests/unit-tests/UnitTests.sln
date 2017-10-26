@@ -9,13 +9,13 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UnitTests.Common.DotNetStan
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UnitTests.Common.DotNetStandard11", "UnitTests.Common.DotNetStandard11\UnitTests.Common.DotNetStandard11.shproj", "{515C6C03-5503-45DF-921F-C8D94634728E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Net.OAuth.NetStandard10", "..\..\source\HolisticWare.Net.OAuth.NetStandard10\HolisticWare.Net.OAuth.NetStandard10.csproj", "{99A55A01-73D4-44FE-8E59-9A6E42726B13}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Net.OAuth.NetStandard10", "..\..\source\HolisticWare.Net.OAuth.NetStandard10\HolisticWare.Net.OAuth.NetStandard10.csproj", "{99A55A01-73D4-44FE-8E59-9A6E42726B13}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Net.OAuth.NetStandard11", "..\..\source\HolisticWare.Net.OAuth.NetStandard11\HolisticWare.Net.OAuth.NetStandard11.csproj", "{49E5F228-3D87-4F38-BDF7-26EB3E2DFE69}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Net.OAuth.NetStandard11", "..\..\source\HolisticWare.Net.OAuth.NetStandard11\HolisticWare.Net.OAuth.NetStandard11.csproj", "{49E5F228-3D87-4F38-BDF7-26EB3E2DFE69}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HolisticWare.Net.OAuth", "..\..\source\HolisticWare.Net.OAuth\HolisticWare.Net.OAuth.shproj", "{0145436C-5EFE-4AD9-81BA-24D7BE276FD1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Net.OAuth.NetStandard13", "..\..\source\HolisticWare.Net.OAuth.NetStandard13\HolisticWare.Net.OAuth.NetStandard13.csproj", "{338D3B0A-7246-4A1A-AC70-CFF0D5AA0EF1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Net.OAuth.NetStandard13", "..\..\source\HolisticWare.Net.OAuth.NetStandard13\HolisticWare.Net.OAuth.NetStandard13.csproj", "{338D3B0A-7246-4A1A-AC70-CFF0D5AA0EF1}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UnitTests.Common.DotNetStandard13", "UnitTests.Common.DotNetStandard13\UnitTests.Common.DotNetStandard13.shproj", "{56EBACB9-A89A-4289-BBD7-FBF9276334D0}"
 EndProject
@@ -32,6 +32,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.NUnit.DotNETStandard11", "nunit\UnitTests.NUnit.DotNETStandard11\UnitTests.NUnit.DotNETStandard11.csproj", "{9E225E03-7F55-4D3B-A66E-6437C2DD32BE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.NUnit.DotNETStandard13", "nunit\UnitTests.NUnit.DotNETStandard13\UnitTests.NUnit.DotNETStandard13.csproj", "{737A1D9C-0A7C-46DD-8702-FD5F056F40D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.XUnit2.DotNETStandard13", "xunit-netfx\UnitTests.XUnit2.DotNETStandard13\UnitTests.XUnit2.DotNETStandard13.csproj", "{950C219D-274F-4BDE-ADAE-D0C4470D271B}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -79,6 +81,10 @@ Global
 		{737A1D9C-0A7C-46DD-8702-FD5F056F40D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{737A1D9C-0A7C-46DD-8702-FD5F056F40D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{737A1D9C-0A7C-46DD-8702-FD5F056F40D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{950C219D-274F-4BDE-ADAE-D0C4470D271B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{950C219D-274F-4BDE-ADAE-D0C4470D271B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{950C219D-274F-4BDE-ADAE-D0C4470D271B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{950C219D-274F-4BDE-ADAE-D0C4470D271B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,6 +99,7 @@ Global
 		{2FA3D724-A040-4106-9796-C990E427FA1F} = {7D8F54EF-1449-4D09-A6E5-90CCD00A691E}
 		{9E225E03-7F55-4D3B-A66E-6437C2DD32BE} = {7D8F54EF-1449-4D09-A6E5-90CCD00A691E}
 		{737A1D9C-0A7C-46DD-8702-FD5F056F40D2} = {7D8F54EF-1449-4D09-A6E5-90CCD00A691E}
+		{950C219D-274F-4BDE-ADAE-D0C4470D271B} = {6AABBDBB-CA0E-423E-99EF-08AF89C32AAA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {80201DC7-57D3-4125-B682-E23C0FE2C569}
