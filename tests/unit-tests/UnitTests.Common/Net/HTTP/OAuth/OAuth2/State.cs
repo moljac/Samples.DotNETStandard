@@ -24,7 +24,7 @@ using System.IO;
 
 using HolisticWare.Net.HTTP.OAuth.OAuth2;
 
-namespace NUnit.TestsNet.HTTP.OAuth.OAuth2
+namespace NUnit.Tests.Net.HTTP.OAuth.OAuth2
 {
     [TestFixture()]
     public class StateTests

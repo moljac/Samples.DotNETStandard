@@ -62,18 +62,18 @@ namespace NUnit.Tests.Net.HTTP
         [Test()]
         public void Merge()
         {
-            Dictionary<string, string> qp01 = new Dictionary<string, string>()
+            Dictionary<string, string> d01 = new Dictionary<string, string>()
             {
                 { "client_id", "client_id_obtained_string" },
                 { "response_type", "code-old" },
-                { "redirect_uri", "http://localhost" },
+                { "redirect_uri", "http://someotherhost" },
             };
 
-            QueryParameters query01 = new QueryParameters(qp01);
+            QueryParameters qp01 = new QueryParameters(d01);
 
-            Console.WriteLine($"query01.ToString(\"D\") = {query01.ToString("D")}");
+            Console.WriteLine($"query01.ToString(\"D\") = {qp01.ToString("D")}");
 
-            Dictionary<string, string> qp02 = new Dictionary<string, string>()
+            Dictionary<string, string> d02 = new Dictionary<string, string>()
             {
                 { "response_type", "code" },
                 { "redirect_uri", "http://localhost" },
@@ -81,10 +81,34 @@ namespace NUnit.Tests.Net.HTTP
                 { "state", "" },
             };
 
-            Dictionary<string, string> qp03 = query01.Merge(qp02);
+            // Merge 
+            // adds new parameters from qp02 
+            // and 
+            // overwrites existing ones in qp01 with values from qp02
+            Dictionary<string, string> d03 = qp01.Merge(d02);
 
-            Console.WriteLine($"query01.ToString(\"D\") = {query01.ToString("D")}");
+            Console.WriteLine($"query01.ToString(\"D\") = {qp01.ToString("D")}");
 
+
+            Dictionary<string, Func<string, string>> parameter_encoding_map_01;
+
+            parameter_encoding_map_01 = new Dictionary<string, Func<string, string>>()
+            {
+                { "response_type",  qp01.DoNotEncode},
+                { "redirect_uri",   qp01.UrlEncode },
+                { "scope", qp01.UrlEncode },
+                { "state", qp01.UrlEncode },
+            };
+
+            QueryParameters qp03 = new QueryParameters(d02)
+            {
+                DefaultParameterEncodings = parameter_encoding_map_01
+            };
+
+            qp03.ToString("D");
+            qp03.Encode().ToString("D");
+
+            return;
         }
 
     }
