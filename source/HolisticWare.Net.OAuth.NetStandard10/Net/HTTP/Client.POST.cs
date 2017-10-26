@@ -10,23 +10,47 @@ namespace HolisticWare.Net.HTTP
 {
     public partial class Client
     {
-        public async Task OAuthPostAsync
-                                (
-                                    string uri_request_token,
-                                    string data_body_token_request,
-                                    string content_type = "application/x-www-form-urlencoded",
-                                    string accept = "Accept=text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
-                                )
+        public async Task<HttpWebResponse> HttpPostAsync
+                                            (
+                                                string url,
+                                                IDictionary<string, string> data,
+                                                IDictionary<string, string> headers = null
+                                            )
         {
-            byte[] bytes = null;
+            if (string.IsNullOrEmpty(url))
+            {
+                throw new ArgumentNullException("url");
+            }
 
-            //bytes = Encoding.ASCII.GetBytes(data_body_token_request);
-            bytes = Encoding.UTF8.GetBytes(data_body_token_request);
-
-            HttpWebRequest http_request = (HttpWebRequest)WebRequest.Create(uri_request_token);
+            HttpWebRequest http_request = (HttpWebRequest)WebRequest.Create(url);
             http_request.Method = "POST";
-            http_request.ContentType = content_type;
-            http_request.Accept = accept;
+
+            foreach (KeyValuePair<string, string> kvp in headers)
+            {
+                if (kvp.Key == "Accept")
+                {
+                    http_request.Accept = kvp.Value;
+                }
+                else
+                {
+                    http_request.Accept = "Accept=text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8";
+                }
+
+                if (kvp.Key == "Content-Type")
+                {
+                    http_request.Accept = kvp.Value;
+                }
+                else
+                {
+                    http_request.ContentType = "application/x-www-form-urlencoded";
+                }
+
+            }
+
+            QueryParameters qp = new QueryParameters(data);
+            string data_string = qp.Encode().ToString("F");
+            byte[] bytes = Encoding.UTF8.GetBytes(data_string);
+                
             //tokenRequest.ContentLength = bytes.Length;
 
             using (Stream stream = await http_request.GetRequestStreamAsync())
@@ -35,7 +59,11 @@ namespace HolisticWare.Net.HTTP
                 await stream.FlushAsync();
             }
 
-            return;
+            this.HttpRequestSetup(http_web_request);
+            http_web_response = (HttpWebResponse)await http_web_request.GetResponseAsync();
+
+            return http_web_response;
         }
+
     }
 } 
