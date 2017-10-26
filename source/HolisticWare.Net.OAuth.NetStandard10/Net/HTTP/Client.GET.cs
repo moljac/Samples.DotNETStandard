@@ -14,13 +14,28 @@ namespace HolisticWare.Net.HTTP
         public async Task<HttpWebResponse> HttpGetAsync
                                             (
                                                 string url,
-                                                Dictionary<string, string> parameters = null
+                                                IDictionary<string, string> query_map = null
                                             )
         {
+            if (string.IsNullOrEmpty(url))
+            {
+                throw new ArgumentNullException("url");
+            }
+
+            string query = null;
+
+            if (null != query_map)
+            {
+                QueryParameters qp = new QueryParameters(query_map);
+                query = qp.ToString("F"); // format query parameters for query (F for fragment)
+            }
+
+            StringBuilder url_sb = new StringBuilder(url).Append("?").Append(query);
+
             // web_request = new System.Net.WebRequest(); // cannot create instance
             http_web_request =
                 // new System.Net.HttpWebRequest()
-                System.Net.WebRequest.CreateHttp(url)
+                System.Net.WebRequest.CreateHttp(url_sb.ToString())
                 ;
 
             this.HttpRequestSetup(http_web_request);
@@ -32,7 +47,7 @@ namespace HolisticWare.Net.HTTP
         public async Task<string> HttpGetStringAsync
                                             (
                                                 string url,
-                                                Dictionary<string, string> query_map = null
+                                                IDictionary<string, string> query_map = null
                                             )
         {
             string query = null;
@@ -43,11 +58,27 @@ namespace HolisticWare.Net.HTTP
                 query = qp.ToString("F"); // format query parameters for query (F for fragment)
             }
 
-            StringBuilder url_sb = new StringBuilder(url).Append("?").Append(query);
+            string response_string = await this.HttpGetStringAsync(url, query);
 
-            string response_string = null;
+            return response_string;
+        }
+
+        public async Task<string> HttpGetStringAsync
+                                            (
+                                                string url,
+                                                string query_url_encoded = null
+                                            )
+        {
+            if (string.IsNullOrEmpty(url))
+            {
+                throw new ArgumentNullException("url");
+            }
+
+            StringBuilder url_sb = new StringBuilder(url).Append("&").Append(query_url_encoded);
 
             http_web_response = await this.HttpGetAsync(url_sb.ToString());
+
+            string response_string = null;
 
             using (StreamReader sr = new StreamReader(http_web_response.GetResponseStream()))
             {
@@ -56,5 +87,6 @@ namespace HolisticWare.Net.HTTP
 
             return response_string;
         }
+
     }
 } 
