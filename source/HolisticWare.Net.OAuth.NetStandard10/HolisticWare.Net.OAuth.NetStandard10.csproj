@@ -9,6 +9,17 @@
 
   <ItemGroup>
     <PackageReference Include="System.Net.Requests" Version="4.3.0" />
+    <PackageReference Include="System.Text.Encoding" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Net\HTTP\Headers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Net\HTTP.Mono\Headers.Mono\HttpWebUtilitiesExtensions.cs" />
+    <Compile Remove="Net\HTTP.Mono\Headers.Mono\Lexer.cs" />
+    <Compile Remove="Net\HTTP.Mono\Headers.Mono\MediaTypeHeaderValue.cs" />
+    <Compile Remove="Net\HTTP.Mono\Headers.Mono\NameValueHeaderValue.cs" />
+    <Compile Remove="Net\HTTP.Mono\Headers.Mono\Parser.cs" />
   </ItemGroup>
   <Import Project="..\HolisticWare.Net.OAuth\HolisticWare.Net.OAuth.projitems" Label="Shared" />
 </Project>
