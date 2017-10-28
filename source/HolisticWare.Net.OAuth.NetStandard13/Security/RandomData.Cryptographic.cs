@@ -43,13 +43,15 @@ namespace HolisticWare.Security
         /// <returns></returns>
         public byte[] ComputeSHA256Hash(string input_string)
         {
-            byte[] bytes = Encoding.ASCII.GetBytes(input_string);
+            byte[] bytes_ascii = Encoding.ASCII.GetBytes(input_string);
+            byte[] bytes_utf8 = Encoding.UTF8.GetBytes(input_string);
+
             //SHA256Managed sha256 = new SHA256Managed();
             byte[] hash = null;
 
             using (SHA256 algorithm = SHA256.Create())
             {
-                hash = algorithm.ComputeHash(bytes);
+                hash = algorithm.ComputeHash(bytes_ascii);
             }
 
             return hash;
