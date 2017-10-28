@@ -14,6 +14,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\OAuth\OAuth2\State.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\QueryParameters.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Security\RandomData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\IClient.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Net\HTTP\" />
