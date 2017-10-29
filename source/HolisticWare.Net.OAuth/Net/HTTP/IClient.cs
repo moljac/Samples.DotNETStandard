@@ -44,5 +44,13 @@ namespace HolisticWare.Net.Net.HTTP
                                         string query_url_encoded = null
                                     );
 
+        Task<HttpWebResponse> HttpPostAsync
+                                    (
+                                        string url,
+                                        IDictionary<string, string> data,
+                                        IDictionary<string, string> headers = null
+                                    );
+
+
     }
 }
