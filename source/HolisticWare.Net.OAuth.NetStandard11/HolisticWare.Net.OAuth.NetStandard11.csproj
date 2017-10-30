@@ -13,5 +13,10 @@
   <ItemGroup>
     <Folder Include="Net\HTTP\OAuth\" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="..\HolisticWare.Net.OAuth\Net\HTTP\Client.Fluent.API.cs" />
+    <Compile Remove="..\HolisticWare.Net.OAuth\Net\HTTP\Client.Fluent.API.cs" />
+    <Compile Remove="..\HolisticWare.Net.OAuth\Net\HTTP\Client.Fluent.API.cs" />
+  </ItemGroup>
   <Import Project="..\HolisticWare.Net.OAuth\HolisticWare.Net.OAuth.projitems" Label="Shared" />
 </Project>

@@ -20,6 +20,7 @@
     <Compile Remove="Net\HTTP.Mono\Headers.Mono\MediaTypeHeaderValue.cs" />
     <Compile Remove="Net\HTTP.Mono\Headers.Mono\NameValueHeaderValue.cs" />
     <Compile Remove="Net\HTTP.Mono\Headers.Mono\Parser.cs" />
+    <Compile Remove="..\HolisticWare.Net.OAuth\Net\HTTP\Client.Fluent.API.cs" />
   </ItemGroup>
   <Import Project="..\HolisticWare.Net.OAuth\HolisticWare.Net.OAuth.projitems" Label="Shared" />
 </Project>

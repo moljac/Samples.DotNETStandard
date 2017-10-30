@@ -4,53 +4,17 @@ using System.Threading.Tasks;
 
 using System.Net;
 
-namespace HolisticWare.Net.Net.HTTP
+namespace HolisticWare.Net.HTTP
 {
     /// <summary>
     /// HTTP Client interface
     ///     Fluent interface
     ///     mimic CURL
     /// </summary>
-    public interface IClient
+    public partial interface IClient
     {
-        IClient UrlEndpoint(string url);
+        // Fluent API IClient.Fluent.API.cs
 
-        IClient UrlEndpoint(Uri url);
-
-        IClient Method(string method);
-
-        IClient Headers(List<string> headers);
-
-        IClient Headers(IDictionary<string, string> headers);
-
-        IClient Parameters(IDictionary<string, string> parameters);
-
-        IClient ParameterEncodings(IDictionary<string, Func<string, string> > parameters);
-
-        Task<HttpWebResponse> HttpGetAsync
-                                    (
-                                        string url,
-                                        IDictionary<string, string> query_map = null
-                                    );
-
-         Task<string> HttpGetStringAsync
-                                    (
-                                        string url,
-                                        IDictionary<string, string> query_map = null
-                                    );
-        Task<string> HttpGetStringAsync
-                                    (
-                                        string url,
-                                        string query_url_encoded = null
-                                    );
-
-        Task<HttpWebResponse> HttpPostAsync
-                                    (
-                                        string url,
-                                        IDictionary<string, string> data,
-                                        IDictionary<string, string> headers = null
-                                    );
-
-
+        // Request API IClient.Requests.API.cs
     }
 }

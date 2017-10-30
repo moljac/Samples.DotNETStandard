@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using System.Linq;
+
 using System.Net;
 using System.Text;
 
 namespace HolisticWare.Net.HTTP
 {
-    public partial class Client
+    public partial class Client : IClient, IFormattable
     {
-        System.Net.HttpWebRequest http_web_request = null;
-        System.Net.HttpWebResponse http_web_response = null;
-        //System.Net.WebRequest web_request = null;
-        //System.Net.HttpRequestHeader http_request_header;
-
         public Client()
         {
             this.HttpRequestSetup = HttpRequestSetupImplementation;

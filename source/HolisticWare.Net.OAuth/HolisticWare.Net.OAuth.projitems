@@ -17,6 +17,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\IClient.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\Methods.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\Verbs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\IClient.Fluent.API.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\IClient.Requests.API.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\Client.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\Client.Fluent.API.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Net\HTTP\" />
