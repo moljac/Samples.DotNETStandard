@@ -10,59 +10,47 @@ namespace HolisticWare.Net.HTTP
 {
     public partial class Client : IClient
     {
-        public async Task<HttpWebResponse> HttpPostAsync
-                                            (
-                                                string url,
-                                                IDictionary<string, string> data,
-                                                IDictionary<string, string> headers = null
-                                            )
+        public async Task<Client> RequestPostAsync(IDictionary<string, string> data)
         {
-            if (string.IsNullOrEmpty(url))
-            {
-                throw new ArgumentNullException("url");
-            }
-
-            HttpWebRequest http_request = (HttpWebRequest)WebRequest.Create(url);
-            http_request.Method = "POST";
-
-            foreach (KeyValuePair<string, string> kvp in headers)
-            {
-                if (kvp.Key == "Accept")
-                {
-                    http_request.Accept = kvp.Value;
-                }
-                else
-                {
-                    http_request.Accept = "Accept=text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8";
-                }
-
-                if (kvp.Key == "Content-Type")
-                {
-                    http_request.Accept = kvp.Value;
-                }
-                else
-                {
-                    http_request.ContentType = "application/x-www-form-urlencoded";
-                }
-
-            }
+            this
+                .Method("POST")
+                //.Headers()            // default headers
+                //.Parameters()         // Data/Parameters
+                ;
 
             QueryParameters qp = new QueryParameters(data);
             string data_string = qp.Encode().ToString("F");
-            byte[] bytes = Encoding.UTF8.GetBytes(data_string);
-                
-            //tokenRequest.ContentLength = bytes.Length;
 
-            using (Stream stream = await http_request.GetRequestStreamAsync())
+            await this.RequestPostAsync(data_string);
+
+            return this;
+        }
+
+        public async Task<Client> RequestPostAsync(string data_string)
+        {
+            byte[] bytes = Encoding.UTF8.GetBytes(data_string);
+
+            foreach (KeyValuePair<Uri, ClientImplementation<HttpWebRequest>> kvp in this.RequestImplementationObjects)
             {
-                await stream.WriteAsync(bytes, 0, bytes.Length);
-                await stream.FlushAsync();
+
+                Uri uri = kvp.Key;
+                HttpWebRequest request = kvp.Value.ImplementationObject;
+
+                RequestSetup(request);
+
+
+                using (Stream stream = await request.GetRequestStreamAsync())
+                {
+                    await stream.WriteAsync(bytes, 0, bytes.Length);
+                    await stream.FlushAsync();
+                }
+
+                HttpWebResponse response = (HttpWebResponse)await request.GetResponseAsync();
+
+                this.ResponseImplementationObjects.Add(uri, response);
             }
 
-            this.HttpRequestSetup(http_web_request);
-            http_web_response = (HttpWebResponse)await http_web_request.GetResponseAsync();
-
-            return http_web_response;
+            return this;
         }
 
     }
