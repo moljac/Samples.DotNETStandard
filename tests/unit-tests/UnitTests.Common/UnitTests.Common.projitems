@@ -15,6 +15,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Uri.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Security\RandomData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\Client.Fluent.API.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\Client.GET.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\Client.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Security\" />
