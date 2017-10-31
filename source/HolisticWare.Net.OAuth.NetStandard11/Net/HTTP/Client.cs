@@ -1,54 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net;
+using System.Net.Http;
 using System.Text;
 
 namespace HolisticWare.Net.HTTP
 {
-    public partial class Client
+    /// <summary>
+    /// HTTP Client
+    /// .NET Standard 1.0 
+    /// implemented with
+    ///         HttpRequestMessage  (WebRequest) 
+    ///         HttpResponseMessage (WebResponse) 
+    /// </summary>
+   public partial class Client
     {
         public Client()
         {
-            this.HttpRequestSetup = HttpRequestSetupImplementation;
+            this.RequestMethodVerb = "GET";
+            this.RequestSetup = RequestSetupImplementation;
 
             return;
         }
 
-        public Func<HttpWebRequest, HttpWebRequest> HttpRequestSetup;
+        public Func<HttpRequestMessage, HttpRequestMessage> RequestSetup;
 
-        protected HttpWebRequest HttpRequestSetupImplementation(HttpWebRequest web_request)
+        protected HttpRequestMessage RequestSetupImplementation(HttpRequestMessage http_request_message)
         {
-            /*
-            http_web_request.Method = "GET";
-            http_web_request.Accept = "";
-            http_web_request.ContentType = "";
-            http_web_request.CookieContainer = null;
 
-            http_web_request.AllowReadStreamBuffering = false;
-            http_web_request.Credentials = null;
-            http_web_request.UseDefaultCredentials = false;
-            */
-
-            /*
-            WebHeaderCollection web_header_collection = 
-            new WebHeaderCollection()
-            null    
-            ;
-            web_header_collection[""] = "";
-            http_web_request.Headers = web_header_collection;
-            */
-
-            //CookieContainer cookie_conatiner = new CookieContainer();
-            //cookie_conatiner.Add
-            // (
-            //     new Uri(url),
-            //     new Cookie("__utmc", "#########")
-            //     {
-            //         Domain = "http://xamarin.com"
-            //     }
-            //);
-
-            return web_request;
+            return http_request_message;
         }
     }
 } 

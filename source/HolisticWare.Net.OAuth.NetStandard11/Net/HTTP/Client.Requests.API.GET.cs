@@ -10,35 +10,30 @@ namespace HolisticWare.Net.HTTP
 {
     public partial class Client
     {
-
-        public async Task<HttpResponseMessage> HttpGetAsync
-                                                (
-                                                    string url,
-                                                    IDictionary<string, string> parameters
-                                                )
+        public async Task<Client> RequestGetAsync()
         {
-            HttpClient http_client = new HttpClient();
+            this
+                .Method("GET")
+                //.Headers()            // default headers
+                //.Parameters()         // Data/Parameters
+                ;
 
-            HttpResponseMessage http_response_msg = null;
+            foreach (KeyValuePair<Uri, ClientImplementation<HttpRequestMessage>> kvp in this.RequestImplementationObjects)
+            {
+                Uri uri = kvp.Key;
+                HttpRequestMessage http_request_message = kvp.Value.ImplementationObject;
 
-            http_response_msg = await http_client.GetAsync(url);
+                RequestSetup(http_request_message);
 
-            return http_response_msg;
-        }
+                using (HttpClient http_client = new HttpClient())
+                {
+                    HttpResponseMessage response = await http_client.SendAsync(http_request_message);
 
-        public async Task<string> HttpGetStringAsync
-                                                (
-                                                    string url,
-                                                    IDictionary<string, string> parameters
-                                                )
-        {
-            HttpClient http_client = new HttpClient();
+                    this.ResponseImplementationObjects.Add(uri, response);
+                }
+            }
 
-            string response_string = null;
-
-            string http_response_str = await http_client.GetStringAsync(url);
-
-            return response_string;
+            return this;
         }
 
     }
