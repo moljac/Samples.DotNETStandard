@@ -22,17 +22,42 @@
     <Compile Remove="..\HolisticWare.Net.OAuth\Net\HTTP\Client.Fluent.API.cs" />
     <Compile Remove="..\HolisticWare.Net.OAuth\Net\HTTP\Client.Fluent.API.cs" />
     <Compile Remove="..\HolisticWare.Net.OAuth\Net\HTTP\Client.Fluent.API.cs" />
+    <Compile Remove="..\HolisticWare.Net.OAuth\Net\HTTP\Client.Fluent.API.cs" />
+    <Compile Remove="..\HolisticWare.Net.OAuth\Net\HTTP\Client.Fluent.API.cs" />
+    <Compile Remove="..\HolisticWare.Net.OAuth\Net\HTTP\Client.Fluent.API.cs" />
+    <Compile Remove="..\HolisticWare.Net.OAuth\Net\HTTP\Client.Fluent.API.cs" />
+    <Compile Remove="..\HolisticWare.Net.OAuth\Net\HTTP\Client.Fluent.API.cs" />
+    <Compile Remove="..\HolisticWare.Net.OAuth\Net\HTTP\Client.Fluent.API.cs" />
+    <Compile Remove="..\HolisticWare.Net.OAuth\Net\HTTP\Client.Fluent.API.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Net\" />
     <Folder Include="Net\HTTP\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\HolisticWare.Net.OAuth.NetStandard11\Net\HTTP\Client.Fluent.API.cs">
+      <Link>Net\HTTP\Client.Fluent.API.cs</Link>
+    </Compile>
+    <Compile Include="..\HolisticWare.Net.OAuth.NetStandard11\Net\HTTP\Client.Requests.API.POST.cs">
+      <Link>Net\HTTP\Client.Requests.API.POST.cs</Link>
+    </Compile>
+    <Compile Include="..\HolisticWare.Net.OAuth.NetStandard11\Net\HTTP\Client.Requests.API.GET.cs">
+      <Link>Net\HTTP\Client.Requests.API.GET.cs</Link>
+    </Compile>
+    <Compile Include="..\HolisticWare.Net.OAuth.NetStandard11\Net\HTTP\Client.cs">
+      <Link>Net\HTTP\Client.cs</Link>
+    </Compile>
     <Compile Include="..\HolisticWare.Net.OAuth.NetStandard11\Net\HTTP\Client.Requests.API.cs">
       <Link>Net\HTTP\Client.Requests.API.cs</Link>
     </Compile>
+    <Compile Include="..\HolisticWare.Net.OAuth.NetStandard11\Net\HTTP\ClientImplementation.cs">
+      <Link>Net\HTTP\ClientImplementation.cs</Link>
+    </Compile>
     <Compile Include="..\HolisticWare.Net.OAuth.NetStandard11\Net\HTTP\Client.IFormattable.cs">
       <Link>Net\HTTP\Client.IFormattable.cs</Link>
+    </Compile>
+    <Compile Include="..\HolisticWare.Net.OAuth.NetStandard11\Net\HTTP\Client.Responses.API.cs">
+      <Link>Net\HTTP\Client.Responses.API.cs</Link>
     </Compile>
   </ItemGroup>
   <Import Project="..\HolisticWare.Net.OAuth\HolisticWare.Net.OAuth.projitems" Label="Shared" Condition="Exists('..\HolisticWare.Net.OAuth\HolisticWare.Net.OAuth.projitems')" />
