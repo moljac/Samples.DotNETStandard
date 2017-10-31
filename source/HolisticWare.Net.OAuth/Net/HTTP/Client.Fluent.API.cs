@@ -16,6 +16,29 @@ namespace HolisticWare.Net.HTTP
             set;
         }
 
+
+        public Client UrlEndpoint(string url)
+        {
+            if (string.IsNullOrEmpty(url))
+            {
+                throw new ArgumentException("url");
+            }
+
+            return this.UrlEndpoints(url);
+        }
+
+        public Client UrlEndpoints(IEnumerable<Uri> urls)
+        {
+            if (null == urls || urls.Count() < 1)
+            {
+                throw new ArgumentException("urls");
+            }
+
+            this.EndPoints.AddRange(urls);
+
+            return this;
+        }
+
         public Client UrlEndpoints(string urls)
         {
             if (string.IsNullOrEmpty(urls))
@@ -23,7 +46,11 @@ namespace HolisticWare.Net.HTTP
                 throw new ArgumentException("urls");
             }
 
-            string[] urls_array = urls.Split(new char[] { ' ', ';' });
+            string[] urls_array = urls.Split
+                                        (
+                                            new char[] { ' ', ';' },
+                                            StringSplitOptions.RemoveEmptyEntries
+                                        );
 
             List<Uri> uris = new List<Uri>();
             foreach (string url in urls_array)
@@ -37,29 +64,9 @@ namespace HolisticWare.Net.HTTP
                 {
                     throw new ArgumentException("url is not Uri", exc);
                 }
+
                 uris.Add(u);
-            }
 
-            this.EndPoints.AddRange(uris);
-
-            return this;
-        }
-
-        public Client UrlEndpoint(string url)
-        {
-            if (string.IsNullOrEmpty(url))
-            {
-                throw new ArgumentException("url");
-            }
-
-            return this.UrlEndpoints(url);
-        }
-
-        public Client UrlEndpoint(Uri url)
-        {
-            if (null == url)
-            {
-                throw new ArgumentException("url");
             }
 
             if (null == this.EndPoints)
@@ -67,19 +74,11 @@ namespace HolisticWare.Net.HTTP
                 this.EndPoints = new List<Uri>();
             }
 
-            this.EndPoints.Add(url);
-
-            return this;
-        }
-
-        public Client UrlEndpoints(IEnumerable<Uri> urls)
-        {
-            if (null == urls || urls.Count() < 1)
+            //this.EndPoints.AddRange(uris);
+            foreach (Uri u in uris)
             {
-                throw new ArgumentException("urls");
+                this.UrlEndpoint(u);
             }
-
-            this.EndPoints.AddRange(urls);
 
             return this;
         }
@@ -135,8 +134,9 @@ namespace HolisticWare.Net.HTTP
                 string header_name = header_parts[0];
                 string header_value = header_parts[1];
 
-                headers_dictionary.Add(header_name, header_value);
+                headers_dictionary[header_name] = header_value;
             }
+
             return this.Headers(headers_dictionary);
         }
 
@@ -184,7 +184,5 @@ namespace HolisticWare.Net.HTTP
         {
             throw new NotImplementedException();
         }
-
-
     }
 } 

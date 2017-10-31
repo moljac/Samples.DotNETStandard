@@ -17,7 +17,7 @@ namespace HolisticWare.Net.HTTP
         // GET
         // curl https://curl.haxx.se
         // curl https://curl.haxx.se http://xamarin.com
-        Client RequestGetAsync
+        Task<Client> RequestGetAsync
                             (
                             );
 
@@ -27,13 +27,21 @@ namespace HolisticWare.Net.HTTP
                                     //);
 
         // POST
-        // curl --data name=curl http://url.example.com
+        // curl \
+        //      --data name=curl \
+        //      --data date=2017-10-28 \
+        //      http://url.example.com
         // curl --data name=curl http://url1.example.com http://url2.example.com
 
         Task<Client> RequestPostAsync
                             (
                                 string data
                             );
+
+        //Task<Client> RequestPostAsync
+                            //(
+                            //    string[] data
+                            //);
 
         Task<Client> RequestPostAsync
                             (
