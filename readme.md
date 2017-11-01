@@ -69,8 +69,13 @@ HTTP client library for .NET Standard 1.0 and 1.1 intended to be integrated in X
 
             https://github.com/moljac/Samples.DotNETStandard/blob/master/source/HolisticWare.Net.OAuth.NetStandard11/Net/HTTP/Client.Requests.API.POST.cs#L33-L51
 
+## Samples included
 
-https://github.com/googlesamples/oauth-apps-for-windows
+[INPRGORESS]
 
-https://github.com/googlesamples/oauth-apps-for-windows/blob/master/OAuthConsoleApp/OAuthConsoleApp/Program.cs
+Refactored google samples for OAuth on Windows (it will use this xplat HTTP Client library):
+
+*   https://github.com/googlesamples/oauth-apps-for-windows
+
+*   https://github.com/googlesamples/oauth-apps-for-windows/blob/master/OAuthConsoleApp/OAuthConsoleApp/Program.cs
 
