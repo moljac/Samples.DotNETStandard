@@ -6,6 +6,20 @@ using System.Linq;
 using System.Net;
 using System.Text;
 
+//-------------------------------------------------------------------------------------------------
+// Aliases for readibility
+#if NETSTANDARD1_0
+// all platforms, non optimized
+using ImplementationRequest = System.Net.HttpWebRequest;
+using ImplementationResponse = System.Net.HttpWebResponse;
+#else
+// ! all platforms (missing Windows Phone 8 Silverlight), optimized for some Xamarin platforms:
+//  
+using ImplementationRequest = System.Net.Http.HttpRequestMessage;
+using ImplementationResponse = System.Net.Http.HttpResponseMessage;
+#endif
+//-------------------------------------------------------------------------------------------------
+
 namespace HolisticWare.Net.HTTP
 {
     public partial class Client : IClient, IFormattable
@@ -25,6 +39,54 @@ namespace HolisticWare.Net.HTTP
             }
 
             return this.UrlEndpoints(url);
+        }
+
+        public Client UrlEndpoint(Uri url)
+        {
+            if (null == url)
+            {
+                throw new ArgumentException("url");
+            }
+
+            if (null == this.EndPoints)
+            {
+                this.EndPoints = new List<Uri>();
+            }
+
+            if (null == this.RequestImplementationObjects)
+            {
+                this.RequestImplementationObjects =
+                        new Dictionary
+                                <
+                                    // Uri endpoints for requests
+                                    Uri,
+                                    // Request Details (platform specific)
+                                    ClientRequestImplementation<ImplementationRequest>
+                                >();
+            }
+
+            this.EndPoints.Add(url);
+            this.RequestImplementationObjects
+                    .Add
+                        (
+                            url,
+                            #if NETSTANDARD1_0
+                            // .NET Standard 1.0
+                            // HttpWebRequest 
+                            (ImplementationRequest)WebRequest.Create(url)
+                            #else
+                            // .NET Standard 1.1+
+                            // HttpRequestMessage for HttpClient
+                            new ImplementationRequest()
+                            {
+                                Method = new System.Net.Http.HttpMethod(this.RequestMethodVerb),
+                                RequestUri = url,
+                            }
+                            #endif
+
+                        );
+
+            return this;
         }
 
         public Client UrlEndpoints(IEnumerable<Uri> urls)

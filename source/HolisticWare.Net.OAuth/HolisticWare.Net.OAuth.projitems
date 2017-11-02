@@ -22,6 +22,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\Client.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\Client.Fluent.API.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
     <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\Client.IFormattable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\Client.Requests.API.GET.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\Client.Requests.API.POST.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\Client.Responses.API.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\ClientRequestImplementation.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\ClientResponseImplementation.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Net\HTTP\" />
