@@ -18,7 +18,6 @@ using Fact= NUnit.Framework.TestAttribute;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Net;
 using System.Text;
 
 using HolisticWare.Net.HTTP;
@@ -172,7 +171,15 @@ namespace NUnit.Tests.Net.HTTP
 
             foreach (Client c in clients)
             {
+                // Dumping
+                //  Abstraction API (HTTP.Client)
+                //  Implementation API
+                //      .NET Standard 1.0 - HttpWebRequest
+                //      .NET Standard 1.1 - HttpClient
+                //  Raw HTTP request
+                string client_dump = c.ToString("A I R");
 
+                Console.WriteLine($"{client_dump}");
             }
 
             return;
