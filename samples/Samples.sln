@@ -11,9 +11,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Net.OAuth.NetS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Net.OAuth.NetStandard11", "..\source\HolisticWare.Net.OAuth.NetStandard11\HolisticWare.Net.OAuth.NetStandard11.csproj", "{49E5F228-3D87-4F38-BDF7-26EB3E2DFE69}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Net.OAuth.NetStandard16", "..\source\HolisticWare.Net.OAuth.NetStandard16\HolisticWare.Net.OAuth.NetStandard16.csproj", "{72AC2C83-EE17-4CD3-AC6F-9FDB8387FB25}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HolisticWare.Net.OAuth", "..\source\HolisticWare.Net.OAuth\HolisticWare.Net.OAuth.shproj", "{0145436C-5EFE-4AD9-81BA-24D7BE276FD1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Net.OAuth.NetStandard13", "..\source\HolisticWare.Net.OAuth.NetStandard13\HolisticWare.Net.OAuth.NetStandard13.csproj", "{338D3B0A-7246-4A1A-AC70-CFF0D5AA0EF1}"
 EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\source\HolisticWare.Net.OAuth\HolisticWare.Net.OAuth.projitems*{0145436c-5efe-4ad9-81ba-24d7be276fd1}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -31,10 +36,10 @@ Global
 		{49E5F228-3D87-4F38-BDF7-26EB3E2DFE69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49E5F228-3D87-4F38-BDF7-26EB3E2DFE69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49E5F228-3D87-4F38-BDF7-26EB3E2DFE69}.Release|Any CPU.Build.0 = Release|Any CPU
-		{72AC2C83-EE17-4CD3-AC6F-9FDB8387FB25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{72AC2C83-EE17-4CD3-AC6F-9FDB8387FB25}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{72AC2C83-EE17-4CD3-AC6F-9FDB8387FB25}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{72AC2C83-EE17-4CD3-AC6F-9FDB8387FB25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{338D3B0A-7246-4A1A-AC70-CFF0D5AA0EF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{338D3B0A-7246-4A1A-AC70-CFF0D5AA0EF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{338D3B0A-7246-4A1A-AC70-CFF0D5AA0EF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{338D3B0A-7246-4A1A-AC70-CFF0D5AA0EF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,7 +47,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{99A55A01-73D4-44FE-8E59-9A6E42726B13} = {570CB4ED-65D6-4F00-915A-E69A5EF1A352}
 		{49E5F228-3D87-4F38-BDF7-26EB3E2DFE69} = {570CB4ED-65D6-4F00-915A-E69A5EF1A352}
-		{72AC2C83-EE17-4CD3-AC6F-9FDB8387FB25} = {570CB4ED-65D6-4F00-915A-E69A5EF1A352}
+		{0145436C-5EFE-4AD9-81BA-24D7BE276FD1} = {570CB4ED-65D6-4F00-915A-E69A5EF1A352}
+		{338D3B0A-7246-4A1A-AC70-CFF0D5AA0EF1} = {570CB4ED-65D6-4F00-915A-E69A5EF1A352}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {80201DC7-57D3-4125-B682-E23C0FE2C569}

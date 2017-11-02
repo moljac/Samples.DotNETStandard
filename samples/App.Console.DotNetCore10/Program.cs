@@ -9,14 +9,9 @@ namespace App.Console.DotNetCore
     {
         static void Main(string[] args)
         {
-            OAuth2Http oauth2 = new OAuth2Http();
-            Task<string> content = oauth2.HttpGetStringAsync("http://xamarin.com");
+            Client c = new Client();
 
-            string s = content.Result;
-
-            System.Console.WriteLine($"Response:");
-            System.Console.WriteLine($"{s}");
-
+            Console.WriteLine($"Demo");
             return;
         }
     }

@@ -8,9 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\source\HolisticWare.Net.OAuth.NetStandard10\HolisticWare.Net.OAuth.NetStandard10.csproj" />
+    <PackageReference Include="System.Console" Version="4.3.0" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="System.Console" Version="4.3.0" />
+    <ProjectReference Include="..\..\source\HolisticWare.Net.OAuth.NetStandard10\HolisticWare.Net.OAuth.NetStandard10.csproj" />
   </ItemGroup>
 </Project>
