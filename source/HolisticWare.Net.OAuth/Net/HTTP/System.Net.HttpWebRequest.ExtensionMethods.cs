@@ -1,14 +1,19 @@
 ﻿using System;
+using System.Text;
+
+#if NETSTANDARD1_0
+using System.Net;
 
 namespace HolisticWare.Net.HTTP
 {
     public static partial class HttpWebRequestExtensionMethods
     {
-        public static Client AddHeaders(this HttpWebRequest uris)
+        public static string ToString(this HttpWebRequest request)
         {
-            Client c = new Client();
+            StringBuilder sb = new StringBuilder();
 
-            return c;
+            return sb.ToString();
         }
     }
 }
+#endif
