@@ -38,7 +38,18 @@ HTTP client library for .NET Standard 1.0 and 1.1 intended to be integrated in X
 
 *   ASP.net Core 
 
-    
+    ```csharp
+    client
+        .AddHeaders()
+        .AddQueryParameters()
+        .Configure<HeadersConfiguration>()
+        .AddBodyData<string>()
+        .AddBodyData<byte[]>()
+        .Configure<BodyDataConfiguration>()
+        .Send()
+        ;        
+    ```
+
 *   Flurl - Fluent URL
 
     *   Fluent API
