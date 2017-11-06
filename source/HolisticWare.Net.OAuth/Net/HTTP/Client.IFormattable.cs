@@ -50,7 +50,10 @@ namespace HolisticWare.Net.HTTP
 
         public string ToString(string format, IFormatProvider provider)
         {
-            if (String.IsNullOrEmpty(format)) format = "R";
+            if (String.IsNullOrEmpty(format))
+            {
+                format = "R";
+            }
 
             if (provider == null)
             {
@@ -173,19 +176,7 @@ namespace HolisticWare.Net.HTTP
                 sb.AppendLine($"Uri.PathAndQuery   = {uri.PathAndQuery}");
 
                 ImplementationRequest request = kvp.Value.ImplementationObject;
-                sb.AppendLine();
-
-                #if NETSTANDARD1_0
-                sb.AppendLine($"[Method] = {request.Method}");
-                sb.AppendLine($"[RequestUri] = {request.RequestUri}");
-                sb.AppendLine($"[Path] = {request.RequestUri.PathAndQuery}");
-                sb.AppendLine($"[Headers] = {request.Headers}");
-                sb.AppendLine($"[Headers-Accept]      = {request.Accept}");
-                sb.AppendLine($"[Headers-ContentType] = {request?.ContentType}");
-                sb.AppendLine($"[Credentials] = {request.Credentials}");
-                #else
-                sb.AppendLine($"[Method] = {request.Method}");
-                #endif
+                sb.AppendLine(request.ToString());
             }
 
             return sb.ToString();
