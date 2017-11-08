@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{5ADCC2B2-20E1-402B-80AC-6D9678700464}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>HolisticWare.JSON</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)System\DecimalExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)System\Reflection\Extensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)System\Type.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)System\TypeCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)System\JSON\JavaScriptReader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)System\JSON\JsonArray.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)System\JSON\JsonObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)System\JSON\JsonPrimitive.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)System\JSON\JsonType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)System\JSON\JsonValue.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)System\Decimal.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)System\JSON\" />
+  </ItemGroup>
+</Project>
