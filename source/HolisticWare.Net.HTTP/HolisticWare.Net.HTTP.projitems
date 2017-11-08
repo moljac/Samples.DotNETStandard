@@ -27,6 +27,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\Client.Responses.API.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
     <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\ClientRequestImplementation.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
     <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\ClientResponseImplementation.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\System.String.ExtensionMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\System.Uri.ExtensionMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\System.Net.HttpWebRequest.ExtensionMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\System.Net.HttpWebResponse.ExtensionMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\System.Net.Http.HttpRequestMessage.ExtensionMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\System.Net.Http.HttpResponseMessage.ExtensionMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\System.Net.WebHeaderCollection.ExtensionMethods.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Net\HTTP\" />

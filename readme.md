@@ -36,6 +36,20 @@ HTTP client library for .NET Standard 1.0 and 1.1 intended to be integrated in X
 
     *   sending HTTP request to multiple Endpoints
 
+*   ASP.net Core 
+
+    ```csharp
+    client
+        .AddHeaders()
+        .AddQueryParameters()
+        .Configure<HeadersConfiguration>()
+        .AddBodyData<string>()
+        .AddBodyData<byte[]>()
+        .Configure<BodyDataConfiguration>()
+        .Send()
+        ;        
+    ```
+
 *   Flurl - Fluent URL
 
     *   Fluent API
@@ -44,30 +58,30 @@ HTTP client library for .NET Standard 1.0 and 1.1 intended to be integrated in X
 
         "http://xamarin.com".GetAsync();
 
-    *   lightweight HTTP API replacement for RESTSharp et all
+*   lightweight HTTP API replacement for RESTSharp et all
 
-    *   support for .NET Standard
+*   support for .NET Standard
 
-        *   1.0 wrapping WebRequest/HttpWebRequest and WebResponse/HttpWebResponse
+    *   1.0 wrapping WebRequest/HttpWebRequest and WebResponse/HttpWebResponse
 
-            GET
+        GET
 
-            https://github.com/moljac/Samples.DotNETStandard/blob/master/source/HolisticWare.Net.OAuth.NetStandard10/Net/HTTP/Client.Requests.API.GET.cs#L22-L32
+        https://github.com/moljac/Samples.DotNETStandard/blob/master/source/HolisticWare.Net.OAuth.NetStandard10/Net/HTTP/Client.Requests.API.GET.cs#L22-L32
 
-            POST
+        POST
 
-            https://github.com/moljac/Samples.DotNETStandard/blob/master/source/HolisticWare.Net.OAuth.NetStandard10/Net/HTTP/Client.Requests.API.POST.cs#L33-L51
+        https://github.com/moljac/Samples.DotNETStandard/blob/master/source/HolisticWare.Net.OAuth.NetStandard10/Net/HTTP/Client.Requests.API.POST.cs#L33-L51
 
 
-        *   1.1 wrapping HttpClient (HttpRequestMessage and HttpResponseMessage)
-            
-            GET 
+    *   1.1 wrapping HttpClient (HttpRequestMessage and HttpResponseMessage)
+        
+        GET 
 
-            https://github.com/moljac/Samples.DotNETStandard/blob/master/source/HolisticWare.Net.OAuth.NetStandard11/Net/HTTP/Client.Requests.API.GET.cs#L21-L36
+        https://github.com/moljac/Samples.DotNETStandard/blob/master/source/HolisticWare.Net.OAuth.NetStandard11/Net/HTTP/Client.Requests.API.GET.cs#L21-L36
 
-            POST
+        POST
 
-            https://github.com/moljac/Samples.DotNETStandard/blob/master/source/HolisticWare.Net.OAuth.NetStandard11/Net/HTTP/Client.Requests.API.POST.cs#L33-L51
+        https://github.com/moljac/Samples.DotNETStandard/blob/master/source/HolisticWare.Net.OAuth.NetStandard11/Net/HTTP/Client.Requests.API.POST.cs#L33-L51
 
 ## Samples included
 
