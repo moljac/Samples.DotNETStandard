@@ -19,7 +19,7 @@ using ImplementationResponse = System.Net.Http.HttpResponseMessage;
 #endif
 //-------------------------------------------------------------------------------------------------
 
-namespace HolisticWare.Net.HTTP
+namespace Core.Net.HTTP
 {
     public partial class Client : IClient
     {

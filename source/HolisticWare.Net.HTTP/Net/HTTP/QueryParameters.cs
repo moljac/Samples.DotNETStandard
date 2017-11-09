@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace HolisticWare.Net.HTTP
+namespace Core.Net.HTTP
 {
     public partial class QueryParameters
     {

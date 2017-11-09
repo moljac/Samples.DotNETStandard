@@ -14,7 +14,7 @@ using ImplementationResponse = System.Net.Http.HttpResponseMessage;
 #endif
 //-------------------------------------------------------------------------------------------------
 
-namespace HolisticWare.Net.HTTP
+namespace Core.Net.HTTP
 {
     /// <summary>
     /// Client HTTP Request implementation - platform specific

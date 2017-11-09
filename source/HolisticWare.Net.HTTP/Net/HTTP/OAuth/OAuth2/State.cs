@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HolisticWare.Net.HTTP.OAuth.OAuth2
+namespace Core.Net.HTTP.OAuth.OAuth2
 //namespace Xamarin.Auth.OAuth.OAuth2
 {
     /// <summary>

@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 using System.Net;
 
-namespace HolisticWare.Net.HTTP
+namespace Core.Net.HTTP
 {
     /// <summary>
     /// HTTP Client interface

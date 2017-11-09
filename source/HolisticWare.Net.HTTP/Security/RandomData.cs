@@ -1,6 +1,7 @@
 ﻿using System;
+using Core.Text.Encodings;
 
-namespace HolisticWare.Security
+namespace Core.Security
 {
     /// <summary>
     /// Random Data utility clas for OAuth
@@ -98,7 +99,12 @@ namespace HolisticWare.Security
             rng.NextBytes(bytes);
             #endif
 
-            return Base64UrlEncodeNoPadding(bytes);
+            string base64url_no_padding = null;
+
+            Base64UrlEncoding e = new Base64UrlEncoding();
+            base64url_no_padding = e.Encode(bytes, is_padded:false);
+
+            return base64url_no_padding;
         }
 
         /// <summary>
@@ -133,24 +139,6 @@ namespace HolisticWare.Security
         // See http://openid.net/specs/openid-connect-core-1_0.html#CodeIDToken
         //identity.AddClaim(JwtRegisteredClaimNames.AtHash, Base64UrlEncoder.Encode(hash, 0, hash.Length / 2));
 
-
-        /// <summary>
-        /// Base64url no-padding encodes the given input buffer.
-        /// </summary>
-        /// <param name="buffer"></param>
-        /// <returns></returns>
-        public string Base64UrlEncodeNoPadding(byte[] buffer)
-        {
-            string base64 = Convert.ToBase64String(buffer);
-
-            // Converts base64 to base64url.
-            base64 = base64.Replace("+", "-");
-            base64 = base64.Replace("/", "_");
-            // Strips padding.
-            base64 = base64.Replace("=", "");
-
-            return base64;
-        }
-    
+            
     }
 }

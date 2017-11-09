@@ -16,7 +16,7 @@ using ImplementationResponse = System.Net.Http.HttpResponseMessage;
 #endif
 //-------------------------------------------------------------------------------------------------
 
-namespace HolisticWare.Net.HTTP
+namespace Core.Net.HTTP
 {
     /// <summary>
     /// HTTP Client

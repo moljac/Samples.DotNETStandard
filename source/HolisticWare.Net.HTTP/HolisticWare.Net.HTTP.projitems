@@ -34,9 +34,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\System.Net.Http.HttpRequestMessage.ExtensionMethods.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\System.Net.Http.HttpResponseMessage.ExtensionMethods.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Net\HTTP\System.Net.WebHeaderCollection.ExtensionMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Text\Encodings\Base64UrlEncoding.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Text\Encodings\Base64Encoding.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Net\HTTP\" />
     <Folder Include="$(MSBuildThisFileDirectory)Security\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Text\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Text\Encodings\" />
   </ItemGroup>
 </Project>

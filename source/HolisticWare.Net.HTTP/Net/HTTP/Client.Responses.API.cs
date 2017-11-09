@@ -19,9 +19,9 @@ using ImplementationResponse = System.Net.Http.HttpResponseMessage;
 #endif
 //-------------------------------------------------------------------------------------------------
 
-using HolisticWare.Net;
+using Core.Net;
 
-namespace HolisticWare.Net.HTTP
+namespace Core.Net.HTTP
 {
     public partial class Client : IClient
     {

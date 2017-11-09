@@ -1,5 +1,5 @@
 ﻿using System;
-namespace HolisticWare.Net.OAuth.Net.HTTP
+namespace Core.Net.OAuth.Net.HTTP
 {
     public class HTTPMethods
     {
