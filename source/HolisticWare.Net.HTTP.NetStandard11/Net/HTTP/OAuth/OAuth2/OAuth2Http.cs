@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
 
-namespace HolisticWare.Net.Http
+namespace Core.Net.Http
 {
     /// <summary>
     /// Web request.

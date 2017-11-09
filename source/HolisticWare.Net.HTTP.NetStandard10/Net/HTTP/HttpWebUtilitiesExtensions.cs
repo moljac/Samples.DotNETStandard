@@ -2,7 +2,7 @@
 using System.Net;
 using System.IO;
 
-namespace HolisticWare.Net.HTTP
+namespace Core.Net.HTTP
 {
     public static class HttpWebUtilitiesExtensions
     {

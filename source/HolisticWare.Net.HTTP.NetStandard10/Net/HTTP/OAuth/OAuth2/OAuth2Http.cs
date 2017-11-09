@@ -5,7 +5,7 @@ using System.IO;
 using System.Net;
 using System.Text;
 
-namespace HolisticWare.Net.Http
+namespace Core.Net.Http
 {
     /// <summary>
     /// Web request.
