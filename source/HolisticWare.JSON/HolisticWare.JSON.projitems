@@ -20,8 +20,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)System\JSON\JsonType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)System\JSON\JsonValue.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)System\Decimal.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)System\JSON\WebToken\JSONWebToken.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)System\JSON\WebToken\Data.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)System\JSON\WebToken\JSON.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)System\JSON\" />
+    <Folder Include="$(MSBuildThisFileDirectory)System\JSON\WebToken\" />
   </ItemGroup>
 </Project>
