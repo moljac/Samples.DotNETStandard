@@ -15,13 +15,13 @@ namespace Core.JSON.WebToken
         {
         }
 
-        public Dictionary<string, string> Header
+        public Data TokenData
         {
             get;
             set;
         }
 
-        public Dictionary<string, object> Payload
+        public JSON TokenDataAsJSON
         {
             get;
             set;
@@ -38,18 +38,45 @@ namespace Core.JSON.WebToken
             get;
         }
 
-        public string Encode()
+        public string Encode(string secret_key = null, IDictionary<string, object> payload = null)
         {
             string encoded = null;
 
-            switch(this.Header["alg"])
+            string alg = this.TokenData.Header["alg"];
+
+            switch(this.TokenData.Header["alg"])
             {
                 case "none":
                     break;
                 case "HS256":
                     break;
+                case "RS256":
+                    break;
+                default:
+                    throw new ArgumentException($"Unknown JWT Header algorithm {alg}");
             }
                    
+            return encoded;
+        }
+
+        public string Decode(string token = null, string secret_key = null)
+        {
+            string encoded = null;
+
+            string alg = this.TokenData.Header["alg"];
+
+            switch (this.TokenData.Header["alg"])
+            {
+                case "none":
+                    break;
+                case "HS256":
+                    break;
+                case "RS256":
+                    break;
+                default:
+                    throw new ArgumentException($"Unknown JWT Header algorithm {alg}");
+            }
+
             return encoded;
         }
 
@@ -57,9 +84,29 @@ namespace Core.JSON.WebToken
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.Append();
-            return 
+            sb.Append(this.TokenDataAsJSON.Header.ToString());
+            sb.Append(".");
+            sb.Append(this.TokenDataAsJSON.Header.ToString());
+            sb.Append(".");
+            if (this.TokenData.Algorithm != "none")
+            {                
+            }
+            else
+            {
+                this.GenerateSignature(null);   
+            }
+
+            return sb.ToString();
         }
 
-   }
+        private byte[] GenerateSignature(byte[] key)
+        {
+            Algorithms.IHashAlgorithm alg = new Algorithms.HMACSHA256();
+
+
+            byte[] data = null;
+
+            return alg.GenerateSignature(data, key);
+        }
+    }
 }

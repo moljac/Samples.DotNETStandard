@@ -15,6 +15,12 @@ namespace Core.JSON.WebToken
             set;
         }
 
+        public string Algorithm
+        {
+            get;
+            set;
+        }
+
         public Dictionary<string, object> Payload
         {
             get;
