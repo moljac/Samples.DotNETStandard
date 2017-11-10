@@ -23,9 +23,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)System\JSON\WebToken\JSONWebToken.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)System\JSON\WebToken\Data.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)System\JSON\WebToken\JSON.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)System\JSON\WebToken\HashAlgorithms\HMACSHA256.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)System\JSON\WebToken\HashAlgorithms\IHashAlgorithm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)System\JSON\WebToken\HashAlgorithms\None.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)System\JSON\" />
     <Folder Include="$(MSBuildThisFileDirectory)System\JSON\WebToken\" />
+    <Folder Include="$(MSBuildThisFileDirectory)System\JSON\WebToken\HashAlgorithms\" />
   </ItemGroup>
 </Project>
