@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Net.HTTP.NetStandard10", "HolisticWare.Net.HTTP.NetStandard10\HolisticWare.Net.HTTP.NetStandard10.csproj", "{99A55A01-73D4-44FE-8E59-9A6E42726B13}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Net.HTTP.NetStandard10", "HolisticWare.Net.HTTP.NetStandard10\HolisticWare.CORE.Net.HTTP.NetStandard10.csproj", "{99A55A01-73D4-44FE-8E59-9A6E42726B13}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Net.HTTP.NetStandard11", "HolisticWare.Net.HTTP.NetStandard11\HolisticWare.Net.HTTP.NetStandard11.csproj", "{49E5F228-3D87-4F38-BDF7-26EB3E2DFE69}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Net.HTTP.NetStandard11", "HolisticWare.Net.HTTP.NetStandard11\HolisticWare.Core.Net.HTTP.NetStandard11.csproj", "{49E5F228-3D87-4F38-BDF7-26EB3E2DFE69}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HolisticWare.Net.HTTP", "HolisticWare.Net.HTTP\HolisticWare.Net.HTTP.shproj", "{0145436C-5EFE-4AD9-81BA-24D7BE276FD1}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HolisticWare.Core.Net.HTTP", "HolisticWare.Net.HTTP\HolisticWare.Core.Net.HTTP.shproj", "{0145436C-5EFE-4AD9-81BA-24D7BE276FD1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Net.HTTP.NetStandard13", "HolisticWare.Net.HTTP.NetStandard13\HolisticWare.Net.HTTP.NetStandard13.csproj", "{338D3B0A-7246-4A1A-AC70-CFF0D5AA0EF1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Net.HTTP.NetStandard13", "HolisticWare.Net.HTTP.NetStandard13\HolisticWare.Core.Net.HTTP.NetStandard13.csproj", "{338D3B0A-7246-4A1A-AC70-CFF0D5AA0EF1}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HolisticWare.JSON", "HolisticWare.JSON\HolisticWare.JSON.shproj", "{5ADCC2B2-20E1-402B-80AC-6D9678700464}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HolisticWare.System.JSON", "HolisticWare.JSON\HolisticWare.System.JSON.shproj", "{5ADCC2B2-20E1-402B-80AC-6D9678700464}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.JSON.NetStandard10", "HolisticWare.JSON.NetStandard10\HolisticWare.JSON.NetStandard10.csproj", "{130B1769-F088-4CCF-9713-7532B56CA013}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.System.JSON.NetStandard10", "HolisticWare.JSON.NetStandard10\HolisticWare.System.JSON.NetStandard10.csproj", "{130B1769-F088-4CCF-9713-7532B56CA013}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.JSON.NetStandard11", "HolisticWare.JSON.NetStandard11\HolisticWare.JSON.NetStandard11.csproj", "{2B4D9BA6-7A6F-4A40-90BF-E317B92ED347}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.System.JSON.NetStandard11", "HolisticWare.JSON.NetStandard11\HolisticWare.System.JSON.NetStandard11.csproj", "{2B4D9BA6-7A6F-4A40-90BF-E317B92ED347}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.JSON.NetStandard13", "HolisticWare.JSON.NetStandard13\HolisticWare.JSON.NetStandard13.csproj", "{3FC9CD9C-91A8-45E0-B619-08F32B7442C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.System.JSON.NetStandard13", "HolisticWare.JSON.NetStandard13\HolisticWare.System.JSON.NetStandard13.csproj", "{3FC9CD9C-91A8-45E0-B619-08F32B7442C0}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution

@@ -7,5 +7,8 @@
     <RootNamespace>Core.JSON</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.0" />
+  </ItemGroup>
   <Import Project="..\HolisticWare.JSON\HolisticWare.JSON.projitems" Label="Shared" Condition="Exists('..\HolisticWare.JSON\HolisticWare.JSON.projitems')" />
 </Project>
