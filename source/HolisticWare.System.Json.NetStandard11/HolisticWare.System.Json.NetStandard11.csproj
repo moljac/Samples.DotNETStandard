@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.1</TargetFramework>
+    <DefaultItemExcludes>$(DefaultItemExcludes);.DS_Store</DefaultItemExcludes>
+    <AssemblyName>HolisticWare.System.Json</AssemblyName>
+    <RootNamespace>System.Json</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="..\HolisticWare.System.Json\HolisticWare.System.Json.projitems" Label="Shared" Condition="Exists('..\HolisticWare.System.Json\HolisticWare.System.Json.projitems')" />
+</Project>

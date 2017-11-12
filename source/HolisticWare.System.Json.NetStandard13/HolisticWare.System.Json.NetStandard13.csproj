@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <DefaultItemExcludes>$(DefaultItemExcludes);.DS_Store</DefaultItemExcludes>
+    <AssemblyName>HolisticWare.System.Json</AssemblyName>
+    <RootNamespace>System.Json</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.0" />
+  </ItemGroup>
+  <Import Project="..\HolisticWare.System.Json\HolisticWare.System.Json.projitems" Label="Shared" Condition="Exists('..\HolisticWare.System.Json\HolisticWare.System.Json.projitems')" />
+</Project>
