@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard1.0</TargetFramework>
     <DefaultItemExcludes>$(DefaultItemExcludes);.DS_Store</DefaultItemExcludes>
-    <AssemblyName>HolisticWare.Net.HTTP</AssemblyName>
+    <AssemblyName>HolisticWare.Core.Net.HTTP</AssemblyName>
     <RootNamespace>Core.Net.HTTP</RootNamespace>    
   </PropertyGroup>
 
@@ -13,6 +13,9 @@
     <PackageReference Include="System.Runtime" Version="4.3.0" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Core\" />
+    <Folder Include="Core\Net\" />
   </ItemGroup>
-  <Import Project="..\HolisticWare.Net.HTTP\HolisticWare.Net.HTTP.projitems" Label="Shared" Condition="Exists('..\HolisticWare.Net.HTTP\HolisticWare.Net.HTTP.projitems')" />
+  <Import Project="..\HolisticWare.Core\HolisticWare.Core.projitems" Label="Shared" Condition="Exists('..\HolisticWare.Core\HolisticWare.Core.projitems')" />
+  <Import Project="..\HolisticWare.Core.Net.HTTP\HolisticWare.Net.HTTP.projitems" Label="Shared" />
 </Project>

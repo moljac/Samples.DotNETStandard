@@ -5,7 +5,7 @@ using System.IO;
 using System.Net;
 using System.Text;
 
-namespace Core.Net.Http
+namespace Core.Net.HTTP.OAuth.OAuth2
 {
     /// <summary>
     /// Web request.

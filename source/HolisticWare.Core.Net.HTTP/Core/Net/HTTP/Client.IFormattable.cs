@@ -28,6 +28,21 @@ namespace Core.Net.HTTP
 
         public string ToString(string format)
         {
+            return this.ToString(format, System.Globalization.CultureInfo.CurrentCulture);
+        }
+
+        public string ToString(string format, IFormatProvider provider)
+        {
+            if (String.IsNullOrEmpty(format))
+            {
+                format = "R";
+            }
+
+            if (provider == null)
+            {
+                provider = System.Globalization.CultureInfo.CurrentCulture;
+            }
+
             string[] formats = format.Split
                                         (
                                              new char[] { ' ', ';', ',' },
@@ -43,21 +58,7 @@ namespace Core.Net.HTTP
                 sb.AppendLine($"{this.ToString(f, System.Globalization.CultureInfo.CurrentCulture)}");
                 sb.AppendLine();
                 sb.AppendLine("---------------------------------------------------------------------");
-            }
-
-            return sb.ToString();
-        }
-
-        public string ToString(string format, IFormatProvider provider)
-        {
-            if (String.IsNullOrEmpty(format))
-            {
-                format = "R";
-            }
-
-            if (provider == null)
-            {
-                provider = System.Globalization.CultureInfo.CurrentCulture;
+                sb.AppendLine();
             }
 
             string retval = null;
@@ -91,19 +92,15 @@ namespace Core.Net.HTTP
 
             foreach (Uri uri in this.EndPoints)
             {
-                sb.AppendLine($"uri.OriginalString = {uri.OriginalString}");
-                sb.AppendLine($"uri.AbsoluteUri    = {uri.AbsoluteUri}");
-                sb.AppendLine($"uri.AbsolutePath   = {uri.AbsolutePath}");
-                sb.AppendLine($"uri.Host           = {uri.Host}");
-                sb.AppendLine($"Uri.PathAndQuery   = {uri.PathAndQuery}");
 
                 sb.AppendLine();
-                sb.Append(this.RequestMethodVerb).Append(" ").Append(uri.PathAndQuery).AppendLine("HTTP/v.v");
+                sb.Append(this.RequestMethodVerb).Append(" ").Append(uri.PathAndQuery)
+                  .Append("HTTP/").AppendLine();
 
-                //foreach (KeyValuePair<string, string> dp in )
-                //{
-                //    sb.Append(hdr.Key).Append(": ").AppendLine(hdr.Value);
-                //}
+                foreach (KeyValuePair<string, string> hdr in this.RequestHeaders)
+                {
+                    sb.Append(hdr.Key).Append(": ").AppendLine(hdr.Value);
+                }
 
                 return sb.ToString();
             }
@@ -129,11 +126,9 @@ namespace Core.Net.HTTP
             foreach (Uri uri in this.EndPoints)
             {
                 sb
-                    .Append(this.RequestMethodVerb)
-                    .Append(" ")
-                    .Append(uri.PathAndQuery)
-                    .Append(" ")
-                    .AppendLine("HTTP/v.v");
+                    .Append(this.RequestMethodVerb).Append(" ").Append(uri.PathAndQuery).Append(" ")
+                    .Append("HTTP/").AppendLine()
+                    .AppendLine();
 
                 if (null != this.RequestHeaders)
                 {
@@ -151,6 +146,8 @@ namespace Core.Net.HTTP
         {
             StringBuilder sb = new StringBuilder();
 
+            sb.AppendLine("------------------------------------------------------------------------");
+            sb.AppendLine("Endpoints:" );
             foreach (Uri uri in this.EndPoints)
             {
                 sb.AppendLine($"uri.OriginalString = {uri.OriginalString}");
@@ -159,9 +156,13 @@ namespace Core.Net.HTTP
                 sb.AppendLine($"uri.Host           = {uri.Host}");
                 sb.AppendLine($"Uri.PathAndQuery   = {uri.PathAndQuery}");
             }
+            sb.AppendLine("------------------------------------------------------------------------");
 
+
+            sb.AppendLine("------------------------------------------------------------------------");
+            sb.AppendLine("KeyValuePair<Uri, ClientRequestImplementation<ImplementationRequest>>");
             sb.AppendLine($"[Implementation Object] = {RequestImplementationObjects?.GetType().ToString()}");
-
+            sb.AppendLine();
             foreach 
                 (
                     KeyValuePair<Uri, ClientRequestImplementation<ImplementationRequest>> kvp 
@@ -169,6 +170,8 @@ namespace Core.Net.HTTP
                 )
             {
                 Uri uri = kvp.Key;
+
+                sb.AppendLine(uri.ToString("D"));
                 sb.AppendLine($"uri.OriginalString = {uri.OriginalString}");
                 sb.AppendLine($"uri.AbsoluteUri    = {uri.AbsoluteUri}");
                 sb.AppendLine($"uri.AbsolutePath   = {uri.AbsolutePath}");
@@ -178,6 +181,9 @@ namespace Core.Net.HTTP
                 ImplementationRequest request = kvp.Value.ImplementationObject;
                 sb.AppendLine(request.ToString());
             }
+            sb.AppendLine("------------------------------------------------------------------------");
+            sb.AppendLine();
+
 
             return sb.ToString();
         }
