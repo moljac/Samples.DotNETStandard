@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{5ADCC2B2-20E1-402B-80AC-6D9678700464}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Core.JSON.JWT</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Core\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Core\JSON\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Core\JSON\WebToken\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Core\JSON\WebToken\Data.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\JSON\WebToken\HashAlgorithms\HMACSHA256.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\JSON\WebToken\HashAlgorithms\IHashAlgorithm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\JSON\WebToken\HashAlgorithms\None.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\JSON\WebToken\JSON.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\JSON\WebToken\JSONWebToken.cs" />
+  </ItemGroup>
+</Project>
