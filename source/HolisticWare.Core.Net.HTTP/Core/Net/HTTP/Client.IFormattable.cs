@@ -53,101 +53,72 @@ namespace Core.Net.HTTP
 
             foreach (string f in formats)
             {
-                sb.AppendLine("---------------------------------------------------------------------");
-                sb.AppendLine($"Format = {f}");
-                sb.AppendLine($"{this.ToString(f, System.Globalization.CultureInfo.CurrentCulture)}");
-                sb.AppendLine();
-                sb.AppendLine("---------------------------------------------------------------------");
-                sb.AppendLine();
+                string f_lower = f.ToLowerInvariant();
+
+                if (f_lower == "d" || f_lower == "debug")
+                {
+                    sb.AppendLine(this.ToStringAbstractionAPI(f));
+                    sb.AppendLine(this.ToStringImplementationObject(f));
+                    sb.AppendLine(this.ToStringRaw(f));
+
+                    break;
+                }
+
+                if (f_lower == "a" || f_lower == "abstraction")
+                {
+                    sb.AppendLine(this.ToStringAbstractionAPI());
+                    continue;
+                }
+
+                if (f_lower == "r" || f_lower == "raw")
+                {
+                    sb.AppendLine(this.ToStringRaw());
+                    continue;
+                }
+
+                if (f_lower == "i" || f_lower == "implementation")
+                {
+                    sb.AppendLine(this.ToStringImplementationObject());
+                    continue;
+                }
+
             }
 
-            string retval = null;
-
-            switch (format.ToUpperInvariant())
-            {
-                case "A":
-                case "ABSTRACTION":
-                    retval = this.ToStringAbstractionAPI();
-                    break;
-                case "I":
-                case "IMPLEMENTATION":
-                    retval = this.ToStringImplementationObject();
-                    break;
-                case "R":
-                case "RAW":
-                    retval = this.ToStringRaw();
-                    break;
-                default:
-                    throw new FormatException(String.Format("The {0} format string is not supported.", format));
-            }
-
-            return retval;
+            return sb.ToString();
         }
 
-        public string ToStringAbstractionAPI()
+        public string ToStringAbstractionAPI(string format = null)
         {
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine($"Abstraction API {this.GetType().ToString()}");
 
+            sb.AppendLine("Uris / Endpoints:");
             foreach (Uri uri in this.EndPoints)
             {
-
-                sb.AppendLine();
-                sb.Append(this.RequestMethodVerb).Append(" ").Append(uri.PathAndQuery)
-                  .Append("HTTP/").AppendLine();
-
-                foreach (KeyValuePair<string, string> hdr in this.RequestHeaders)
-                {
-                    sb.Append(hdr.Key).Append(": ").AppendLine(hdr.Value);
-                }
-
-                return sb.ToString();
+                sb.AppendLine($"    Uri = {uri.ToString(format)}");
             }
 
+            sb.AppendLine($"Headers:");
             foreach (KeyValuePair<string, string> hdr in this.RequestHeaders)
             {
-                sb.Append(hdr.Key).Append(": ").AppendLine(hdr.Value);
+                sb.Append($"    {hdr.Key}").Append(": ").AppendLine(hdr.Value);
             }
 
             sb.AppendLine($"DataAsString       = {this.DataAsString}");
             sb.AppendLine($"ParametersAsString = {this.ParametersAsString}");
-            //            foreach (KeyValuePair<string, string> hdr in this.)
+            //foreach (KeyValuePair<string, string> hdr in this.)
             {
             }
 
             return sb.ToString();
         }
 
-        public string ToStringRaw()
+        public string ToStringImplementationObject(string format = null)
         {
             StringBuilder sb = new StringBuilder();
 
-            foreach (Uri uri in this.EndPoints)
-            {
-                sb
-                    .Append(this.RequestMethodVerb).Append(" ").Append(uri.PathAndQuery).Append(" ")
-                    .Append("HTTP/").AppendLine()
-                    .AppendLine();
-
-                if (null != this.RequestHeaders)
-                {
-                    foreach (KeyValuePair<string, string> hdr in this.RequestHeaders)
-                    {
-                        sb.Append(hdr.Key).Append(": ").AppendLine(hdr.Value);
-                    }
-                }
-            }
-
-            return sb.ToString();
-        }
-
-        public string ToStringImplementationObject()
-        {
-            StringBuilder sb = new StringBuilder();
-
-            sb.AppendLine("------------------------------------------------------------------------");
-            sb.AppendLine("Endpoints:" );
+            sb.AppendLine("Uri Endpoints:" );
             foreach (Uri uri in this.EndPoints)
             {
                 sb.AppendLine($"uri.OriginalString = {uri.OriginalString}");
@@ -184,6 +155,29 @@ namespace Core.Net.HTTP
             sb.AppendLine("------------------------------------------------------------------------");
             sb.AppendLine();
 
+
+            return sb.ToString();
+        }
+
+        public string ToStringRaw(string format = null)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            foreach (Uri uri in this.EndPoints)
+            {
+                sb
+                    .Append(this.RequestMethodVerb).Append(" ").Append(uri.PathAndQuery).Append(" ")
+                    .Append("HTTP/").AppendLine()
+                    .AppendLine();
+
+                if (null != this.RequestHeaders)
+                {
+                    foreach (KeyValuePair<string, string> hdr in this.RequestHeaders)
+                    {
+                        sb.Append(hdr.Key).Append(": ").AppendLine(hdr.Value);
+                    }
+                }
+            }
 
             return sb.ToString();
         }

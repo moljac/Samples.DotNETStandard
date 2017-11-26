@@ -2,7 +2,7 @@
 
 namespace Core.Net.HTTP
 {
-    public class ServerAsynchronous
+    public class ServerAsynchronous : Server
     {
         public ServerAsynchronous(string[] prefixes)
         {
@@ -13,23 +13,35 @@ namespace Core.Net.HTTP
                 listener.Prefixes.Add(prefix);
             }
 
+            this.RequestHandler = this.RequestHandlerDefault;
+
             listener.Start();
 
-            while (true)
+            while (this.IsRunning)
             {
                 try
                 {
-                    var context = listener.GetContext();
-                    System.Threading.ThreadPool.QueueUserWorkItem(o => HandleRequest(context));
+                    System.Net.HttpListenerContext context = listener.GetContext();
+                    System.Threading.ThreadPool.QueueUserWorkItem
+                            (
+                                o => RequestHandler(context)    
+                            );
                 }
-                catch (Exception)
+                catch (Exception exc)
                 {
-                    // Ignored for this example
+                    System.Text.StringBuilder sb = new System.Text.StringBuilder();
+                    sb.Append($"ServerAsynchronous error");
+
+                    throw new InvalidOperationException(sb.ToString(), exc);
                 }
             }
+
+            return;
         }
 
-        private void HandleRequest(object state)
+        public Action<System.Net.HttpListenerContext> RequestHandler;
+                            
+        private void RequestHandlerDefault(object state)
         {
             try
             {
@@ -40,7 +52,7 @@ namespace Core.Net.HTTP
 
                 int totalTime = 0;
 
-                while (true)
+                while (this.IsRunning)
                 {
                     if (totalTime % 3000 == 0)
                     {
@@ -54,16 +66,20 @@ namespace Core.Net.HTTP
                         context.Response.OutputStream.Write(bytes, 0, bytes.Length);
                     }
 
-                    System.Threading.Thread.Sleep(1000);
+                    //System.Threading.Thread.Sleep(1000);    // blocking delay
+                    System.Threading.Tasks.Task.Delay(1000);
                     totalTime += 1000;
                 }
             }
-            catch (Exception)
+            catch (Exception exc)
             {
-                // Client disconnected or some other error - ignored for this example
+                System.Text.StringBuilder sb = new System.Text.StringBuilder();
+                sb.Append($"ServerAsync error");
+
+                throw new InvalidOperationException(sb.ToString(), exc);
             }
 
             return;
-        }
+        }    
     }
 }

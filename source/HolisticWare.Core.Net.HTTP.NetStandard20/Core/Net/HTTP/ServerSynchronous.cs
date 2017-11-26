@@ -2,7 +2,7 @@
 
 namespace Core.Net.HTTP
 {
-    public class ServerSynchronous
+    public class ServerSynchronous : Server
     {
         public ServerSynchronous(string[] prefixes)
         {
@@ -15,7 +15,7 @@ namespace Core.Net.HTTP
 
             listener.Start();
 
-            while (true)
+            while (this.IsRunning)
             {
                 try
                 {
@@ -25,7 +25,7 @@ namespace Core.Net.HTTP
 
                     int totalTime = 0;
 
-                    while (true)
+                    while (this.IsRunning)
                     {
                         if (totalTime % 3000 == 0)
                         {
@@ -44,9 +44,12 @@ namespace Core.Net.HTTP
                     }
 
                 }
-                catch (Exception)
+                catch (Exception exc)
                 {
-                    // Client disconnected or some other error - ignored for this example
+                    System.Text.StringBuilder sb = new System.Text.StringBuilder();
+                    sb.Append($"ServerAsync error");
+
+                    throw new InvalidOperationException(sb.ToString(), exc);
                 }
             }
 
