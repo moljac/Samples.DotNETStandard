@@ -20,5 +20,4 @@
   </ItemGroup>
   <Import Project="..\HolisticWare.Core.Text\HolisticWare.Core.Text.projitems" Label="Shared" Condition="Exists('..\HolisticWare.Core.Text\HolisticWare.Core.Text.projitems')" />
   <Import Project="..\HolisticWare.Core.Security\HolisticWare.Core.Security.projitems" Label="Shared" Condition="Exists('..\HolisticWare.Core.Security\HolisticWare.Core.Security.projitems')" />
-  <Import Project="..\HolisticWare.Core.Collections.Generic\HolisticWare.Core.Collections.Generic.projitems" Label="Shared" Condition="Exists('..\HolisticWare.Core.Collections.Generic\HolisticWare.Core.Collections.Generic.projitems')" />
 </Project>

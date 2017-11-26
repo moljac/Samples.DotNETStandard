@@ -6,7 +6,7 @@
     <SharedGUID>{57B0EB28-7B4E-410D-B021-0DC9D719C11F}</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>Core</Import_RootNamespace>
+    <Import_RootNamespace></Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Core\" />

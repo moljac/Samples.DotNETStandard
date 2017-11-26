@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.0</TargetFramework>
-    <DefaultItemExcludes>$(DefaultItemExcludes);.DS_Store</DefaultItemExcludes>
     <AssemblyName>HolisticWare.Core.JSON.JWT</AssemblyName>
+    <DefaultItemExcludes>$(DefaultItemExcludes);.DS_Store</DefaultItemExcludes>
     <RootNamespace>Core.JSON.JWT</RootNamespace>
   </PropertyGroup>
 

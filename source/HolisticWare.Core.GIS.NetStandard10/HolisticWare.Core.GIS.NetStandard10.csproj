@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.0</TargetFramework>
+    <AssemblyName>HolisticWare.Core.GIS</AssemblyName>
+    <DefaultItemExcludes>$(DefaultItemExcludes);.DS_Store</DefaultItemExcludes>
   </PropertyGroup>
 
   <Import Project="..\HolisticWare.Core.GIS\HolisticWare.Core.GIS.projitems" Label="Shared" Condition="Exists('..\HolisticWare.Core.GIS\HolisticWare.Core.GIS.projitems')" />
