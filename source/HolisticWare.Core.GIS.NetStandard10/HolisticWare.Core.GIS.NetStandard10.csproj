@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+  </PropertyGroup>
+
+  <Import Project="..\HolisticWare.Core.GIS\HolisticWare.Core.GIS.projitems" Label="Shared" Condition="Exists('..\HolisticWare.Core.GIS\HolisticWare.Core.GIS.projitems')" />
+</Project>
