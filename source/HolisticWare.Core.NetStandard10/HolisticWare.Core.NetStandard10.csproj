@@ -4,5 +4,4 @@
     <TargetFramework>netstandard1.0</TargetFramework>
   </PropertyGroup>
 
-  <Import Project="..\HolisticWare.Core\HolisticWare.Core.projitems" Label="Shared" Condition="Exists('..\HolisticWare.Core\HolisticWare.Core.projitems')" />
 </Project>
