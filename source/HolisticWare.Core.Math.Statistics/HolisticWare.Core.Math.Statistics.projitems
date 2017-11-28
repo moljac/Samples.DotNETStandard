@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{920D7D0F-3FAE-4C77-9174-23E7A4E80E50}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>HolisticWare.Core.Math.Statistics</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.Variance.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.Median.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.Moment.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)readme.md" />
+  </ItemGroup>
+</Project>
