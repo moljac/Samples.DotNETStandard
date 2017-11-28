@@ -14,7 +14,9 @@ namespace Core.Math.Statistics
             int n = x.Count();
 
             for (int i = 0; i < n; i++)
+            {
                 sum += System.Math.Pow(x.ElementAt(i) - mean, m);
+            }
 
             return sum / n;
         }
@@ -27,7 +29,9 @@ namespace Core.Math.Statistics
             int n = x.Count();
 
             for (int i = 0; i < n; i++)
+            {
                 sum += System.Math.Pow(x.ElementAt(i) - mean, m);
+            }
 
             return sum / n;
         }
@@ -40,7 +44,9 @@ namespace Core.Math.Statistics
             int n = x.Count();
 
             for (int i = 0; i < n; i++)
+            {
                 sum += System.Math.Pow(x.ElementAt(i) - mean, m);
+            }
 
             return sum / n;
         }
@@ -53,7 +59,9 @@ namespace Core.Math.Statistics
             int n = x.Count();
 
             for (int i = 0; i < n; i++)
+            {
                 sum += System.Math.Pow(x.ElementAt(i) - mean, m);
+            }
 
             return sum / n;
         }
@@ -66,7 +74,9 @@ namespace Core.Math.Statistics
             int n = x.Count();
 
             for (int i = 0; i < n; i++)
+            {
                 sum += System.Math.Pow(x.ElementAt(i) - mean, m);
+            }
 
             return sum / n;
         }
@@ -79,7 +89,24 @@ namespace Core.Math.Statistics
             int n = x.Count();
 
             for (int i = 0; i < n; i++)
+            {
                 sum += System.Math.Pow(x.ElementAt(i) - mean, m);
+            }
+
+            return sum / n;
+        }
+
+        public static double Median(this IEnumerable<float> x, int m)
+        {
+            double mean = x.Average();
+            double sum = 0;
+
+            int n = x.Count();
+
+            for (int i = 0; i < n; i++)
+            {
+                sum += System.Math.Pow(x.ElementAt(i) - mean, m);
+            }
 
             return sum / n;
         }
@@ -92,10 +119,26 @@ namespace Core.Math.Statistics
             int n = x.Count();
 
             for (int i = 0; i < n; i++)
+            {
                 sum += System.Math.Pow(x.ElementAt(i) - mean, m);
+            }
 
             return sum / n;
         }
 
+        public static decimal Median(this IEnumerable<decimal> x, int m)
+        {
+            decimal mean = x.Average();
+            decimal sum = 0;
+
+            int n = x.Count();
+
+            for (int i = 0; i < n; i++)
+            {
+                sum += (decimal)System.Math.Pow((double)x.ElementAt(i) - (double)mean, m);
+            }
+
+            return sum / n;
+        }
     }
 }
