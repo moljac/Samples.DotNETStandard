@@ -150,7 +150,9 @@ namespace System.Json
             {
                 // FIXME: what should we do for null? Handle it as null so far.
                 if (value == null)
+                {
                     return JsonType.String;
+                }
 
                 #if !PCL && !PORTABLE && !NETFX_CORE && !WINDOWS_PHONE && !SILVERLIGHT && !WINDOWS_APP && !WINDOWS_PHONE_APP && !NETSTANDARD1_0 && !NETSTANDARD1_1 && !NETSTANDARD1_2 && !NETSTANDARD1_3
                 switch (System.Type.GetTypeCode(value.GetType()))
@@ -230,9 +232,13 @@ namespace System.Json
             {
                 case JsonType.Boolean:
                     if ((bool)value)
+                    {
                         stream.Write(true_bytes, 0, 4);
+                    }
                     else
+                    {
                         stream.Write(false_bytes, 0, 5);
+                    }
                     break;
                 case JsonType.String:
                     stream.WriteByte((byte)'\"');
@@ -253,7 +259,9 @@ namespace System.Json
             {
                 case JsonType.String:
                     if (value is string || value == null)
+                    {
                         return (string)value;
+                    }
                     throw new NotImplementedException("GetFormattedString from value type " + value.GetType());
                 case JsonType.Number:
                     return ((IFormattable)value).ToString("G", NumberFormatInfo.InvariantInfo);

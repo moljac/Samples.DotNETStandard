@@ -52,7 +52,9 @@ namespace System.Json
         public JsonArray(IEnumerable<JsonValue> items)
         {
             if (items == null)
+            {
                 throw new ArgumentNullException("items");
+            }
 
             list = new List<JsonValue>(items);
         }
@@ -81,7 +83,9 @@ namespace System.Json
         public void Add(JsonValue item)
         {
             if (item == null)
+            {
                 throw new ArgumentNullException("item");
+            }
 
             list.Add(item);
         }
@@ -89,7 +93,9 @@ namespace System.Json
         public void AddRange(IEnumerable<JsonValue> items)
         {
             if (items == null)
+            {
                 throw new ArgumentNullException("items");
+            }
 
             list.AddRange(items);
         }
@@ -97,14 +103,20 @@ namespace System.Json
         public void AddRange(params JsonValue[] items)
         {
             if (items == null)
+            {
                 return;
+            }
 
             list.AddRange(items);
+
+            return;
         }
 
         public void Clear()
         {
             list.Clear();
+
+            return;
         }
 
         public bool Contains(JsonValue item)
@@ -115,6 +127,8 @@ namespace System.Json
         public void CopyTo(JsonValue[] array, int arrayIndex)
         {
             list.CopyTo(array, arrayIndex);
+
+            return;
         }
 
         public int IndexOf(JsonValue item)
@@ -125,6 +139,8 @@ namespace System.Json
         public void Insert(int index, JsonValue item)
         {
             list.Insert(index, item);
+
+            return;
         }
 
         public bool Remove(JsonValue item)
@@ -135,18 +151,24 @@ namespace System.Json
         public void RemoveAt(int index)
         {
             list.RemoveAt(index);
+
+            return;
         }
 
         public override void Save(Stream stream)
         {
             if (stream == null)
+            {
                 throw new ArgumentNullException("stream");
+            }
             stream.WriteByte((byte)'[');
             for (int i = 0; i < list.Count; i++)
             {
                 JsonValue v = list[i];
                 if (v != null)
+                {
                     v.Save(stream);
+                }
                 else
                 {
                     stream.WriteByte((byte)'n');
@@ -162,6 +184,8 @@ namespace System.Json
                 }
             }
             stream.WriteByte((byte)']');
+
+            return;
         }
 
         IEnumerator<JsonValue> IEnumerable<JsonValue>.GetEnumerator()

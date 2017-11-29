@@ -51,16 +51,24 @@ namespace System.Json
             map = new Dictionary<string, JsonValue>();
 
             if (items != null)
+            {
                 AddRange(items);
+            }
+
+            return;
         }
 
         public JsonObject(JsonPairEnumerable items)
         {
             if (items == null)
+            {
                 throw new ArgumentNullException("items");
+            }
 
             map = new Dictionary<string, JsonValue>();
             AddRange(items);
+
+            return;
         }
 
         public override int Count
@@ -102,33 +110,48 @@ namespace System.Json
         public void Add(string key, JsonValue value)
         {
             if (key == null)
+            {
                 throw new ArgumentNullException("key");
+            }
 
             map.Add(key, value);
+
+            return;
         }
 
         public void Add(JsonPair pair)
         {
             Add(pair.Key, pair.Value);
+
+            return;
         }
 
         public void AddRange(JsonPairEnumerable items)
         {
             if (items == null)
+            {
                 throw new ArgumentNullException("items");
-
+            }
             foreach (var pair in items)
+            {
                 map.Add(pair.Key, pair.Value);
+            }
+
+            return;
         }
 
         public void AddRange(params JsonPair[] items)
         {
             AddRange((JsonPairEnumerable)items);
+
+            return;
         }
 
         public void Clear()
         {
             map.Clear();
+
+            return;
         }
 
         bool ICollection<JsonPair>.Contains(JsonPair item)
@@ -144,7 +167,9 @@ namespace System.Json
         public override bool ContainsKey(string key)
         {
             if (key == null)
+            {
                 throw new ArgumentNullException("key");
+            }
 
             return map.ContainsKey(key);
         }
@@ -152,12 +177,16 @@ namespace System.Json
         public void CopyTo(JsonPair[] array, int arrayIndex)
         {
             (map as ICollection<JsonPair>).CopyTo(array, arrayIndex);
+
+            return;
         }
 
         public bool Remove(string key)
         {
             if (key == null)
+            {
                 throw new ArgumentNullException("key");
+            }
 
             return map.Remove(key);
         }
@@ -170,7 +199,9 @@ namespace System.Json
         public override void Save(Stream stream)
         {
             if (stream == null)
+            {
                 throw new ArgumentNullException("stream");
+            }
             stream.WriteByte((byte)'{');
             foreach (JsonPair pair in map)
             {
@@ -188,9 +219,13 @@ namespace System.Json
                     stream.WriteByte((byte)'l');
                 }
                 else
+                {
                     pair.Value.Save(stream);
+                }
             }
             stream.WriteByte((byte)'}');
+
+            return;
         }
 
         public bool TryGetValue(string key, out JsonValue value)

@@ -45,9 +45,13 @@ namespace System.Runtime.Serialization.Json
         public JavaScriptReader(TextReader reader, bool raiseOnNumberError)
         {
             if (reader == null)
+            {
                 throw new ArgumentNullException("reader");
+            }
             this.r = reader;
             //			raise_on_number_error = raiseOnNumberError;
+
+            return;
         }
 
         public object Read()
@@ -55,7 +59,10 @@ namespace System.Runtime.Serialization.Json
             object v = ReadCore();
             SkipSpaces();
             if (r.Read() >= 0)
+            {
                 throw JsonError(String.Format("extra characters in JSON input"));
+            }
+
             return v;
         }
 
@@ -63,8 +70,11 @@ namespace System.Runtime.Serialization.Json
         {
             SkipSpaces();
             int c = PeekChar();
+
             if (c < 0)
+            {
                 throw JsonError("Incomplete JSON input");
+            }
             switch (c)
             {
                 case '[':
@@ -82,12 +92,16 @@ namespace System.Runtime.Serialization.Json
                         SkipSpaces();
                         c = PeekChar();
                         if (c != ',')
+                        {
                             break;
+                        }
                         ReadChar();
                         continue;
                     }
                     if (ReadChar() != ']')
+                    {
                         throw JsonError("JSON array must end with ']'");
+                    }
                     return list.ToArray();
                 case '{':
                     ReadChar();
@@ -102,7 +116,9 @@ namespace System.Runtime.Serialization.Json
                     {
                         SkipSpaces();
                         if (PeekChar() == '}')
+                        {
                             break;
+                        }
                         string name = ReadStringLiteral();
                         SkipSpaces();
                         Expect(':');
@@ -111,9 +127,13 @@ namespace System.Runtime.Serialization.Json
                         SkipSpaces();
                         c = ReadChar();
                         if (c == ',')
+                        {
                             continue;
+                        }
                         if (c == '}')
+                        {
                             break;
+                        }
                     }
                 #if MONOTOUCH
 				int idx = 0;
@@ -139,9 +159,13 @@ namespace System.Runtime.Serialization.Json
                     return ReadStringLiteral();
                 default:
                     if ('0' <= c && c <= '9' || c == '-')
+                    {
                         return ReadNumericLiteral();
+                    }
                     else
+                    {
                         throw JsonError(String.Format("Unexpected character '{0}'", (char)c));
+                    }
             }
         }
 
@@ -173,7 +197,9 @@ namespace System.Runtime.Serialization.Json
             }
 
             if (v == '\n')
+            {
                 prev_lf = true;
+            }
             column++;
 
             return v;
@@ -206,7 +232,9 @@ namespace System.Runtime.Serialization.Json
                 negative = true;
                 ReadChar();
                 if (PeekChar() < 0)
+                {
                     throw JsonError("Invalid JSON numeric literal; extra negation");
+                }
             }
 
             int c;
@@ -217,11 +245,15 @@ namespace System.Runtime.Serialization.Json
             {
                 c = PeekChar();
                 if (c < '0' || '9' < c)
+                {
                     break;
+                }
                 val = val * 10 + (c - '0');
                 ReadChar();
                 if (zeroStart && x == 1 && c == '0')
+                {
                     throw JsonError("leading multiple zeros are not allowed");
+                }
             }
 
             // fraction
@@ -234,20 +266,26 @@ namespace System.Runtime.Serialization.Json
                 hasFrac = true;
                 ReadChar();
                 if (PeekChar() < 0)
+                {
                     throw JsonError("Invalid JSON numeric literal; extra dot");
+                }
                 decimal d = 10;
                 while (true)
                 {
                     c = PeekChar();
                     if (c < '0' || '9' < c)
+                    {
                         break;
+                    }
                     ReadChar();
                     frac += (c - '0') / d;
                     d *= 10;
                     fdigits++;
                 }
                 if (fdigits == 0)
+                {
                     throw JsonError("Invalid JSON numeric literal; extra dot");
+                }
             }
             #if PORTABLE || NETFX_CORE || NETSTANDARD1_0 || NETSTANDARD1_1 || NETSTANDARD1_2 || NETSTANDARD1_3
 			frac = Core.Decimal.Round (frac, fdigits);
@@ -276,7 +314,9 @@ namespace System.Runtime.Serialization.Json
 
             int exp = 0;
             if (PeekChar() < 0)
+            {
                 throw new ArgumentException("Invalid JSON numeric literal; incomplete exponent");
+            }
 
             bool negexp = false;
             c = PeekChar();
@@ -286,22 +326,31 @@ namespace System.Runtime.Serialization.Json
                 negexp = true;
             }
             else if (c == '+')
+            {
                 ReadChar();
+            }
 
             if (PeekChar() < 0)
+            {
                 throw JsonError("Invalid JSON numeric literal; incomplete exponent");
+            }
             while (true)
             {
                 c = PeekChar();
                 if (c < '0' || '9' < c)
+                {
                     break;
+                }
                 exp = exp * 10 + (c - '0');
                 ReadChar();
             }
             // it is messy to handle exponent, so I just use Decimal.Parse() with assured JSON format.
             if (negexp)
+            {
                 return new Decimal((double)(val + frac) / Math.Pow(10, exp));
+            }
             int[] bits = Decimal.GetBits(val + frac);
+
             return new Decimal(bits[0], bits[1], bits[2], negative, (byte)exp);
         }
 
@@ -310,7 +359,9 @@ namespace System.Runtime.Serialization.Json
         string ReadStringLiteral()
         {
             if (PeekChar() != '"')
+            {
                 throw JsonError("Invalid JSON string literal format");
+            }
 
             ReadChar();
             vb.Length = 0;
@@ -318,9 +369,13 @@ namespace System.Runtime.Serialization.Json
             {
                 int c = ReadChar();
                 if (c < 0)
+                {
                     throw JsonError("JSON string is not closed");
+                }
                 if (c == '"')
+                {
                     return vb.ToString();
+                }
                 else if (c != '\\')
                 {
                     vb.Append((char)c);
@@ -330,7 +385,9 @@ namespace System.Runtime.Serialization.Json
                 // escaped expression
                 c = ReadChar();
                 if (c < 0)
+                {
                     throw JsonError("Invalid JSON string literal; incomplete escape sequence");
+                }
                 switch (c)
                 {
                     case '"':
@@ -359,13 +416,21 @@ namespace System.Runtime.Serialization.Json
                         {
                             cp <<= 4;
                             if ((c = ReadChar()) < 0)
+                            {
                                 throw JsonError("Incomplete unicode character escape literal");
+                            }
                             if ('0' <= c && c <= '9')
+                            {
                                 cp += (ushort)(c - '0');
+                            }
                             if ('A' <= c && c <= 'F')
+                            {
                                 cp += (ushort)(c - 'A' + 10);
+                            }
                             if ('a' <= c && c <= 'f')
+                            {
                                 cp += (ushort)(c - 'a' + 10);
+                            }
                         }
                         vb.Append((char)cp);
                         break;
@@ -379,14 +444,20 @@ namespace System.Runtime.Serialization.Json
         {
             int c;
             if ((c = ReadChar()) != expected)
+            {
                 throw JsonError(String.Format("Expected '{0}', got '{1}'", expected, (char)c));
+            }
         }
 
         void Expect(string expected)
         {
             for (int i = 0; i < expected.Length; i++)
+            {
                 if (ReadChar() != expected[i])
+                {
                     throw JsonError(String.Format("Expected '{0}', differed at {1}", expected, i));
+                }
+            }
         }
 
         Exception JsonError(string msg)
