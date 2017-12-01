@@ -6,12 +6,16 @@ using Core.Math.Statistics;
 
 namespace Core.Math.Statistics
 {
+    /// <summary>
+    /// Correlation
+    /// </summary>
+    /// <see cref="https://en.wikipedia.org/wiki/Correlation_and_dependence"/> 
     public static class IEnumerableExtensionsCorrelation
     {
         public static double Correlation(this IEnumerable<short> x, IEnumerable<short> y)
         {
-            double sx = x.StandardDeviation();
-            double sy = y.StandardDeviation();
+            double standard_deviation_x = x.StandardDeviation();
+            double standard_deviation_y = y.StandardDeviation();
 
             double sum = 0.0;
 
@@ -22,13 +26,17 @@ namespace Core.Math.Statistics
                 sum += x.ElementAt(i) * y.ElementAt(i);
             }
 
-            return (sum - n * x.Cast<int>().Average() * y.Cast<int>().Average()) / ((n - 1) * sx * sy);
+            return 
+                (sum - n * x.Cast<int>().Average() * y.Cast<int>().Average()) 
+                / 
+                ((n - 1) * standard_deviation_x * standard_deviation_y)
+                ;
         }
 
         public static double Correlation(this IEnumerable<ushort> x, IEnumerable<ushort> y)
         {
-            double sx = x.StandardDeviation();
-            double sy = y.StandardDeviation();
+            double standard_deviation_x = x.StandardDeviation();
+            double standard_deviation_y = y.StandardDeviation();
 
             double sum = 0.0;
 
@@ -39,13 +47,17 @@ namespace Core.Math.Statistics
                 sum += x.ElementAt(i) * y.ElementAt(i);
             }
 
-            return (sum - n * x.Cast<int>().Average() * y.Cast<int>().Average()) / ((n - 1) * sx * sy);
+            return 
+                (sum - n * x.Cast<int>().Average() * y.Cast<int>().Average()) 
+                / 
+                ((n - 1) * standard_deviation_x * standard_deviation_y)
+                ;
         }
 
         public static double Correlation(this IEnumerable<int> x, IEnumerable<int> y)
         {
-            double sx = x.StandardDeviation();
-            double sy = y.StandardDeviation();
+            double standard_deviation_x = x.StandardDeviation();
+            double standard_deviation_y = y.StandardDeviation();
 
             double sum = 0.0;
 
@@ -56,13 +68,17 @@ namespace Core.Math.Statistics
                 sum += x.ElementAt(i) * y.ElementAt(i);
             }
 
-            return (sum - n * x.Average() * y.Average()) / ((n - 1) * sx * sy);
+            return 
+                (sum - n * x.Average() * y.Average()) 
+                / 
+                ((n - 1) * standard_deviation_x * standard_deviation_y)
+                ;
         }
 
         public static double Correlation(this IEnumerable<uint> x, IEnumerable<uint> y)
         {
-            double sx = x.StandardDeviation();
-            double sy = y.StandardDeviation();
+            double standard_deviation_x = x.StandardDeviation();
+            double standard_deviation_y = y.StandardDeviation();
 
             double sum = 0.0;
 
@@ -73,13 +89,17 @@ namespace Core.Math.Statistics
                 sum += x.ElementAt(i) * y.ElementAt(i);
             }
 
-            return (sum - n * x.Cast<long>().Average() * y.Cast<long>().Average()) / ((n - 1) * sx * sy);
+            return 
+                (sum - n * x.Cast<long>().Average() * y.Cast<long>().Average()) 
+                / 
+                ((n - 1) * standard_deviation_x * standard_deviation_y)
+                ;
         }
 
         public static double Correlation(this IEnumerable<long> x, IEnumerable<long> y)
         {
-            double sx = x.StandardDeviation();
-            double sy = y.StandardDeviation();
+            double standard_deviation_x = x.StandardDeviation();
+            double standard_deviation_y = y.StandardDeviation();
 
             double sum = 0.0;
 
@@ -90,13 +110,17 @@ namespace Core.Math.Statistics
                 sum += x.ElementAt(i) * y.ElementAt(i);
             }
 
-            return (sum - n * x.Average() * y.Average()) / ((n - 1) * sx * sy);
+            return 
+                (sum - n * x.Average() * y.Average()) 
+                / 
+                ((n - 1) * standard_deviation_x * standard_deviation_y)
+                ;
         }
 
         public static double Correlation(this IEnumerable<ulong> x, IEnumerable<ulong> y)
         {
-            double sx = x.StandardDeviation();
-            double sy = y.StandardDeviation();
+            double standard_deviation_x = x.StandardDeviation();
+            double standard_deviation_y = y.StandardDeviation();
 
             double sum = 0.0;
 
@@ -107,13 +131,17 @@ namespace Core.Math.Statistics
                 sum += x.ElementAt(i) * y.ElementAt(i);
             }
 
-            return (sum - n * x.Cast<double>().Average() * y.Cast<double>().Average()) / ((n - 1) * sx * sy);
+            return 
+                (sum - n * x.Cast<double>().Average() * y.Cast<double>().Average()) 
+                / 
+                ((n - 1) * standard_deviation_x * standard_deviation_y)
+                ;
         }
 
         public static double Correlation(this IEnumerable<double> x, IEnumerable<double> y)
         {
-            double sx = x.StandardDeviation();
-            double sy = y.StandardDeviation();
+            double standard_deviation_x = x.StandardDeviation();
+            double standard_deviation_y = y.StandardDeviation();
 
             double sum = 0.0;
 
@@ -124,13 +152,17 @@ namespace Core.Math.Statistics
                 sum += x.ElementAt(i) * y.ElementAt(i);
             }
 
-            return (sum - n * x.Average() * y.Average()) / ((n - 1) * sx * sy);
+            return 
+                (sum - n * x.Average() * y.Average()) 
+                / 
+                ((n - 1) * standard_deviation_x * standard_deviation_y)
+                ;            
         }
 
         public static decimal Correlation(this IEnumerable<decimal> x, IEnumerable<decimal> y)
         {
-            decimal sx = x.StandardDeviation();
-            decimal sy = y.StandardDeviation();
+            decimal standard_deviation_x = x.StandardDeviation();
+            decimal standard_deviation_y = y.StandardDeviation();
 
             decimal sum = 0.0M;
 
@@ -141,7 +173,11 @@ namespace Core.Math.Statistics
                 sum += x.ElementAt(i) * y.ElementAt(i);
             }
 
-            return (sum - n * x.Average() * y.Average()) / ((n - 1) * sx * sy);
+            return 
+                (sum - n * x.Average() * y.Average()) 
+                / 
+                ((n - 1) * standard_deviation_x * standard_deviation_y)
+                ;
         }
     }
 }
