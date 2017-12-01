@@ -8,146 +8,162 @@ namespace Core.Math.Statistics
     {
         public static double Covariance(this IEnumerable<short> x, IEnumerable<short> y)
         {
-            long sumx = 0;
-            long sumy = 0;
-            long sumxy = 0;
+            long sum_x = 0;
+            long sum_y = 0;
+            long sum_product_xy = 0;
 
             int n = x.Count();
 
             for (int i = 0; i < n; i++)
             {
-                sumx += x.ElementAt(i);
-                sumy += y.ElementAt(i);
-                sumxy += x.ElementAt(i) * y.ElementAt(i);
+                short x_i = x.ElementAt(i);
+                short y_i = y.ElementAt(i);
+                sum_x += x_i;
+                sum_y += y_i;
+                sum_product_xy += x_i * y_i;
             }
 
-            return (sumxy - sumx * sumy / n) / (n - 1);
+            return (sum_product_xy - sum_x * sum_y / n) / (n - 1);
         }
 
         public static double Covariance(this IEnumerable<ushort> x, IEnumerable<ushort> y)
         {
-            long sumx = 0;
-            long sumy = 0;
-            long sumxy = 0;
+            long sum_x = 0;
+            long sum_y = 0;
+            long sum_product_xy = 0;
 
             int n = x.Count();
 
             for (int i = 0; i < n; i++)
             {
-                sumx += x.ElementAt(i);
-                sumy += y.ElementAt(i);
-                sumxy += x.ElementAt(i) * y.ElementAt(i);
+                ushort x_i = x.ElementAt(i);
+                ushort y_i = y.ElementAt(i);
+                sum_x += x_i;
+                sum_y += y_i;
+                sum_product_xy += x_i * y_i;
             }
 
-            return (sumxy - sumx * sumy / n) / (n - 1);
+            return (sum_product_xy - sum_x * sum_y / n) / (n - 1);
         }
 
         public static double Covariance(this IEnumerable<int> x, IEnumerable<int> y)
         {
-            long sumx = 0;
-            long sumy = 0;
-            long sumxy = 0;
+            long sum_x = 0;
+            long sum_y = 0;
+            long sum_product_xy = 0;
 
             int n = x.Count();
 
             for (int i = 0; i < n; i++)
             {
-                sumx += x.ElementAt(i);
-                sumy += y.ElementAt(i);
-                sumxy += x.ElementAt(i) * y.ElementAt(i);
+                int x_i = x.ElementAt(i);
+                int y_i = y.ElementAt(i);
+                sum_x += x_i;
+                sum_y += y_i;
+                sum_product_xy += x_i * y_i;
             }
 
-            return (sumxy - sumx * sumy / n) / (n - 1);
+            return (sum_product_xy - sum_x * sum_y / n) / (n - 1);
         }
 
         public static double Covariance(this IEnumerable<long> x, IEnumerable<long> y)
         {
-            double sumx = 0;
-            double sumy = 0;
-            double sumxy = 0;
+            double sum_x = 0;
+            double sum_y = 0;
+            double sum_product_xy = 0;
 
             int n = x.Count();
 
             for (int i = 0; i < n; i++)
             {
-                sumx += x.ElementAt(i);
-                sumy += y.ElementAt(i);
-                sumxy += x.ElementAt(i) * y.ElementAt(i);
+                long x_i = x.ElementAt(i);
+                long y_i = y.ElementAt(i);
+                sum_x += x_i;
+                sum_y += y_i;
+                sum_product_xy += x_i * y_i;
             }
 
-            return (sumxy - sumx * sumy / n) / (n - 1);
+            return (sum_product_xy - sum_x * sum_y / n) / (n - 1);
         }
 
         public static double Covariance(this IEnumerable<ulong> x, IEnumerable<ulong> y)
         {
-            double sumx = 0;
-            double sumy = 0;
-            double sumxy = 0;
+            double sum_x = 0;
+            double sum_y = 0;
+            double sum_product_xy = 0;
 
             int n = x.Count();
 
             for (int i = 0; i < n; i++)
             {
-                sumx += x.ElementAt(i);
-                sumy += y.ElementAt(i);
-                sumxy += x.ElementAt(i) * y.ElementAt(i);
+                ulong x_i = x.ElementAt(i);
+                ulong y_i = y.ElementAt(i);
+                sum_x += x_i;
+                sum_y += y_i;
+                sum_product_xy += x_i * y_i;
             }
 
-            return (sumxy - sumx * sumy / n) / (n - 1);
+            return (sum_product_xy - sum_x * sum_y / n) / (n - 1);
         }
 
         public static double Covariance(this IEnumerable<float> x, IEnumerable<float> y)
         {
-            double sumx = 0;
-            double sumy = 0;
-            double sumxy = 0;
+            double sum_x = 0;
+            double sum_y = 0;
+            double sum_product_xy = 0;
 
             int n = x.Count();
 
             for (int i = 0; i < n; i++)
             {
-                sumx += x.ElementAt(i);
-                sumy += y.ElementAt(i);
-                sumxy += x.ElementAt(i) * y.ElementAt(i);
+                float x_i = x.ElementAt(i);
+                float y_i = y.ElementAt(i);
+                sum_x += x_i;
+                sum_y += y_i;
+                sum_product_xy += x_i * y_i;
             }
 
-            return (sumxy - sumx * sumy / n) / (n - 1);
+            return (sum_product_xy - sum_x * sum_y / n) / (n - 1);
         }
 
         public static double Covariance(this IEnumerable<double> x, IEnumerable<double> y)
         {
-            double sumx = 0;
-            double sumy = 0;
-            double sumxy = 0;
+            double sum_x = 0;
+            double sum_y = 0;
+            double sum_product_xy = 0;
 
             int n = x.Count();
 
             for (int i = 0; i < n; i++)
             {
-                sumx += x.ElementAt(i);
-                sumy += y.ElementAt(i);
-                sumxy += x.ElementAt(i) * y.ElementAt(i);
+                double x_i = x.ElementAt(i);
+                double y_i = y.ElementAt(i);
+                sum_x += x_i;
+                sum_y += y_i;
+                sum_product_xy += x_i * y_i;
             }
 
-            return (sumxy - sumx * sumy / n) / (n - 1);
+            return (sum_product_xy - sum_x * sum_y / n) / (n - 1);
         }
 
         public static decimal Covariance(this IEnumerable<decimal> x, IEnumerable<decimal> y)
         {
-            decimal sumx = 0;
-            decimal sumy = 0;
-            decimal sumxy = 0;
+            decimal sum_x = 0;
+            decimal sum_y = 0;
+            decimal sum_product_xy = 0;
 
             int n = x.Count();
 
             for (int i = 0; i < n; i++)
             {
-                sumx += x.ElementAt(i);
-                sumy += y.ElementAt(i);
-                sumxy += x.ElementAt(i) * y.ElementAt(i);
+                decimal x_i = x.ElementAt(i);
+                decimal y_i = y.ElementAt(i);
+                sum_x += x_i;
+                sum_y += y_i;
+                sum_product_xy += x_i * y_i;
             }
 
-            return (sumxy - sumx * sumy / n) / (n - 1);
+            return (sum_product_xy - sum_x * sum_y / n) / (n - 1);
         }
     }
 }
