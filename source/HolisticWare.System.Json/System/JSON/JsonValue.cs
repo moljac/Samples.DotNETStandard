@@ -338,6 +338,7 @@ namespace System.Json
         {
             int start = cur;
             for (int i = cur; i < src.Length; i++)
+            {
                 if (src[i] == '"' || src[i] == '\\')
                 {
                     sb.Append(src, start, i - start);
@@ -345,6 +346,7 @@ namespace System.Json
                     sb.Append(src[i++]);
                     start = i;
                 }
+            }
             sb.Append(src, start, src.Length - start);
 
             return sb.ToString();
