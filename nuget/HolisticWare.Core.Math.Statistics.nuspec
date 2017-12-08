@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>
+      HolisticWare.Core.Math.Statistics
+    </id>
+    <title>
+      HolisticWare.Core.Math.Statistics
+    </title>
+    <version>2017.12.03</version>
+    <authors>
+      HolisticWare LLC
+    </authors>
+    <owners>
+      HolisticWare / Xamarin Inc. / Microsoft
+    </owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      Xplat (cross platform) statistical library for .NET Standard 1.0 
+    </description>
+    <copyright>
+      Copyright 2017
+    </copyright>
+    <iconUrl>
+      https://pbs.twimg.com/profile_images/2721489654/ac2cb8bed26e93032ee6a3dacb073c07_400x400.png
+    </iconUrl>
+    <projectUrl>
+      https://github.com/moljac/HolisticWare.Core.Math
+    </projectUrl>
+    <licenseUrl>
+      https://github.com/moljac/HolisticWare.Core.Math/blob/master/LICENSE
+    </licenseUrl>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file 
+      src="../source/HolisticWare.Core.Math.Statistics.NetStandard10/bin/Release/netstandard1.0/HolisticWare.Core.Math.Statistics.NetStandard10.dll"
+      target="lib/netstandard1.0/HolisticWare.Core.Math.Statistics.dll" 
+      >
+    </file>
+    <!--
+    <file 
+      src="External-Dependency-Info.txt" 
+      target="THIRD-PARTY-NOTICES.txt"
+    </file>
+    -->
+  </files>
+</package>
