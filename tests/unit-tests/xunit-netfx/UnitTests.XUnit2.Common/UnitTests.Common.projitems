@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>049a73ee-1799-42af-b5b7-83ccc2a84050</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>UnitTests.Common</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Uri.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\JSON\WebToken\JSONWebToken.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)System\Json\JsonObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Net\HTTP\Client.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Net\HTTP\Client.Fluent.API.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Net\HTTP\Client.GET.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Net\HTTP\Data.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Net\HTTP\OAuth\OAuth2\State.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Net\HTTP\QueryParameters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Security\RandomData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Text\Encoding\Base64Encoding.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Text\Encoding\Base64UrlEncoding.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)System\" />
+    <Folder Include="$(MSBuildThisFileDirectory)System\Json\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Core\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Core\JSON\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Core\Net\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Core\Security\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Core\Text\" />
+  </ItemGroup>
+</Project>
