@@ -28,14 +28,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="nunit.framework">
-      <HintPath>..\..\packages\NUnit.3.7.1\lib\net45\nunit.framework.dll</HintPath>
+      <HintPath>..\..\packages\NUnit.3.9.0\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\source\HolisticWare.Net.OAuth.NetStandard10\HolisticWare.Net.OAuth.NetStandard10.csproj">
-      <Project>{99a55a01-73d4-44fe-8e59-9a6e42726b13}</Project>
-      <Name>HolisticWare.Net.OAuth.NetStandard10</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
@@ -44,9 +38,38 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Net\HTTP\" />
+    <ProjectReference Include="..\..\..\..\source\HolisticWare.Core.Collections.Generic.NetStandard10\HolisticWare.Core.Collections.Generic.NetStandard10.csproj">
+      <Project>{4C828D7D-C3A6-4C71-803A-2DBAAA598C65}</Project>
+      <Name>HolisticWare.Core.Collections.Generic.NetStandard10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\source\HolisticWare.Core.GIS.NetStandard10\HolisticWare.Core.GIS.NetStandard10.csproj">
+      <Project>{7506FE98-377C-4FF2-BAE5-CE8B2E06468F}</Project>
+      <Name>HolisticWare.Core.GIS.NetStandard10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\source\HolisticWare.Core.JSON.JWT.NetStandard10\HolisticWare.Core.JSON.JWT.NetStandard10.csproj">
+      <Project>{7AE60A2C-BE21-4FEE-B0C3-916C461795CD}</Project>
+      <Name>HolisticWare.Core.JSON.JWT.NetStandard10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\source\HolisticWare.Core.Net.HTTP.NetStandard10\HolisticWare.Core.Net.HTTP.NetStandard10.csproj">
+      <Project>{99A55A01-73D4-44FE-8E59-9A6E42726B13}</Project>
+      <Name>HolisticWare.Core.Net.HTTP.NetStandard10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\source\HolisticWare.Core.Security.NetStandard10\HolisticWare.Core.Security.NetStandard10.csproj">
+      <Project>{09840C03-C59A-485C-A58C-79EF439A30B8}</Project>
+      <Name>HolisticWare.Core.Security.NetStandard10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\source\HolisticWare.Core.NetStandard10\HolisticWare.Core.NetStandard10.csproj">
+      <Project>{964F1FF0-FDAC-4A81-A787-2FE4C5020894}</Project>
+      <Name>HolisticWare.Core.NetStandard10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\source\HolisticWare.Core.Text.NetStandard10\HolisticWare.Core.Text.NetStandard10.csproj">
+      <Project>{BC5E22A0-CAF9-464E-85EF-9D3D8348958D}</Project>
+      <Name>HolisticWare.Core.Text.NetStandard10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\source\HolisticWare.System.Json.NetStandard10\HolisticWare.System.Json.NetStandard10.csproj">
+      <Project>{130B1769-F088-4CCF-9713-7532B56CA013}</Project>
+      <Name>HolisticWare.System.Json.NetStandard10</Name>
+    </ProjectReference>
   </ItemGroup>
-  <Import Project="..\..\UnitTests.Common.DotNetStandard10\UnitTests.Common.DotNetStandard10.projitems" Label="Shared" Condition="Exists('..\..\UnitTests.Common.DotNetStandard10\UnitTests.Common.DotNetStandard10.projitems')" />
-  <Import Project="..\..\UnitTests.Common\UnitTests.Common.projitems" Label="Shared" Condition="Exists('..\..\UnitTests.Common\UnitTests.Common.projitems')" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

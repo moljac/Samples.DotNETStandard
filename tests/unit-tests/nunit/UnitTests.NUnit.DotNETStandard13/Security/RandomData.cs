@@ -18,11 +18,10 @@ using Fact= NUnit.Framework.TestAttribute;
 using System;
 using System.Threading.Tasks;
 using System.Net;
-using HolisticWare.Security;
+using Core.Security;
 
 namespace NUnit.Tests.Security
 {
-    [TestFixture()]
     public partial class RandomDataTests
     {
         [Test()]
@@ -49,7 +48,8 @@ namespace NUnit.Tests.Security
             byte[] sha_bytes_01 = System.Text.Encoding.ASCII.GetBytes(sha01);
             //Assert.AreEqual(bytes01, sha_bytes_01);
 
-            string str01 = rd.Base64UrlEncodeNoPadding(bytes01);
+            string str01 = rd.RandomDataBase64Url(16);
+            string str02 = rd.RandomDataBase64Url(32);
 
             return;
         }

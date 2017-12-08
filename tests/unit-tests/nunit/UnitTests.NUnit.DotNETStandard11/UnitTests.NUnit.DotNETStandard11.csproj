@@ -26,24 +26,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="nunit.framework">
-      <HintPath>..\..\packages\NUnit.3.8.1\lib\net45\nunit.framework.dll</HintPath>
-    </Reference>
     <Reference Include="System.Net.Http" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\source\HolisticWare.Net.OAuth.NetStandard11\HolisticWare.Net.OAuth.NetStandard11.csproj">
-      <Project>{49E5F228-3D87-4F38-BDF7-26EB3E2DFE69}</Project>
-      <Name>HolisticWare.Net.OAuth.NetStandard11</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\packages\NUnit.3.9.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
-  <Import Project="..\..\UnitTests.Common.DotNetStandard11\UnitTests.Common.DotNetStandard11.projitems" Label="Shared" Condition="Exists('..\..\UnitTests.Common.DotNetStandard11\UnitTests.Common.DotNetStandard11.projitems')" />
-  <Import Project="..\..\UnitTests.Common\UnitTests.Common.projitems" Label="Shared" Condition="Exists('..\..\UnitTests.Common\UnitTests.Common.projitems')" />
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="..\UnitTests.NUnit.Common\UnitTests.Common.projitems" Label="Shared" Condition="Exists('..\UnitTests.NUnit.Common\UnitTests.Common.projitems')" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
