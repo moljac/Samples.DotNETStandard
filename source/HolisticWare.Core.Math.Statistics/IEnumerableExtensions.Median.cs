@@ -4,6 +4,9 @@ using System.Linq;
 
 namespace Core.Math.Statistics
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class IEnumerableExtensionsMedian
     {
         public static double Median(this IEnumerable<short> x)
@@ -13,7 +16,7 @@ namespace Core.Math.Statistics
 
             if (n % 2 == 1)
             {
-                return x.ElementAt((int)(n + 1) / 2 - 1);
+                return x.ElementAt((n + 1) / 2 - 1);
             }
 
             return 0.5 * (x.ElementAt(n2) + x.ElementAt(n2 + 1));
@@ -26,7 +29,7 @@ namespace Core.Math.Statistics
 
             if (n % 2 == 1)
             {
-                return x.ElementAt((int)(n + 1) / 2 - 1);
+                return x.ElementAt((n + 1) / 2 - 1);
             }
 
             return 0.5 * (x.ElementAt(n2) + x.ElementAt(n2 + 1));
@@ -39,7 +42,7 @@ namespace Core.Math.Statistics
 
             if (n % 2 == 1)
             {
-                return x.ElementAt((int)(n + 1) / 2 - 1);
+                return x.ElementAt((n + 1) / 2 - 1);
             }
 
             return 0.5 * (x.ElementAt(n2) + x.ElementAt(n2 + 1));
@@ -52,7 +55,7 @@ namespace Core.Math.Statistics
 
             if (n % 2 == 1)
             {
-                return x.ElementAt((int)(n + 1) / 2 - 1);
+                return x.ElementAt((n + 1) / 2 - 1);
             }
 
             return 0.5 * (x.ElementAt(n2) + x.ElementAt(n2 + 1));
@@ -65,7 +68,7 @@ namespace Core.Math.Statistics
 
             if (n % 2 == 1)
             {
-                return x.ElementAt((int)(n + 1) / 2 - 1);
+                return x.ElementAt((n + 1) / 2 - 1);
             }
 
             return 0.5 * (x.ElementAt(n2) + x.ElementAt(n2 + 1));
@@ -78,7 +81,7 @@ namespace Core.Math.Statistics
 
             if (n % 2 == 1)
             {
-                return x.ElementAt((int)(n + 1) / 2 - 1);
+                return x.ElementAt((n + 1) / 2 - 1);
             }
 
             return 0.5 * (x.ElementAt(n2) + x.ElementAt(n2 + 1));
@@ -91,7 +94,7 @@ namespace Core.Math.Statistics
 
             if (n % 2 == 1)
             {
-                return x.ElementAt((int)(n + 1) / 2 - 1);
+                return x.ElementAt((n + 1) / 2 - 1);
             }
 
             return 0.5 * (x.ElementAt(n2) + x.ElementAt(n2 + 1));
@@ -104,7 +107,7 @@ namespace Core.Math.Statistics
 
             if (n % 2 == 1)
             {
-                return x.ElementAt((int)(n + 1) / 2 - 1);
+                return x.ElementAt((n + 1) / 2 - 1);
             }
 
             return 0.5 * (x.ElementAt(n2) + x.ElementAt(n2 + 1));
@@ -117,7 +120,7 @@ namespace Core.Math.Statistics
 
             if (n % 2 == 1)
             {
-                return x.ElementAt((int)(n + 1) / 2 - 1);
+                return x.ElementAt((n + 1) / 2 - 1);
             }
 
             return 0.5M * (x.ElementAt(n2) + x.ElementAt(n2 + 1));

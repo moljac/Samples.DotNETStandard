@@ -4,6 +4,12 @@ using System.Linq;
 
 namespace Core.Math.Statistics
 {
+    /// <summary>
+    /// F-Statistics / F test
+    /// A value you get when you run an ANOVA test or a regression analysis to 
+    /// find out if the means between two populations are significantly 
+    /// </summary>
+    /// <see cref="https://en.wikipedia.org/wiki/F-test"/>
     public static class IEnumerableExtensionsFStatistic
     {
         public static double FStatistic(this IEnumerable<short> x, IEnumerable<short> y)

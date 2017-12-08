@@ -16,11 +16,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.Skewness.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.StudenttStatisticIndependent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.WelchtStatistic.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.Kurtosis.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.KurtosisPop.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.KurtosisExcess.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.KurtosisSampleExcess.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.FStatistic.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.Covariance.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.Correlation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.Kurtosis.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)readme.md" />

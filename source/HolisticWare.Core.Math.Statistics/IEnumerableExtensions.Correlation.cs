@@ -13,11 +13,10 @@ namespace Core.Math.Statistics
     /// <see cref="http://www.mathsisfun.com/data/correlation.html"/>
     public static class IEnumerableExtensionsCorrelation
     {
-        public static double Correlation(this IEnumerable<double> x, IEnumerable<double> y)
+        public static double Correlation_Fast(this IEnumerable<double> x, IEnumerable<double> y)
         {
             int n = x.Count();
 
-            double sum = 0.0;
             double sum_x = 0.0;
             double sum_y = 0.0;
             double sum_x_pow_2 = 0.0;
