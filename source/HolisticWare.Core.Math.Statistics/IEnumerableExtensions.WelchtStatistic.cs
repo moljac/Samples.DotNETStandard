@@ -20,8 +20,8 @@ namespace Core.Math.Statistics
             // unequal variances
             double xmean = x.Cast<int>().Average();
             double ymean = y.Cast<int>().Average();
-            double xvar = x.Variance();
-            double yvar = y.Variance();
+            double xvar = x.VarianceSample();
+            double yvar = y.VarianceSample();
             int xn = x.Count();
             int yn = y.Count();
             double xvn = xvar / xn;
@@ -43,8 +43,8 @@ namespace Core.Math.Statistics
             // unequal variances
             double xmean = x.Average();
             double ymean = y.Average();
-            double xvar = x.Variance();
-            double yvar = y.Variance();
+            double xvar = x.VarianceSample();
+            double yvar = y.VarianceSample();
             int xn = x.Count();
             int yn = y.Count();
             double xvn = xvar / xn;
@@ -66,8 +66,8 @@ namespace Core.Math.Statistics
             // unequal variances
             double xmean = x.Cast<long>().Average();
             double ymean = y.Cast<long>().Average();
-            double xvar = x.Variance();
-            double yvar = y.Variance();
+            double xvar = x.VarianceSample();
+            double yvar = y.VarianceSample();
             int xn = x.Count();
             int yn = y.Count();
             double xvn = xvar / xn;
@@ -89,8 +89,8 @@ namespace Core.Math.Statistics
             // unequal variances
             double xmean = x.Average();
             double ymean = y.Average();
-            double xvar = x.Variance();
-            double yvar = y.Variance();
+            double xvar = x.VarianceSample();
+            double yvar = y.VarianceSample();
             int xn = x.Count();
             int yn = y.Count();
             double xvn = xvar / xn;
@@ -112,8 +112,8 @@ namespace Core.Math.Statistics
             // unequal variances
             double xmean = x.Cast<double>().Average();
             double ymean = y.Cast<double>().Average();
-            double xvar = x.Variance();
-            double yvar = y.Variance();
+            double xvar = x.VarianceSample();
+            double yvar = y.VarianceSample();
             int xn = x.Count();
             int yn = y.Count();
             double xvn = xvar / xn;
@@ -135,8 +135,8 @@ namespace Core.Math.Statistics
             // unequal variances
             double xmean = x.Average();
             double ymean = y.Average();
-            double xvar = x.Variance();
-            double yvar = y.Variance();
+            double xvar = x.VarianceSample();
+            double yvar = y.VarianceSample();
             int xn = x.Count();
             int yn = y.Count();
             double xvn = xvar / xn;
@@ -158,8 +158,8 @@ namespace Core.Math.Statistics
             // unequal variances
             double xmean = x.Average();
             double ymean = y.Average();
-            double xvar = x.Variance();
-            double yvar = y.Variance();
+            double xvar = x.VarianceSample();
+            double yvar = y.VarianceSample();
             int xn = x.Count();
             int yn = y.Count();
             double xvn = xvar / xn;
@@ -181,8 +181,8 @@ namespace Core.Math.Statistics
             // unequal variances
             decimal xmean = x.Average();
             decimal ymean = y.Average();
-            decimal xvar = x.Variance();
-            decimal yvar = y.Variance();
+            decimal xvar = x.VarianceSample();
+            decimal yvar = y.VarianceSample();
             int xn = x.Count();
             int yn = y.Count();
             decimal xvn = xvar / xn;

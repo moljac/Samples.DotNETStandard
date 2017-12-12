@@ -50,8 +50,8 @@ namespace Core.Math.Statistics
 
         public static double Correlation(this IEnumerable<short> x, IEnumerable<short> y)
         {
-            double standard_deviation_x = x.StandardDeviation();
-            double standard_deviation_y = y.StandardDeviation();
+            double standard_deviation_x = x.StandardDeviationSample();
+            double standard_deviation_y = y.StandardDeviationSample();
 
             double sum = 0.0;
 
@@ -71,8 +71,8 @@ namespace Core.Math.Statistics
 
         public static double Correlation(this IEnumerable<ushort> x, IEnumerable<ushort> y)
         {
-            double standard_deviation_x = x.StandardDeviation();
-            double standard_deviation_y = y.StandardDeviation();
+            double standard_deviation_x = x.StandardDeviationSample();
+            double standard_deviation_y = y.StandardDeviationSample();
 
             double sum = 0.0;
 
@@ -92,8 +92,8 @@ namespace Core.Math.Statistics
 
         public static double Correlation(this IEnumerable<int> x, IEnumerable<int> y)
         {
-            double standard_deviation_x = x.StandardDeviation();
-            double standard_deviation_y = y.StandardDeviation();
+            double standard_deviation_x = x.StandardDeviationSample();
+            double standard_deviation_y = y.StandardDeviationSample();
 
             double sum = 0.0;
 
@@ -113,8 +113,8 @@ namespace Core.Math.Statistics
 
         public static double Correlation(this IEnumerable<uint> x, IEnumerable<uint> y)
         {
-            double standard_deviation_x = x.StandardDeviation();
-            double standard_deviation_y = y.StandardDeviation();
+            double standard_deviation_x = x.StandardDeviationSample();
+            double standard_deviation_y = y.StandardDeviationSample();
 
             double sum = 0.0;
 
@@ -134,8 +134,8 @@ namespace Core.Math.Statistics
 
         public static double Correlation(this IEnumerable<long> x, IEnumerable<long> y)
         {
-            double standard_deviation_x = x.StandardDeviation();
-            double standard_deviation_y = y.StandardDeviation();
+            double standard_deviation_x = x.StandardDeviationSample();
+            double standard_deviation_y = y.StandardDeviationSample();
 
             double sum = 0.0;
 
@@ -155,8 +155,8 @@ namespace Core.Math.Statistics
 
         public static double Correlation(this IEnumerable<ulong> x, IEnumerable<ulong> y)
         {
-            double standard_deviation_x = x.StandardDeviation();
-            double standard_deviation_y = y.StandardDeviation();
+            double standard_deviation_x = x.StandardDeviationSample();
+            double standard_deviation_y = y.StandardDeviationSample();
 
             double sum = 0.0;
 
@@ -176,8 +176,8 @@ namespace Core.Math.Statistics
 
         public static double Correlation(this IEnumerable<double> x, IEnumerable<double> y)
         {
-            double standard_deviation_x = x.StandardDeviation();
-            double standard_deviation_y = y.StandardDeviation();
+            double standard_deviation_x = x.StandardDeviationSample();
+            double standard_deviation_y = y.StandardDeviationSample();
 
             double sum = 0.0;
 
@@ -197,8 +197,8 @@ namespace Core.Math.Statistics
 
         public static decimal Correlation(this IEnumerable<decimal> x, IEnumerable<decimal> y)
         {
-            decimal standard_deviation_x = x.StandardDeviation();
-            decimal standard_deviation_y = y.StandardDeviation();
+            decimal standard_deviation_x = x.StandardDeviationSample();
+            decimal standard_deviation_y = y.StandardDeviationSample();
 
             decimal sum = 0.0M;
 

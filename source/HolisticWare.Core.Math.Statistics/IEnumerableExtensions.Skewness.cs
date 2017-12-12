@@ -11,7 +11,7 @@ namespace Core.Math.Statistics
             // NIST definition of adjusted Fisher-Pearson
             // coefficient of skewness
             double x_moment_3 = x.Moment(3);
-            double x_standard_deviation = x.StandardDeviation();
+            double x_standard_deviation = x.StandardDeviationSample();
             int n = x.Count();
             int n1 = n - 1;
 
@@ -27,7 +27,7 @@ namespace Core.Math.Statistics
             // NIST definition of adjusted Fisher-Pearson
             // coefficient of skewness
             double x_moment_3 = x.Moment(3);
-            double x_standard_deviation = x.StandardDeviation();
+            double x_standard_deviation = x.StandardDeviationSample();
             int n = x.Count();
             int n1 = n - 1;
 
@@ -43,7 +43,7 @@ namespace Core.Math.Statistics
             // NIST definition of adjusted Fisher-Pearson
             // coefficient of skewness
             double x_moment_3 = x.Moment(3);
-            double x_standard_deviation = x.StandardDeviation();
+            double x_standard_deviation = x.StandardDeviationSample();
             int n = x.Count();
             int n1 = n - 1;
 
@@ -59,7 +59,7 @@ namespace Core.Math.Statistics
             // NIST definition of adjusted Fisher-Pearson
             // coefficient of skewness
             double x_moment_3 = x.Moment(3);
-            double x_standard_deviation = x.StandardDeviation();
+            double x_standard_deviation = x.StandardDeviationSample();
             int n = x.Count();
             int n1 = n - 1;
 
@@ -75,7 +75,7 @@ namespace Core.Math.Statistics
             // NIST definition of adjusted Fisher-Pearson
             // coefficient of skewness
             double x_moment_3 = x.Moment(3);
-            double x_standard_deviation = x.StandardDeviation();
+            double x_standard_deviation = x.StandardDeviationSample();
             int n = x.Count();
             int n1 = n - 1;
 
@@ -90,7 +90,7 @@ namespace Core.Math.Statistics
             // NIST definition of adjusted Fisher-Pearson
             // coefficient of skewness
             double x_moment_3 = x.Moment(3);
-            double x_standard_deviation = x.StandardDeviation();
+            double x_standard_deviation = x.StandardDeviationSample();
             int n = x.Count();
             int n1 = n - 1;
 
@@ -106,7 +106,7 @@ namespace Core.Math.Statistics
             // NIST definition of adjusted Fisher-Pearson
             // coefficient of skewness
             double x_moment_3 = x.Moment(3);
-            double x_standard_deviation = x.StandardDeviation();
+            double x_standard_deviation = x.StandardDeviationSample();
             int n = x.Count();
             int n1 = n - 1;
 
@@ -122,7 +122,7 @@ namespace Core.Math.Statistics
             // NIST definition of adjusted Fisher-Pearson
             // coefficient of skewness
             double x_moment_3 = x.Moment(3);
-            double x_standard_deviation = x.StandardDeviation();
+            double x_standard_deviation = x.StandardDeviationSample();
             int n = x.Count();
             int n1 = n - 1;
 
@@ -138,7 +138,7 @@ namespace Core.Math.Statistics
             // NIST definition of adjusted Fisher-Pearson
             // coefficient of skewness
             decimal x_moment_3 = x.Moment(3);
-            decimal x_standard_deviation = x.StandardDeviation();
+            decimal x_standard_deviation = x.StandardDeviationSample();
             int n = x.Count();
             int n1 = n - 1;
 

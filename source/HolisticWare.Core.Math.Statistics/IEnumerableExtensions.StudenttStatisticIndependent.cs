@@ -11,8 +11,8 @@ namespace Core.Math.Statistics
             // equal variances
             double x_average = x.Cast<int>().Average();
             double y_average = y.Cast<int>().Average();
-            double x_variance = x.Variance();
-            double y_variance = y.Variance();
+            double x_variance = x.VarianceSample();
+            double y_variance = y.VarianceSample();
             int xn = x.Count();
             int yn = y.Count();
 
@@ -33,8 +33,8 @@ namespace Core.Math.Statistics
             // equal variances
             double x_average = x.Cast<int>().Average();
             double y_average = y.Cast<int>().Average();
-            double x_variance = x.Variance();
-            double y_variance = y.Variance();
+            double x_variance = x.VarianceSample();
+            double y_variance = y.VarianceSample();
             int xn = x.Count();
             int yn = y.Count();
 
@@ -55,8 +55,8 @@ namespace Core.Math.Statistics
             // equal variances
             double x_average = x.Average();
             double y_average = y.Average();
-            double x_variance = x.Variance();
-            double y_variance = y.Variance();
+            double x_variance = x.VarianceSample();
+            double y_variance = y.VarianceSample();
             int xn = x.Count();
             int yn = y.Count();
 
@@ -77,8 +77,8 @@ namespace Core.Math.Statistics
             // equal variances
             double x_average = x.Cast<long>().Average();
             double y_average = y.Cast<long>().Average();
-            double x_variance = x.Variance();
-            double y_variance = y.Variance();
+            double x_variance = x.VarianceSample();
+            double y_variance = y.VarianceSample();
             int xn = x.Count();
             int yn = y.Count();
 
@@ -99,8 +99,8 @@ namespace Core.Math.Statistics
             // equal variances
             double x_average = x.Average();
             double y_average = y.Average();
-            double x_variance = x.Variance();
-            double y_variance = y.Variance();
+            double x_variance = x.VarianceSample();
+            double y_variance = y.VarianceSample();
             int xn = x.Count();
             int yn = y.Count();
 
@@ -121,8 +121,8 @@ namespace Core.Math.Statistics
             // equal variances
             double x_average = x.Average();
             double y_average = y.Average();
-            double x_variance = x.Variance();
-            double y_variance = y.Variance();
+            double x_variance = x.VarianceSample();
+            double y_variance = y.VarianceSample();
             int xn = x.Count();
             int yn = y.Count();
 
@@ -143,8 +143,8 @@ namespace Core.Math.Statistics
             // equal variances
             decimal x_average = x.Average();
             decimal y_average = y.Average();
-            decimal x_variance = x.Variance();
-            decimal y_variance = y.Variance();
+            decimal x_variance = x.VarianceSample();
+            decimal y_variance = y.VarianceSample();
             int xn = x.Count();
             int yn = y.Count();
 

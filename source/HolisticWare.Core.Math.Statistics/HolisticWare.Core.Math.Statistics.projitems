@@ -9,10 +9,10 @@
     <Import_RootNamespace>HolisticWare.Core.Math.Statistics</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.Variance.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.VarianceSample.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.Median.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.Moment.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.StandardDeviation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.StandardDeviationPopulation.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.Skewness.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.StudenttStatisticIndependent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.WelchtStatistic.cs" />
@@ -22,6 +22,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.Covariance.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.Correlation.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.Kurtosis.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.Frequency.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.StandardDeviationSample.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.VariancePopulation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)readme.md" />
