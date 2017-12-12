@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace Core.Math.Statistics
 {
-    public static class IEnumerableExtensionsVariance
+    public static class IEnumerableExtensionsVariancePopulation
     {
-        public static double Variance(this IEnumerable<short> x)
+        public static double VariancePopulation(this IEnumerable<short> x)
         {
             double mean = x.Cast<int>().Average();
             double sum_suquares = 0;
@@ -20,10 +20,10 @@ namespace Core.Math.Statistics
                 sum_suquares += delta * delta;
             }
 
-            return sum_suquares / (n - 1);
+            return sum_suquares / n;
         }
 
-        public static double Variance(this IEnumerable<ushort> x)
+        public static double VariancePopulation(this IEnumerable<ushort> x)
         {
             double mean = x.Cast<int>().Average();
             double sum_suquares = 0;
@@ -37,10 +37,10 @@ namespace Core.Math.Statistics
                 sum_suquares += delta * delta;
             }
 
-            return sum_suquares / (n - 1);
+            return sum_suquares / n;
         }
 
-        public static double Variance(this IEnumerable<int> x)
+        public static double VariancePopulation(this IEnumerable<int> x)
         {
             double mean = x.Average();
             double sum_suquares = 0;
@@ -54,10 +54,10 @@ namespace Core.Math.Statistics
                 sum_suquares += delta * delta;
             }
 
-            return sum_suquares / (n - 1);
+            return sum_suquares / n;
         }
 
-        public static double Variance(this IEnumerable<uint> x)
+        public static double VariancePopulation(this IEnumerable<uint> x)
         {
             double mean = x.Cast<long>().Average();
             double sum_suquares = 0;
@@ -71,10 +71,10 @@ namespace Core.Math.Statistics
                 sum_suquares += delta * delta;
             }
 
-            return sum_suquares / (n - 1);
+            return sum_suquares / n;
         }
 
-        public static double Variance(this IEnumerable<long> x)
+        public static double VariancePopulation(this IEnumerable<long> x)
         {
             double mean = x.Average();
             double sum_suquares = 0;
@@ -88,10 +88,10 @@ namespace Core.Math.Statistics
                 sum_suquares += delta * delta;
             }
 
-            return sum_suquares / (n - 1);
+            return sum_suquares / n;
         }
 
-        public static double Variance(this IEnumerable<ulong> x)
+        public static double VariancePopulation(this IEnumerable<ulong> x)
         {
             double mean = x.Cast<double>().Average();
             double sum_suquares = 0;
@@ -105,10 +105,10 @@ namespace Core.Math.Statistics
                 sum_suquares += delta * delta;
             }
 
-            return sum_suquares / (n - 1);
+            return sum_suquares / n;
         }
 
-        public static double Variance(this IEnumerable<float> x)
+        public static double VariancePopulation(this IEnumerable<float> x)
         {
             double mean = x.Average();
             double sum_suquares = 0;
@@ -122,10 +122,10 @@ namespace Core.Math.Statistics
                 sum_suquares += delta * delta;
             }
 
-            return sum_suquares / (n - 1);
+            return sum_suquares / n;
         }
 
-        public static double Variance(this IEnumerable<double> x)
+        public static double VariancePopulation(this IEnumerable<double> x)
         {
             double mean = x.Average();
             double sum_suquares = 0;
@@ -139,10 +139,10 @@ namespace Core.Math.Statistics
                 sum_suquares += delta * delta;
             }
 
-            return sum_suquares / (n - 1);
+            return sum_suquares / n;
         }
 
-        public static decimal Variance(this IEnumerable<decimal> x)
+        public static decimal VariancePopulation(this IEnumerable<decimal> x)
         {
             decimal mean = x.Average();
             decimal sum_suquares = 0;
@@ -156,7 +156,7 @@ namespace Core.Math.Statistics
                 sum_suquares += delta * delta;
             }
 
-            return sum_suquares / (n - 1);
+            return sum_suquares / n;
         }
 
     }
