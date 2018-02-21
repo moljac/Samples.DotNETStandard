@@ -22,6 +22,52 @@ Usefull links and references for porting apps to .NET Standard
     https://apisof.net/
 
 
+## Plugins
+
+
+*   Plugins
+
+    *   FileSystem
+
+    *   Serilization
+
+    *   BlueTooth LE
+
+        *   https://github.com/xabre/xamarin-bluetooth-le
+
+        *   https://github.com/aritchie/bluetoothle
+
+    *   Sensors 
+
+        *   Accelerometer, 
+
+        *   Gyroscope, 
+
+        *   Magnetometer
+
+        *   Compass
+
+        *   https://github.com/rdelrosario/xamarin-plugins/tree/master/DeviceMotion
+
+        *   https://stackoverflow.com/questions/45946889/how-can-i-get-device-tilt-in-xamarin-forms
+
+        *   https://visualstudiomagazine.com/articles/2017/05/01/fitbit-and-xamarin.aspx
+
+        *   https://github.com/JarleySoft/CompassPlugin
+
+    *   OAuth
+
+    *   Cache
+
+        *   MonkeyCache
+
+
+
+### References / Links
+
+*   https://paper.dropbox.com/doc/Xamarin-F50-7K9IxU8q5C1MSk2RWxhvY
+
+*   
 
 ## HolisticWare.Net.HTTP
 

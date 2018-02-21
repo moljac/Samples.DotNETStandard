@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>78a40509-45b3-4653-bf45-d212034e9f7c</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>F50.moljac</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)BluetoothLE\BluetoothLE.android.cs" />
+    <None Include="$(MSBuildThisFileDirectory)BluetoothLE\BluetoothLE.ios.cs" />
+    <None Include="$(MSBuildThisFileDirectory)BluetoothLE\BluetoothLE.uwp.cs" />
+    <None Include="$(MSBuildThisFileDirectory)OAuth\OAuth.android.cs" />
+    <None Include="$(MSBuildThisFileDirectory)OAuth\OAuth.ios.cs" />
+    <None Include="$(MSBuildThisFileDirectory)OAuth\OAuth.uwp.cs" />
+    <None Include="$(MSBuildThisFileDirectory)SensorAccelerometer\SensorAccelerometer.android.cs" />
+    <None Include="$(MSBuildThisFileDirectory)SensorAccelerometer\SensorAccelerometer.ios.cs" />
+    <None Include="$(MSBuildThisFileDirectory)SensorAccelerometer\SensorAccelerometer.uwp.cs" />
+    <None Include="$(MSBuildThisFileDirectory)SensorCompass\Preferences.android.cs" />
+    <None Include="$(MSBuildThisFileDirectory)SensorCompass\Preferences.ios.cs" />
+    <None Include="$(MSBuildThisFileDirectory)SensorCompass\Preferences.uwp.cs" />
+    <None Include="$(MSBuildThisFileDirectory)SensorGyroscope\SensorGyroscope.android.cs" />
+    <None Include="$(MSBuildThisFileDirectory)SensorGyroscope\SensorGyroscope.ios.cs" />
+    <None Include="$(MSBuildThisFileDirectory)SensorGyroscope\SensorGyroscope.uwp.cs" />
+    <None Include="$(MSBuildThisFileDirectory)SensorMagnetometer\SensorMagnetometer.android.cs" />
+    <None Include="$(MSBuildThisFileDirectory)SensorMagnetometer\SensorMagnetometer.ios.cs" />
+    <None Include="$(MSBuildThisFileDirectory)SensorMagnetometer\SensorMagnetometer.uwp.cs" />
+    <None Include="$(MSBuildThisFileDirectory)StorageFileSystem\StorageFileSystem.android.cs" />
+    <None Include="$(MSBuildThisFileDirectory)StorageFileSystem\StorageFileSystem.ios.cs" />
+    <None Include="$(MSBuildThisFileDirectory)StorageFileSystem\StorageFileSystem.uwp.cs" />
+    <None Include="$(MSBuildThisFileDirectory)StorageSecure\StorageSecure.android.cs" />
+    <None Include="$(MSBuildThisFileDirectory)StorageSecure\StorageSecure.ios.cs" />
+    <None Include="$(MSBuildThisFileDirectory)StorageSecure\StorageSecure.uwp.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)BluetoothLE\BluetoothLE.netstandard.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BluetoothLE\BluetoothLE.shared.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BluetoothLE\BluetoothLEExtensions.shared.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OAuth\OAuth.netstandard.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OAuth\OAuth.shared.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OAuth\OAuthExtensions.shared.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SensorAccelerometer\SensorAccelerometer.netstandard.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SensorAccelerometer\SensorAccelerometer.shared.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SensorAccelerometer\SensorAccelerometerExtensions.shared.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SensorCompass\Preferences.netstandard.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SensorCompass\Preferences.shared.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SensorCompass\PreferencesExtensions.shared.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SensorGyroscope\SensorGyroscope.netstandard.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SensorGyroscope\SensorGyroscope.shared.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SensorGyroscope\SensorGyroscopeExtensions.shared.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SensorMagnetometer\SensorMagnetometer.netstandard.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SensorMagnetometer\SensorMagnetometer.shared.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SensorMagnetometer\SensorMagnetometerExtensions.shared.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StorageFileSystem\StorageFileSystem.netstandard.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StorageFileSystem\StorageFileSystem.shared.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StorageFileSystem\StorageFileSystemExtensions.shared.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StorageSecure\StorageSecure.netstandard.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StorageSecure\StorageSecure.shared.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StorageSecure\StorageSecureExtensions.shared.cs" />
+  </ItemGroup>
+</Project>

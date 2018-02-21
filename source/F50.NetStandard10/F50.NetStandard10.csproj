@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="F50.shared\" />
+  </ItemGroup>
+  <Import Project="..\F50.moljac\F50.moljac.projitems" Label="Shared" Condition="Exists('..\F50.moljac\F50.moljac.projitems')" />
+</Project>

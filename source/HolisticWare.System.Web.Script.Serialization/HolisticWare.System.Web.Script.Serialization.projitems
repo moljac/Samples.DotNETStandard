@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{71C0E07F-FFC1-46FE-A1A2-4DF1EFB20A45}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>System.Web.Script.Serialization</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)System\Web\Script\Serialization\JSON\JavaScriptUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)System\Web\Script\Serialization\JSON\ReflectionUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)System\Web\Script\Serialization\JavaScriptConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)System\Web\Script\Serialization\JavaScriptSerializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)System\Web\Script\Serialization\JavaScriptTypeResolver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)System\Web\Script\Serialization\Json.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)System\Web\Script\Serialization\JsonDeserializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)System\Web\Script\Serialization\JsonSerializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)System\Web\Script\Serialization\ScriptIgnoreAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)System\Web\Script\Serialization\SimpleTypeResolver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)System\Web\Script\Serialization\StringBuilderExtensions.cs" />
+  </ItemGroup>
+</Project>

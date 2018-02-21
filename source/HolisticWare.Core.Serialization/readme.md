@@ -1,6 +1,18 @@
 ﻿# Serialization
 
+
+HolisticWare.Serialization.Avro
+HolisticWare.Serialization.Bond
+HolisticWare.Serialization.Thrift
+HolisticWare.Serialization.CapnProto
+HolisticWare.Serialization.MsgPack
+HolisticWare.Serialization.BSON
+HolisticWare.Serialization.Protobuf
+
+
 ## Protobuf
+
+https://damienbod.com/2015/06/03/asp-net-5-mvc-6-custom-protobuf-formatters/
 
 
 
@@ -13,6 +25,9 @@ https://docs.microsoft.com/en-us/azure/hdinsight/hadoop/apache-hadoop-dotnet-avr
 https://msdn.microsoft.com/en-us/library/dn749865.aspx
 https://www.infoq.com/news/2014/05/MS-Avro
 https://stackoverflow.com/questions/39846833/deserialize-an-avro-file-with-c-sharp
+https://code.msdn.microsoft.com/windowsdesktop/Schema-Evolution-In-Avro-240f0a7a
+https://github.com/YuvalItzchakov/AvroMediaTypeFormatter
+
 
 
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>

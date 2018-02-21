@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="System\Web\Script\Serialization\JavaScriptConverter.cs" />
+    <Compile Remove="System\Web\Script\Serialization\JavaScriptSerializer.cs" />
+    <Compile Remove="System\Web\Script\Serialization\JavaScriptTypeResolver.cs" />
+    <Compile Remove="System\Web\Script\Serialization\JSON\JavaScriptUtils.cs" />
+    <Compile Remove="System\Web\Script\Serialization\JSON\ReflectionUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="System\.DS_Store" />
+    <None Remove="System\Web\.DS_Store" />
+    <None Remove="System\Web\Script\.DS_Store" />
+    <None Remove="System\Web\Script\Serialization\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Collections.NonGeneric" Version="4.3.0" />
+  </ItemGroup>
+  <Import Project="..\HolisticWare.System.Web.Script.Serialization\HolisticWare.System.Web.Script.Serialization.projitems" Label="Shared" Condition="Exists('..\HolisticWare.System.Web.Script.Serialization\HolisticWare.System.Web.Script.Serialization.projitems')" />
+</Project>

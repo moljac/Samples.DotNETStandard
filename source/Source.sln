@@ -1,92 +1,95 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HolisticWare.Core.Net.HTTP", "HolisticWare.Core.Net.HTTP\HolisticWare.Core.Net.HTTP.shproj", "{0145436C-5EFE-4AD9-81BA-24D7BE276FD1}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HolisticWare.Core", "HolisticWare.Core\HolisticWare.Core.shproj", "{994E6A76-908C-45C8-BBDC-D1B5152D4658}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Net.HTTP.NetStandard10", "HolisticWare.Core.Net.HTTP.NetStandard10\HolisticWare.Core.Net.HTTP.NetStandard10.csproj", "{99A55A01-73D4-44FE-8E59-9A6E42726B13}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Core.NetStandard10", "HolisticWare.Core.NetStandard10\HolisticWare.Core.NetStandard10.csproj", "{964F1FF0-FDAC-4A81-A787-2FE4C5020894}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Net.HTTP.NetStandard11", "HolisticWare.Core.Net.HTTP.NetStandard11\HolisticWare.Core.Net.HTTP.NetStandard11.csproj", "{49E5F228-3D87-4F38-BDF7-26EB3E2DFE69}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Net.HTTP.NetStandard13", "HolisticWare.Core.Net.HTTP.NetStandard13\HolisticWare.Core.Net.HTTP.NetStandard13.csproj", "{338D3B0A-7246-4A1A-AC70-CFF0D5AA0EF1}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HolisticWare.Core.JSON.JWT", "HolisticWare.Core.JSON.JWT\HolisticWare.Core.JSON.JWT.shproj", "{5ADCC2B2-20E1-402B-80AC-6D9678700464}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.System.Json.NetStandard10", "HolisticWare.System.Json.NetStandard10\HolisticWare.System.Json.NetStandard10.csproj", "{130B1769-F088-4CCF-9713-7532B56CA013}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.System.Json.NetStandard11", "HolisticWare.System.Json.NetStandard11\HolisticWare.System.Json.NetStandard11.csproj", "{2B4D9BA6-7A6F-4A40-90BF-E317B92ED347}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.System.Json.NetStandard13", "HolisticWare.System.Json.NetStandard13\HolisticWare.System.Json.NetStandard13.csproj", "{3FC9CD9C-91A8-45E0-B619-08F32B7442C0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.JSON.JWT.NetStandard10", "HolisticWare.Core.JSON.JWT.NetStandard10\HolisticWare.Core.JSON.JWT.NetStandard10.csproj", "{7AE60A2C-BE21-4FEE-B0C3-916C461795CD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.JSON.JWT.NetStandard11", "HolisticWare.Core.JSON.JWT.NetStandard11\HolisticWare.Core.JSON.JWT.NetStandard11.csproj", "{2F3EC3E8-2F7B-4DD8-833C-F6A00D5F3962}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.JSON.JWT.NetStandard13", "HolisticWare.Core.JSON.JWT.NetStandard13\HolisticWare.Core.JSON.JWT.NetStandard13.csproj", "{A9CB566D-075A-4038-AC8C-BD829D071469}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HolisticWare.Core.Collections.Generic", "HolisticWare.Core.Collections.Generic\HolisticWare.Core.Collections.Generic.shproj", "{57B0EB28-7B4E-410D-B021-0DC9D719C11F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Net.HTTP.NetStandard20", "HolisticWare.Core.Net.HTTP.NetStandard20\HolisticWare.Core.Net.HTTP.NetStandard20.csproj", "{E49757B7-D513-4457-B7BF-6FFB12275C4B}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HolisticWare.Core.Security", "HolisticWare.Core.Security\HolisticWare.Core.Security.shproj", "{E3BFE2EA-D505-46A1-B9A5-33DEFE5DF193}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HolisticWare.Core.Text", "HolisticWare.Core.Text\HolisticWare.Core.Text.shproj", "{124E619A-6E2D-48F5-A1D9-275269BD39DF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Security.NetStandard13", "HolisticWare.Core.Security.NetStandard13\HolisticWare.Core.Security.NetStandard13.csproj", "{386F0D74-ED35-45A2-8321-D75D1D80C3B6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Security.NetStandard10", "HolisticWare.Core.Security.NetStandard10\HolisticWare.Core.Security.NetStandard10.csproj", "{09840C03-C59A-485C-A58C-79EF439A30B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Core.Serialization", "HolisticWare.Core.Serialization\HolisticWare.Core.Serialization.csproj", "{FF841D8C-B603-4C71-8C55-01B56A4F941E}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HolisticWare.Core.GIS", "HolisticWare.Core.GIS\HolisticWare.Core.GIS.shproj", "{07A71058-5008-4156-8AA5-2F07A7359306}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Collections.Generic.NetStandard10", "HolisticWare.Core.Collections.Generic.NetStandard10\HolisticWare.Core.Collections.Generic.NetStandard10.csproj", "{4C828D7D-C3A6-4C71-803A-2DBAAA598C65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Core.GIS.NetStandard10", "HolisticWare.Core.GIS.NetStandard10\HolisticWare.Core.GIS.NetStandard10.csproj", "{7506FE98-377C-4FF2-BAE5-CE8B2E06468F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.GIS.NetStandard10", "HolisticWare.Core.GIS.NetStandard10\HolisticWare.Core.GIS.NetStandard10.csproj", "{7506FE98-377C-4FF2-BAE5-CE8B2E06468F}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HolisticWare.Core.Text", "HolisticWare.Core.Text\HolisticWare.Core.Text.shproj", "{124E619A-6E2D-48F5-A1D9-275269BD39DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Text.NetStandard10", "HolisticWare.Core.Text.NetStandard10\HolisticWare.Core.Text.NetStandard10.csproj", "{BC5E22A0-CAF9-464E-85EF-9D3D8348958D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Core.Text.NetStandard10", "HolisticWare.Core.Text.NetStandard10\HolisticWare.Core.Text.NetStandard10.csproj", "{BC5E22A0-CAF9-464E-85EF-9D3D8348958D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.NetStandard10", "HolisticWare.Core.NetStandard10\HolisticWare.Core.NetStandard10.csproj", "{964F1FF0-FDAC-4A81-A787-2FE4C5020894}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HolisticWare.Core", "HolisticWare.Core\HolisticWare.Core.shproj", "{994E6A76-908C-45C8-BBDC-D1B5152D4658}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HolisticWare.Core.JSON.JWT", "HolisticWare.Core.JSON.JWT\HolisticWare.Core.JSON.JWT.shproj", "{5ADCC2B2-20E1-402B-80AC-6D9678700464}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HolisticWare.System.Json", "HolisticWare.System.Json\HolisticWare.System.Json.shproj", "{CBF43DCD-6897-479D-B3CD-E03BCDB32CEF}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HolisticWare.Core.Math", "HolisticWare.Core.Math\HolisticWare.Core.Math.shproj", "{7344D9A6-55D5-4B8D-82B2-D5C8C89CEA63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.System.Json.NetStandard10", "HolisticWare.System.Json.NetStandard10\HolisticWare.System.Json.NetStandard10.csproj", "{130B1769-F088-4CCF-9713-7532B56CA013}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HolisticWare.Core.Math.Statistics", "HolisticWare.Core.Math.Statistics\HolisticWare.Core.Math.Statistics.shproj", "{920D7D0F-3FAE-4C77-9174-23E7A4E80E50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.System.Json.NetStandard11", "HolisticWare.System.Json.NetStandard11\HolisticWare.System.Json.NetStandard11.csproj", "{2B4D9BA6-7A6F-4A40-90BF-E317B92ED347}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Math.Statistics.NetStandard10", "HolisticWare.Core.Math.Statistics.NetStandard10\HolisticWare.Core.Math.Statistics.NetStandard10.csproj", "{7D262D95-638A-40F9-8C36-9E578F1B86FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.System.Json.NetStandard13", "HolisticWare.System.Json.NetStandard13\HolisticWare.System.Json.NetStandard13.csproj", "{3FC9CD9C-91A8-45E0-B619-08F32B7442C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Serialization", "HolisticWare.Core.Serialization\HolisticWare.Core.Serialization.csproj", "{FF841D8C-B603-4C71-8C55-01B56A4F941E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Core.JSON.JWT.NetStandard10", "HolisticWare.Core.JSON.JWT.NetStandard10\HolisticWare.Core.JSON.JWT.NetStandard10.csproj", "{7AE60A2C-BE21-4FEE-B0C3-916C461795CD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Core.JSON.JWT.NetStandard11", "HolisticWare.Core.JSON.JWT.NetStandard11\HolisticWare.Core.JSON.JWT.NetStandard11.csproj", "{2F3EC3E8-2F7B-4DD8-833C-F6A00D5F3962}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Core.JSON.JWT.NetStandard13", "HolisticWare.Core.JSON.JWT.NetStandard13\HolisticWare.Core.JSON.JWT.NetStandard13.csproj", "{A9CB566D-075A-4038-AC8C-BD829D071469}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HolisticWare.System.Web.Script.Serialization", "HolisticWare.System.Web.Script.Serialization\HolisticWare.System.Web.Script.Serialization.shproj", "{71C0E07F-FFC1-46FE-A1A2-4DF1EFB20A45}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.System.Web.Script.Serialization.NetStandard20", "HolisticWare.System.Web.Script.Serialization.NetStandard10\HolisticWare.System.Web.Script.Serialization.NetStandard20.csproj", "{5CC5852D-7451-4DDB-A006-04EF8422ECBE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{579F334C-FB7F-448A-A638-8FCB1CE53D93}"
+	ProjectSection(SolutionItems) = preProject
+		..\externals\F50\.editorconfig = ..\externals\F50\.editorconfig
+		..\readme.md = ..\readme.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "externals", "externals", "{EE42EE6A-19DA-455A-BCBD-0798576C2F9A}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "F50.moljac", "F50.moljac\F50.moljac.shproj", "{78A40509-45B3-4653-BF45-D212034E9F7C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "F50", "..\externals\F50\F50\F50.csproj", "{B5FE6C55-6B11-44AA-95A8-27E92F9F5A32}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{579F334C-FB7F-448A-A638-8FCB1CE53D93}"
+	ProjectSection(SolutionItems) = preProject
+		..\externals\F50\.editorconfig = ..\externals\F50\.editorconfig
+		..\readme.md = ..\readme.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "F50.Tests", "..\externals\F50\F50.Tests\F50.Tests.csproj", "{445B6CA2-A1A3-4565-B7E8-D5AE6A5AF0CD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A14D061F-382D-4609-A3B0-E1D0BF7AB6AC}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		HolisticWare.Core.Net.HTTP\HolisticWare.Core.Net.HTTP.projitems*{0145436c-5efe-4ad9-81ba-24d7be276fd1}*SharedItemsImports = 13
 		HolisticWare.Core.GIS\HolisticWare.Core.GIS.projitems*{07a71058-5008-4156-8aa5-2f07a7359306}*SharedItemsImports = 13
 		HolisticWare.Core.Text\HolisticWare.Core.Text.projitems*{124e619a-6e2d-48f5-a1d9-275269bd39df}*SharedItemsImports = 13
-		HolisticWare.Core.Collections.Generic\HolisticWare.Core.Collections.Generic.projitems*{57b0eb28-7b4e-410d-b021-0dc9d719c11f}*SharedItemsImports = 13
 		HolisticWare.Core.JSON.JWT\HolisticWare.Core.JSON.JWT.projitems*{5adcc2b2-20e1-402b-80ac-6d9678700464}*SharedItemsImports = 13
+		HolisticWare.System.Web.Script.Serialization\HolisticWare.System.Web.Script.Serialization.projitems*{71c0e07f-ffc1-46fe-a1a2-4df1efb20a45}*SharedItemsImports = 13
+		F50.moljac\F50.moljac.projitems*{78a40509-45b3-4653-bf45-d212034e9f7c}*SharedItemsImports = 13
 		HolisticWare.Core\HolisticWare.Core.projitems*{994e6a76-908c-45c8-bbdc-d1b5152d4658}*SharedItemsImports = 13
 		HolisticWare.System.Json\HolisticWare.System.Json.projitems*{cbf43dcd-6897-479d-b3cd-e03bcdb32cef}*SharedItemsImports = 13
-		HolisticWare.Core.Security\HolisticWare.Core.Security.projitems*{e3bfe2ea-d505-46a1-b9a5-33defe5df193}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{99A55A01-73D4-44FE-8E59-9A6E42726B13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{99A55A01-73D4-44FE-8E59-9A6E42726B13}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{99A55A01-73D4-44FE-8E59-9A6E42726B13}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{99A55A01-73D4-44FE-8E59-9A6E42726B13}.Release|Any CPU.Build.0 = Release|Any CPU
-		{49E5F228-3D87-4F38-BDF7-26EB3E2DFE69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{49E5F228-3D87-4F38-BDF7-26EB3E2DFE69}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{49E5F228-3D87-4F38-BDF7-26EB3E2DFE69}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{49E5F228-3D87-4F38-BDF7-26EB3E2DFE69}.Release|Any CPU.Build.0 = Release|Any CPU
-		{338D3B0A-7246-4A1A-AC70-CFF0D5AA0EF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{338D3B0A-7246-4A1A-AC70-CFF0D5AA0EF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{338D3B0A-7246-4A1A-AC70-CFF0D5AA0EF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{338D3B0A-7246-4A1A-AC70-CFF0D5AA0EF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{964F1FF0-FDAC-4A81-A787-2FE4C5020894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{964F1FF0-FDAC-4A81-A787-2FE4C5020894}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{964F1FF0-FDAC-4A81-A787-2FE4C5020894}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{964F1FF0-FDAC-4A81-A787-2FE4C5020894}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF841D8C-B603-4C71-8C55-01B56A4F941E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF841D8C-B603-4C71-8C55-01B56A4F941E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF841D8C-B603-4C71-8C55-01B56A4F941E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF841D8C-B603-4C71-8C55-01B56A4F941E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7506FE98-377C-4FF2-BAE5-CE8B2E06468F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7506FE98-377C-4FF2-BAE5-CE8B2E06468F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7506FE98-377C-4FF2-BAE5-CE8B2E06468F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7506FE98-377C-4FF2-BAE5-CE8B2E06468F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC5E22A0-CAF9-464E-85EF-9D3D8348958D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC5E22A0-CAF9-464E-85EF-9D3D8348958D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC5E22A0-CAF9-464E-85EF-9D3D8348958D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC5E22A0-CAF9-464E-85EF-9D3D8348958D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{130B1769-F088-4CCF-9713-7532B56CA013}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{130B1769-F088-4CCF-9713-7532B56CA013}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{130B1769-F088-4CCF-9713-7532B56CA013}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -111,47 +114,29 @@ Global
 		{A9CB566D-075A-4038-AC8C-BD829D071469}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9CB566D-075A-4038-AC8C-BD829D071469}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9CB566D-075A-4038-AC8C-BD829D071469}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E49757B7-D513-4457-B7BF-6FFB12275C4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E49757B7-D513-4457-B7BF-6FFB12275C4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E49757B7-D513-4457-B7BF-6FFB12275C4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E49757B7-D513-4457-B7BF-6FFB12275C4B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{386F0D74-ED35-45A2-8321-D75D1D80C3B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{386F0D74-ED35-45A2-8321-D75D1D80C3B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{386F0D74-ED35-45A2-8321-D75D1D80C3B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{386F0D74-ED35-45A2-8321-D75D1D80C3B6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{09840C03-C59A-485C-A58C-79EF439A30B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{09840C03-C59A-485C-A58C-79EF439A30B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{09840C03-C59A-485C-A58C-79EF439A30B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{09840C03-C59A-485C-A58C-79EF439A30B8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4C828D7D-C3A6-4C71-803A-2DBAAA598C65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C828D7D-C3A6-4C71-803A-2DBAAA598C65}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C828D7D-C3A6-4C71-803A-2DBAAA598C65}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C828D7D-C3A6-4C71-803A-2DBAAA598C65}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7506FE98-377C-4FF2-BAE5-CE8B2E06468F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7506FE98-377C-4FF2-BAE5-CE8B2E06468F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7506FE98-377C-4FF2-BAE5-CE8B2E06468F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7506FE98-377C-4FF2-BAE5-CE8B2E06468F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BC5E22A0-CAF9-464E-85EF-9D3D8348958D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BC5E22A0-CAF9-464E-85EF-9D3D8348958D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BC5E22A0-CAF9-464E-85EF-9D3D8348958D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BC5E22A0-CAF9-464E-85EF-9D3D8348958D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{964F1FF0-FDAC-4A81-A787-2FE4C5020894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{964F1FF0-FDAC-4A81-A787-2FE4C5020894}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{964F1FF0-FDAC-4A81-A787-2FE4C5020894}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{964F1FF0-FDAC-4A81-A787-2FE4C5020894}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7D262D95-638A-40F9-8C36-9E578F1B86FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7D262D95-638A-40F9-8C36-9E578F1B86FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7D262D95-638A-40F9-8C36-9E578F1B86FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7D262D95-638A-40F9-8C36-9E578F1B86FB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FF841D8C-B603-4C71-8C55-01B56A4F941E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FF841D8C-B603-4C71-8C55-01B56A4F941E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FF841D8C-B603-4C71-8C55-01B56A4F941E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FF841D8C-B603-4C71-8C55-01B56A4F941E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CC5852D-7451-4DDB-A006-04EF8422ECBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CC5852D-7451-4DDB-A006-04EF8422ECBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CC5852D-7451-4DDB-A006-04EF8422ECBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CC5852D-7451-4DDB-A006-04EF8422ECBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5FE6C55-6B11-44AA-95A8-27E92F9F5A32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5FE6C55-6B11-44AA-95A8-27E92F9F5A32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5FE6C55-6B11-44AA-95A8-27E92F9F5A32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5FE6C55-6B11-44AA-95A8-27E92F9F5A32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{445B6CA2-A1A3-4565-B7E8-D5AE6A5AF0CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{445B6CA2-A1A3-4565-B7E8-D5AE6A5AF0CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{445B6CA2-A1A3-4565-B7E8-D5AE6A5AF0CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{445B6CA2-A1A3-4565-B7E8-D5AE6A5AF0CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B5FE6C55-6B11-44AA-95A8-27E92F9F5A32} = {EE42EE6A-19DA-455A-BCBD-0798576C2F9A}
+		{579F334C-FB7F-448A-A638-8FCB1CE53D93} = {EE42EE6A-19DA-455A-BCBD-0798576C2F9A}
+		{445B6CA2-A1A3-4565-B7E8-D5AE6A5AF0CD} = {A14D061F-382D-4609-A3B0-E1D0BF7AB6AC}
+		{A14D061F-382D-4609-A3B0-E1D0BF7AB6AC} = {EE42EE6A-19DA-455A-BCBD-0798576C2F9A}
+	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {80201DC7-57D3-4125-B682-E23C0FE2C569}
+		SolutionGuid = {105B0052-C7EA-44D0-8697-37A45E1392AF}
 	EndGlobalSection
 EndGlobal
